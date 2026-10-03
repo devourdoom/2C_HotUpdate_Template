@@ -1,0 +1,7 @@
+{
+  "variants": ["default"],
+  "platforms": ["ad", "ios"],
+  "scan": {
+    "patch_lookahead": 4
+  }
+}
