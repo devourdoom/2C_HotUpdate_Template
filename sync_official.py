@@ -6,6 +6,7 @@ import io
 import json
 import os
 import re
+import socket
 import tarfile
 import time
 import urllib.request
@@ -14,6 +15,8 @@ from pathlib import Path
 
 from compiledtext import decode
 from fetch_real_hash import e_decrypt, e_encrypt, send
+
+socket.setdefaulttimeout(20)
 
 ROOT = Path(__file__).parent
 CONFIG = ROOT / "config.json"
@@ -35,16 +38,17 @@ def vkey(v: str) -> tuple[int, ...]:
 
 
 def query_hash(cv: str, platform: str) -> str | None:
-    try:
-        e = e_encrypt(json.dumps({"cv": cv, "t": "0"}).encode())
-        resp = json.loads(send(e, platform))
-        plain = e_decrypt(resp["e"])
-        lp = (json.loads(plain).get("d") or {}).get("lp") if plain else None
-    except Exception as ex:
-        print(f"  ! {platform} {cv}: {ex}")
-        return None
-    m = LP_RE.match(lp or "")
-    return m.group(3) if m and m.group(2) == cv else None
+    for attempt in range(2):
+        try:
+            e = e_encrypt(json.dumps({"cv": cv, "t": "0"}).encode())
+            resp = json.loads(send(e, platform))
+            plain = e_decrypt(resp["e"])
+            lp = (json.loads(plain).get("d") or {}).get("lp") if plain else None
+            m = LP_RE.match(lp or "")
+            return m.group(3) if m and m.group(2) == cv else None
+        except Exception as ex:
+            print(f"  ! {platform} {cv}: {ex}", flush=True)
+    return None
 
 
 def latest_android() -> str | None:
@@ -80,7 +84,12 @@ def latest_beta(release: str | None) -> str | None:
         return None
     major, minor, patch = vkey(release)
     cvs = [f"{major}.{minor}.{p}" for p in range(patch, patch + 6)] + [f"{major}.{minor + 1}.{p}" for p in range(4)]
-    found = [cv for cv in cvs if query_hash(cv, "ad_beta")]
+    found = []
+    for cv in cvs:
+        if query_hash(cv, "ad_beta"):
+            found.append(cv)
+        elif found:
+            break
     return max(found, key=vkey) if found else None
 
 

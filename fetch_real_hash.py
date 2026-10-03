@@ -62,7 +62,7 @@ def send(e: str, platform: str, ev: str = EV) -> str:
         },
         method="POST",
     )
-    with urllib.request.urlopen(req) as resp:
+    with urllib.request.urlopen(req, timeout=20) as resp:
         raw = resp.read()
         if resp.headers.get("Content-Encoding") == "gzip":
             import gzip

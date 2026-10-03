@@ -15,6 +15,7 @@ concurrency:
 
 jobs:
   sync:
+    timeout-minutes: 10
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -26,7 +27,7 @@ jobs:
       - run: pip install pycryptodome
 
       - name: Fetch official levels into raw/
-        run: python sync_official.py
+        run: python -u sync_official.py
 
       - name: Commit and trigger a build
         env:

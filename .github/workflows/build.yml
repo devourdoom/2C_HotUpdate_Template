@@ -11,6 +11,7 @@ permissions:
 
 jobs:
   build:
+    timeout-minutes: 15
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -23,8 +24,10 @@ jobs:
         run: pip install pycryptodome
 
       - name: Build a bundle for every platform/version under raw/
+        id: build
         run: |
           for cv_dir in raw/*/*/; do
+            [ -d "$cv_dir" ] || continue
             platform_dir="$(dirname "$cv_dir")"
             platform="$(basename "$platform_dir")"
             path_platform="${platform%_beta}"
@@ -41,8 +44,10 @@ jobs:
             python -c "from main import build_bundle; from pathlib import Path; build_bundle(\"$cv\", Path(\"$cv_dir\"), Path(\"dist/hotupdate/$path_platform/level_shipping/$cv\"), \"$hash\")"
             echo "::endgroup::"
           done
+          [ -d dist ] && echo "publish=true" >> "$GITHUB_OUTPUT" || echo "nothing built, nothing to publish"
 
       - name: Publish to gh-pages
+        if: steps.build.outputs.publish == 'true'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
