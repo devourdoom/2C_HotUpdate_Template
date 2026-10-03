@@ -22,14 +22,14 @@ jobs:
       - name: Install dependencies
         run: pip install pycryptodome
 
-      - name: Build a bundle for every variant/platform/version under raw/
+      - name: Build a bundle for every platform/version under raw/
         run: |
-          for cv_dir in raw/*/*/*/; do
+          for cv_dir in raw/*/*/; do
             platform_dir="$(dirname "$cv_dir")"
-            variant="$(basename "$(dirname "$platform_dir")")"
             platform="$(basename "$platform_dir")"
+            path_platform="${platform%_beta}"
             cv="$(basename "$cv_dir")"
-            echo "::group::$variant/$platform/$cv"
+            echo "::group::$platform/$cv"
 
             hash="$(python fetch_real_hash.py "$cv" --platform "$platform" | sed -n 's/^hash:[[:space:]]*//p')"
             if [ -z "$hash" ]; then
@@ -38,7 +38,7 @@ jobs:
               continue
             fi
 
-            python -c "from main import build_bundle; from pathlib import Path; build_bundle(\"$cv\", Path(\"$cv_dir\"), Path(\"dist/$variant/hotupdate/$platform/level_shipping/$cv\"), \"$hash\")"
+            python -c "from main import build_bundle; from pathlib import Path; build_bundle(\"$cv\", Path(\"$cv_dir\"), Path(\"dist/hotupdate/$path_platform/level_shipping/$cv\"), \"$hash\")"
             echo "::endgroup::"
           done
 

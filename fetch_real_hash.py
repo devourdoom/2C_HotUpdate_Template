@@ -1,4 +1,4 @@
-"""Asks the real server which level_shipping hash it serves for a version. Usage: python fetch_real_hash.py [cv] [--platform ad|ios]"""
+"""Asks the real server which level_shipping hash it serves for a version. Usage: python fetch_real_hash.py [cv] [--platform ad|ios|ad_beta]"""
 import hashlib
 import json
 import re
@@ -12,6 +12,7 @@ from Crypto.Util.Padding import pad, unpad
 REAL_HOSTS = {
     "ad":  "http://cloudpvz2android.ditwan.cn/index.php",
     "ios": "http://cloudpvz2ios.ditwan.cn/index.php",
+    "ad_beta": "http://cloudpvz2androidbeta.ditwan.cn/index.php",
 }
 MSG_ID = "V1270"
 FALLBACK_KEY = "1geh6fvq4r20M02s"
@@ -74,7 +75,7 @@ def main() -> None:
 
     ap = argparse.ArgumentParser()
     ap.add_argument("cv", nargs="?", default="4.2.4")
-    ap.add_argument("--platform", choices=("ad", "ios"), default="ad")
+    ap.add_argument("--platform", choices=tuple(REAL_HOSTS), default="ad")
     args = ap.parse_args()
     cv, platform = args.cv, args.platform
 
@@ -104,8 +105,6 @@ def main() -> None:
     print(f"platform: {platform}")
     print(f"cv:       {cv}")
     print(f"hash:     {real_hash}")
-    print(f"\nnext: python main.py {cv} raw/<variant>/{platform}/{cv} "
-          f"dist/<variant>/hotupdate/{platform}/level_shipping/{cv} --hash {real_hash}")
 
 
 if __name__ == "__main__":
