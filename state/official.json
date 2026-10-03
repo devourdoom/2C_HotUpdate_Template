@@ -1,0 +1,41 @@
+{
+ "ad/4.2.4": {
+  "files": {
+   "displayavataractions.json": "7c2ce04132a273784853e9118a7f1da2213c4099d3cbb8697f8cddf9b6efef3f",
+   "propertysheets.json": "159722f2ff427c377c78e176e4e5d1f222e23f1197c37ea8d2228f15a9c733e4",
+   "pvz1_s33_41_n.json": "46e7202a26a97e43ed00038cc34770c2747e9245041403e4c24ff2a00eb6ac55",
+   "pvz1_s33_42_n.json": "3de68caa14e6dd4fb99df018c17ce3ddc349921dfbcc14e9d016247cdbee66f9",
+   "pvz1_s33_43_n.json": "03fecce2b1d17daf888cfe52e6f86a5accf2b817415e3770d598f52f3926f3ca",
+   "pvz1_s33_44_n.json": "c8a074cde20aaca966c28f559f17ba1b4fbf9f16fcc790388fea7eaea134b593",
+   "pvz1_s33_45_n.json": "c5d85adfb94b91bcb7058ae8bc169de434fff50bf81ad11cfb629bac2bbef0be",
+   "pvz1_s33_46_n.json": "684d36ba38366e3f87204ff375992e784afffd9a1a2623bd7d357bd8c2f5ed8b",
+   "pvz1_s33_47_n.json": "5326dfe84c35b94553736221e3081ec8f974dd6064121e83936906ee216dc562",
+   "pvz1_s33_48_n.json": "bcdf4f389a613c57d560960a2b11999e0e4c4843b037032fcc793c1f188bd262",
+   "pvz1_s33_49_n.json": "be6fe567df427050c4759e1a49140f8d03ad5c34beb0f3c71d056ca8515e12da",
+   "pvz1_s33_50_n.json": "24f28073019a17e8b548a1f9479e9f535a7c77ebe2e269303fa4a3027a690963",
+   "pvz1_s33_51_n.json": "371a120321344aaafeae1f7b4da120bfdea50dc0db3b80cc7e989caa77db5deb",
+   "pvz1_s33_52_n.json": "7662b964fd94e4a64a25f4eec3c7a506d4fa28748e18b570a8f77a224dcf10d9",
+   "pvz1_s33_53_n.json": "ed4473287de998a63a8b97aad47b0c6d240f0f5ca88b1da7be121dc135e299ae",
+   "pvz1_s33_54_n.json": "0e0a85ac368fd6f48b069cf038ffaf5b6bf084532999980c9bcd45b26e0ddfd4",
+   "pvz1_s33_55_n.json": "ba93b79ef8bfc56736fbb84d8f4ab0c8dbfbdc6405297ed5eee262581a0d47df",
+   "pvz1_s33_56_n.json": "b55386c0d90aaa9f1d01cfc27b5d0babcffe95fdfa35202b11c31e4a9d71012a",
+   "pvz1_s33_57_n.json": "a3c1d993644115fd7c1468403d234ffd292c29bf18127b870580f2e4b65ccfb5",
+   "pvz1_s33_58_n.json": "aa620a00387503ded9603cc4788dc8811ab52becd0764fe3f1d2e5cd2b2eaf30",
+   "pvz1_s33_59_n.json": "aec2dbe45eb1e7872984af711aba89897a4bf08052e6b0317f11f9963dcde9a6",
+   "pvz1_s33_60_n.json": "8f3da381fe2bbd4676d69cd49ebfd54b8932b40fe96f81101d4ebe6817a313c9",
+   "pvz1_s33_61_n.json": "d432377eb7233c00cddee349719416e85e2f61a8bcb77350fadf9f5b5ee79697",
+   "pvz1_s33_62_n.json": "e1ceb825f932e96bac69bd732e7e850eab1ab02eaa049d9aa9d24e8cb652195c",
+   "pvz1_s33_63_n.json": "a7a555d04c656334091d89c20cb6534af75a9532d746826677bc7bac630a2d22",
+   "pvz1_s33_64_n.json": "71f144b777ec88b1f5134ddfa16599f2c8628353147476aa3511104ebb74057f",
+   "pvz1_s33_boss_robot_4.json": "e6e9a3ce11be0561f3aa7a60f41939268ebf07747c19552b8d5684d1bee12350",
+   "pvz1_s33_boss_robot_6.json": "6afedc77089c6c6b503c7bc99980f0138a63ac028f8c5a4a2c6d3a9faa6bd556",
+   "pvz1_s33_boss_robot_7.json": "3a02c4364003b8e6362e43b71b22546c2ba719b88843ec03f07577a9ad75b158",
+   "pvz1_s33_boss_robot_8.json": "bed9c9345f220bec57268603dd8186224b2bff470e2640ee7c6694fecefd3cfd",
+   "rift_1500.json": "5af5957bc0a0f30a6211ee7e22d77aa0868ec7091baca2552dd33a762794a8fa",
+   "uncharted_anniversary_2026_17.json": "260f76d9fb8da4c6b401e8bafa224e2dd2535d28206874236b5f18e85a928330",
+   "uncharted_anniversary_2026_18.json": "11523da5dcb18c4c9861a50865d08d6ba3bdb6e458cfb2b6701aed103c8590f8",
+   "uncharted_anniversary_2026_19.json": "145e362ba15437f0700daa8afd7157a62e739de7ae714c90aa24e58159f80b5f"
+  },
+  "hash": "db243ccca43e6d7b23934312db4379cda98b55ce3ef4f8e3b8707447a43a9d89"
+ }
+}
