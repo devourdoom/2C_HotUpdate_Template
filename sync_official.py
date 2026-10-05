@@ -37,7 +37,8 @@ def vkey(v: str) -> tuple[int, ...]:
     return tuple(int(p) for p in v.split("."))
 
 
-def query_hash(cv: str, platform: str) -> str | None:
+def query_hash(cv: str, platform: str, strict: bool = False) -> str | None:
+    """Hash the server serves for cv, or None if it serves none. With strict, a failed request raises instead of meaning None."""
     for attempt in range(2):
         try:
             e = e_encrypt(json.dumps({"cv": cv, "t": "0"}).encode())
@@ -48,6 +49,8 @@ def query_hash(cv: str, platform: str) -> str | None:
             return m.group(3) if m and m.group(2) == cv else None
         except Exception as ex:
             print(f"  ! {platform} {cv}: {ex}", flush=True)
+            if strict and attempt == 1:
+                raise
     return None
 
 
@@ -85,11 +88,15 @@ def latest_beta(release: str | None) -> str | None:
     major, minor, patch = vkey(release)
     cvs = [f"{major}.{minor}.{p}" for p in range(patch, patch + 6)] + [f"{major}.{minor + 1}.{p}" for p in range(4)]
     found = []
-    for cv in cvs:
-        if query_hash(cv, "ad_beta"):
-            found.append(cv)
-        elif found:
-            break
+    try:
+        for cv in cvs:
+            if query_hash(cv, "ad_beta", strict=True):
+                found.append(cv)
+            elif found:
+                break
+    except Exception:
+        print("  ! beta version scan interrupted by a request failure, skipping beta this run")
+        return None
     return max(found, key=vkey) if found else None
 
 

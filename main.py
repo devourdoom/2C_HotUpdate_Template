@@ -53,3 +53,15 @@ def build_bundle(cv: str, src_dir: Path, out_dir: Path, override_hash: str | Non
     print(f"\nbundle hash: {bundle_hash}")
     print(f"wrote: {out_dir / (bundle_hash + '.txt')}")
     print(f"wrote: {out_dir / (bundle_hash + '_md5.txt')}")
+
+
+if __name__ == "__main__":
+    import argparse
+
+    ap = argparse.ArgumentParser(description="Pack plaintext level JSON into a level_shipping bundle.")
+    ap.add_argument("cv")
+    ap.add_argument("src_dir", type=Path)
+    ap.add_argument("out_dir", type=Path)
+    ap.add_argument("--hash", dest="override_hash")
+    args = ap.parse_args()
+    build_bundle(args.cv, args.src_dir, args.out_dir, args.override_hash)

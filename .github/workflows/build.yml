@@ -9,14 +9,17 @@ on:
 permissions:
   contents: write
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
 jobs:
   build:
     timeout-minutes: 15
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
@@ -34,7 +37,7 @@ jobs:
             cv="$(basename "$cv_dir")"
             echo "::group::$platform/$cv"
 
-            hash="$(python fetch_real_hash.py "$cv" --platform "$platform" | sed -n 's/^hash:[[:space:]]*//p')"
+            hash="$(python fetch_real_hash.py "$cv" --platform "$platform" | sed -n 's/^hash:[[:space:]]*//p' || true)"
             if [ -z "$hash" ]; then
               echo "no real hash for $cv ($platform) right now -- skipping (the game isn't asking for a bundle at this version)"
               echo "::endgroup::"
