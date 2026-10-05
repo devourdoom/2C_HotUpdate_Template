@@ -26,4 +26,8 @@ def decode(blob: bytes, key: str = LEVEL_KEY) -> bytes:
     if plain[:4] != HEADER_MAGIC:
         raise ValueError("not a CompiledText blob (bad header magic)")
     (size,) = struct.unpack("<I", plain[4:8])
-    return zlib.decompress(plain[8:])[:size]
+    d = zlib.decompressobj()
+    out = d.decompress(plain[8:] + bytes(64))
+    if not d.eof:
+        raise ValueError("truncated zlib stream")
+    return out[:size]
