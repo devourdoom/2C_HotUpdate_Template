@@ -3,7 +3,7 @@ name: Build and publish level bundles
 on:
   push:
     branches: [main, master]
-    paths: ["raw/**"]
+    paths: ["json/**", "text/**"]
   workflow_dispatch:
 
 permissions:
@@ -26,10 +26,10 @@ jobs:
       - name: Install dependencies
         run: pip install pycryptodome
 
-      - name: Build a bundle for every platform/version under raw/
+      - name: Build level bundles (json/) and text files (text/)
         id: build
         run: |
-          for cv_dir in raw/*/*/; do
+          for cv_dir in json/*/*/; do
             [ -d "$cv_dir" ] || continue
             platform_dir="$(dirname "$cv_dir")"
             platform="$(basename "$platform_dir")"
@@ -45,6 +45,13 @@ jobs:
             fi
 
             python -c "from main import build_bundle; from pathlib import Path; build_bundle(\"$cv\", Path(\"$cv_dir\"), Path(\"dist/hotupdate/$path_platform/level_shipping/$cv\"), \"$hash\")"
+            echo "::endgroup::"
+          done
+          for text_dir in text/*/; do
+            [ -d "$text_dir" ] || continue
+            platform="$(basename "$text_dir")"
+            echo "::group::text/$platform"
+            python -c "from main import build_text; from pathlib import Path; build_text(Path(\"$text_dir\"), Path(\"dist/hotupdate/$platform/res_release\"))"
             echo "::endgroup::"
           done
           [ -d dist ] && echo "publish=true" >> "$GITHUB_OUTPUT" || echo "nothing built, nothing to publish"

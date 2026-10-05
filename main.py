@@ -2,6 +2,7 @@
 import gzip
 import hashlib
 import json
+import re
 import sys
 import tarfile
 import tempfile
@@ -53,6 +54,33 @@ def build_bundle(cv: str, src_dir: Path, out_dir: Path, override_hash: str | Non
     print(f"\nbundle hash: {bundle_hash}")
     print(f"wrote: {out_dir / (bundle_hash + '.txt')}")
     print(f"wrote: {out_dir / (bundle_hash + '_md5.txt')}")
+
+
+TEXT_NAME = "pvz2_l.txt"
+TEXT_FILE_RE = re.compile(r"(\d+)\.(\d+)\.(\d+)_(\d+)_\w+\.txt")
+
+
+def latest_text(platform_dir: Path) -> Path | None:
+    """Newest <version>_<revision>_<platform>.txt under text/<platform>/."""
+    found = [(tuple(map(int, m.groups())), p) for p in platform_dir.glob("*/*.txt") if (m := TEXT_FILE_RE.fullmatch(p.name))]
+    return max(found)[1] if found else None
+
+
+def build_text(platform_dir: Path, out_dir: Path) -> None:
+    """Encodes the newest plaintext localization file as pvz2_l.txt, with the file_list.txt that points at it."""
+    src = latest_text(platform_dir)
+    if not src:
+        print(f"  no text files in {platform_dir}")
+        return
+    plain = src.read_bytes()
+    member = encode(plain)
+    if decode(member) != plain:
+        sys.exit(f"self-check failed encoding {src.name} -- refusing to publish a broken text file")
+    out_dir.mkdir(parents=True, exist_ok=True)
+    (out_dir / TEXT_NAME).write_bytes(b64encode(member))
+    listing = json.dumps({"File": {"Name": TEXT_NAME, "Hash": hashlib.md5(plain).hexdigest()}}, separators=(",", ":"))
+    (out_dir / "file_list.txt").write_bytes(b64encode(encode(listing.encode("utf-8"))))
+    print(f"  encoded {src.relative_to(platform_dir)} ({len(plain)} bytes) -> {TEXT_NAME} + file_list.txt")
 
 
 if __name__ == "__main__":

@@ -1,4 +1,4 @@
-"""Mirrors the official level bundles into raw/ (run by .github/workflows/sync.yml)."""
+"""Mirrors the official level bundles into json/ (run by .github/workflows/sync.yml)."""
 import argparse
 import gzip
 import hashlib
@@ -20,7 +20,7 @@ socket.setdefaulttimeout(20)
 
 ROOT = Path(__file__).parent
 CONFIG = ROOT / "config.json"
-STATE = ROOT / "state" / "official.json"
+STATE = ROOT / "tracking" / "levels.json"
 COMMIT_MSG = ROOT / ".sync_message"
 
 CDN_HOSTS = {
@@ -156,7 +156,7 @@ def main() -> None:
 
         key = f"{platform}/{latest}"
         prev = state.get(key, {"hash": None, "files": {}})
-        folder = ROOT / "raw" / platform / latest
+        folder = ROOT / "json" / platform / latest
         if prev["hash"] == h and folder.is_dir():
             continue
 

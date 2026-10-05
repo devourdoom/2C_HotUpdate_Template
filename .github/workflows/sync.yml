@@ -29,8 +29,11 @@ jobs:
 
       - run: pip install pycryptodome
 
-      - name: Fetch official levels into raw/
+      - name: Fetch official levels into json/
         run: python -u sync_official.py
+
+      - name: Fetch official text into text/
+        run: python -u sync_text.py
 
       - name: Commit and trigger a build
         env:
@@ -42,7 +45,7 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add raw state
+          git add json text tracking
           git commit -F .sync_message
           git push
           # pushes made with GITHUB_TOKEN don't fire other workflows, so start the build explicitly
