@@ -18,7 +18,6 @@
                 "ShinyPresentTable": "egypt_shiny_01",
                 "Modules": [
                     "RTID(StandardIntro@LevelModules)",
-                    "RTID(ModernMowers@LevelModules)",
                     "RTID(DefaultZombieWinCondition@LevelModules)",
                     "RTID(SeedBank@CurrentLevel)",
                     "RTID(StartPlants@CurrentLevel)",
@@ -34,8 +33,8 @@
                     "tutorial",
                     "tutorial_armor1",
                     "tutorial_armor2",
-                    "modern_miner",
-                    "tutorial_gargantuar"
+                    "tutorial_gargantuar",
+                    "mech_cone"
                 ]
             }
         },
@@ -50,17 +49,27 @@
                 "InitialPlantList": [
                     {
                         "PlantType": "laser_bean",
-                        "Weight": 140,
+                        "Weight": 90,
                         "MinCount": 0,
                         "MinWeightFactor": 1,
-                        "MaxCount": 4,
+                        "MaxCount": 7,
                         "MaxWeightFactor": 0,
                         "iLevel": 1,
                         "iAvatar": -1
                     },
                     {
                         "PlantType": "splitpea",
-                        "Weight": 180,
+                        "Weight": 90,
+                        "MinCount": 0,
+                        "MinWeightFactor": 1,
+                        "MaxCount": 2,
+                        "MaxWeightFactor": 0,
+                        "iLevel": 1,
+                        "iAvatar": -1
+                    },
+                    {
+                        "PlantType": "repeater",
+                        "Weight": 130,
                         "MinCount": 0,
                         "MinWeightFactor": 1,
                         "MaxCount": 5,
@@ -70,20 +79,20 @@
                     },
                     {
                         "PlantType": "wallnut",
-                        "Weight": 200,
-                        "MinCount": 0,
-                        "MinWeightFactor": 1,
-                        "MaxCount": 5,
+                        "Weight": 120,
+                        "MinCount": 1,
+                        "MinWeightFactor": 3,
+                        "MaxCount": 4,
                         "MaxWeightFactor": 0,
                         "iLevel": 1,
                         "iAvatar": -1
                     },
                     {
                         "PlantType": "magnetshroom",
-                        "Weight": 120,
-                        "MinCount": 0,
-                        "MinWeightFactor": 1,
-                        "MaxCount": 5,
+                        "Weight": 160,
+                        "MinCount": 1,
+                        "MinWeightFactor": 2,
+                        "MaxCount": 3,
                         "MaxWeightFactor": 0,
                         "iLevel": 1,
                         "iAvatar": -1
@@ -107,20 +116,30 @@
                         "MaxWeightFactor": 0,
                         "iLevel": 1,
                         "iAvatar": -1
+                    },
+                    {
+                        "PlantType": "empea",
+                        "Weight": 70,
+                        "MinCount": 1,
+                        "MinWeightFactor": 3,
+                        "MaxCount": 1,
+                        "MaxWeightFactor": 0.25,
+                        "iLevel": 1,
+                        "iAvatar": -1
                     }
                 ],
                 "DropDelayConditions": [
                     {
                         "MaxPackets": 0,
-                        "Delay": 2.0
+                        "Delay": 2.5
                     },
                     {
                         "MaxPackets": 3,
-                        "Delay": 3.0
+                        "Delay": 4.0
                     },
                     {
                         "MaxPackets": 6,
-                        "Delay": 5.0
+                        "Delay": 6.0
                     }
                 ],
                 "SpeedConditions": [
@@ -168,17 +187,17 @@
                 "Plants": [
                     {
                         "PlantType": "magnetshroom",
-                        "GridX": 1,
+                        "GridX": 2,
                         "GridY": 1
                     },
                     {
                         "PlantType": "magnetshroom",
-                        "GridX": 2,
+                        "GridX": 3,
                         "GridY": 2
                     },
                     {
                         "PlantType": "magnetshroom",
-                        "GridX": 1,
+                        "GridX": 2,
                         "GridY": 3
                     }
                 ]
@@ -188,18 +207,26 @@
             "aliases": [
                 "Goal2"
             ],
-            "objclass": "StarChallengeKillZombiesInTimeProps",
+            "objclass": "DefeatZombiesOfTypeChallengeProps",
             "objdata": {
-                "ZombiesToKill": 12,
-                "Time": 10
+                "Description": "[S34_MEMORY_HARD_TOY_KILLS_013]",
+                "NumZombiesToKill": 20,
+                "TypesToKill": {
+                    "List": [
+                        "Neuropathy"
+                    ],
+                    "ListType": "whitelist"
+                }
             }
         },
         {
             "aliases": [
                 "Goal3"
             ],
-            "objclass": "StarChallengeSaveMowersProps",
-            "objdata": {}
+            "objclass": "StarChallengePlantsLostProps",
+            "objdata": {
+                "MaximumPlantsLost": 20
+            }
         },
         {
             "aliases": [
@@ -233,8 +260,8 @@
             ],
             "objclass": "ZombieJitterOffsets",
             "objdata": {
-                "ZombieSpawningOffsetIncrement": 35,
-                "ZombieSpawningRandomJitter": 10
+                "ZombieSpawningOffsetIncrement": 65,
+                "ZombieSpawningRandomJitter": 55
             }
         },
         {
@@ -243,8 +270,8 @@
             ],
             "objclass": "ZombieJitterOffsets",
             "objdata": {
-                "ZombieSpawningOffsetIncrement": 35,
-                "ZombieSpawningRandomJitter": 8
+                "ZombieSpawningOffsetIncrement": 75,
+                "ZombieSpawningRandomJitter": 45
             }
         },
         {
@@ -255,17 +282,17 @@
             "objdata": {
                 "InitialGridItemPlacements": [
                     {
-                        "GridX": 6,
+                        "GridX": 7,
                         "GridY": 1,
                         "TypeName": "zombie_bound_tile"
                     },
                     {
-                        "GridX": 7,
+                        "GridX": 8,
                         "GridY": 2,
                         "TypeName": "zombie_bound_tile"
                     },
                     {
-                        "GridX": 6,
+                        "GridX": 7,
                         "GridY": 3,
                         "TypeName": "zombie_bound_tile"
                     }
@@ -296,6 +323,12 @@
                         "GridX": 1,
                         "GridY": 2,
                         "Level": 1
+                    },
+                    {
+                        "TypeName": "wallnut",
+                        "GridX": 4,
+                        "GridY": 2,
+                        "Level": 1
                     }
                 ]
             }
@@ -309,12 +342,12 @@
                 "Zombies": [
                     {
                         "Type": "RTID(tutorial@ZombieTypes)",
-                        "Row": "1",
+                        "Row": "5",
                         "Level": 1
                     },
                     {
-                        "Type": "RTID(tutorial@ZombieTypes)",
-                        "Row": "5",
+                        "Type": "RTID(tutorial_armor2@ZombieTypes)",
+                        "Row": "1",
                         "Level": 1
                     }
                 ],
@@ -340,8 +373,8 @@
                         "Level": 1
                     },
                     {
-                        "Type": "RTID(tutorial_armor1@ZombieTypes)",
-                        "Row": "2",
+                        "Type": "RTID(tutorial_armor2@ZombieTypes)",
+                        "Row": "5",
                         "Level": 1
                     }
                 ],
@@ -357,11 +390,6 @@
             "objdata": {
                 "Zombies": [
                     {
-                        "Type": "RTID(tutorial_armor1@ZombieTypes)",
-                        "Row": "1",
-                        "Level": 1
-                    },
-                    {
                         "Type": "RTID(tutorial@ZombieTypes)",
                         "Row": "5",
                         "Level": 1
@@ -372,8 +400,13 @@
                         "Level": 1
                     },
                     {
-                        "Type": "RTID(tutorial@ZombieTypes)",
-                        "Row": "4",
+                        "Type": "RTID(tutorial_armor2@ZombieTypes)",
+                        "Row": "1",
+                        "Level": 1
+                    },
+                    {
+                        "Type": "RTID(tutorial_armor2@ZombieTypes)",
+                        "Row": "5",
                         "Level": 1
                     }
                 ],
@@ -400,22 +433,12 @@
                     },
                     {
                         "Type": "RTID(tutorial_armor1@ZombieTypes)",
-                        "Row": "2",
-                        "Level": 1
-                    },
-                    {
-                        "Type": "RTID(tutorial_armor2@ZombieTypes)",
-                        "Row": "4",
-                        "Level": 1
-                    },
-                    {
-                        "Type": "RTID(tutorial_armor1@ZombieTypes)",
                         "Row": "3",
                         "Level": 1
                     }
                 ],
-                "AdditionalPlantfood": 1,
-                "JitterOffsets": "RTID(NormalOffsets@CurrentLevel)"
+                "AdditionalPlantfood": 0,
+                "JitterOffsets": "RTID(CombatOffsets@CurrentLevel)"
             }
         },
         {
@@ -441,33 +464,19 @@
                         "Level": 1
                     },
                     {
-                        "Type": "RTID(tutorial_armor2@ZombieTypes)",
-                        "Row": "4",
-                        "Level": 1
-                    },
-                    {
                         "Type": "RTID(tutorial_armor1@ZombieTypes)",
                         "Row": "3",
                         "Level": 1
                     },
                     {
-                        "Type": "RTID(tutorial@ZombieTypes)",
-                        "Row": "1",
-                        "Level": 1
-                    },
-                    {
                         "Type": "RTID(tutorial_armor2@ZombieTypes)",
                         "Row": "5",
-                        "Level": 1
-                    },
-                    {
-                        "Type": "RTID(modern_miner@ZombieTypes)",
-                        "Row": "2",
-                        "Level": 1
+                        "Level": 1,
+                        "Column": "7"
                     }
                 ],
                 "AdditionalPlantfood": 1,
-                "JitterOffsets": "RTID(NormalOffsets@CurrentLevel)"
+                "JitterOffsets": "RTID(CombatOffsets@CurrentLevel)"
             }
         },
         {
@@ -478,11 +487,6 @@
             "objdata": {
                 "Zombies": [
                     {
-                        "Type": "RTID(tutorial_armor2@ZombieTypes)",
-                        "Row": "1",
-                        "Level": 1
-                    },
-                    {
                         "Type": "RTID(tutorial@ZombieTypes)",
                         "Row": "5",
                         "Level": 1
@@ -490,11 +494,6 @@
                     {
                         "Type": "RTID(tutorial_armor1@ZombieTypes)",
                         "Row": "2",
-                        "Level": 1
-                    },
-                    {
-                        "Type": "RTID(tutorial_armor2@ZombieTypes)",
-                        "Row": "4",
                         "Level": 1
                     },
                     {
@@ -506,15 +505,10 @@
                         "Type": "RTID(tutorial@ZombieTypes)",
                         "Row": "1",
                         "Level": 1
-                    },
-                    {
-                        "Type": "RTID(tutorial_gargantuar@ZombieTypes)",
-                        "Row": "1",
-                        "Level": 1
                     }
                 ],
                 "AdditionalPlantfood": 0,
-                "JitterOffsets": "RTID(NormalOffsets@CurrentLevel)"
+                "JitterOffsets": "RTID(CombatOffsets@CurrentLevel)"
             }
         },
         {
@@ -542,7 +536,8 @@
                     {
                         "Type": "RTID(tutorial_armor2@ZombieTypes)",
                         "Row": "4",
-                        "Level": 1
+                        "Level": 1,
+                        "Column": "5"
                     },
                     {
                         "Type": "RTID(tutorial_armor1@ZombieTypes)",
@@ -557,17 +552,8 @@
                     {
                         "Type": "RTID(tutorial_armor2@ZombieTypes)",
                         "Row": "5",
-                        "Level": 1
-                    },
-                    {
-                        "Type": "RTID(modern_miner@ZombieTypes)",
-                        "Row": "3",
-                        "Level": 1
-                    },
-                    {
-                        "Type": "RTID(modern_miner@ZombieTypes)",
-                        "Row": "4",
-                        "Level": 1
+                        "Level": 1,
+                        "Column": "7"
                     },
                     {
                         "Type": "RTID(tutorial_gargantuar@ZombieTypes)",
@@ -575,8 +561,8 @@
                         "Level": 1
                     }
                 ],
-                "AdditionalPlantfood": 1,
-                "JitterOffsets": "RTID(NormalOffsets@CurrentLevel)"
+                "AdditionalPlantfood": 0,
+                "JitterOffsets": "RTID(CombatOffsets@CurrentLevel)"
             }
         },
         {
@@ -589,7 +575,8 @@
                     {
                         "Type": "RTID(tutorial_armor2@ZombieTypes)",
                         "Row": "1",
-                        "Level": 1
+                        "Level": 1,
+                        "Column": "5"
                     },
                     {
                         "Type": "RTID(tutorial@ZombieTypes)",
@@ -604,7 +591,8 @@
                     {
                         "Type": "RTID(tutorial_armor2@ZombieTypes)",
                         "Row": "4",
-                        "Level": 1
+                        "Level": 1,
+                        "Column": "6"
                     },
                     {
                         "Type": "RTID(tutorial_armor1@ZombieTypes)",
@@ -619,7 +607,8 @@
                     {
                         "Type": "RTID(tutorial_armor2@ZombieTypes)",
                         "Row": "5",
-                        "Level": 1
+                        "Level": 1,
+                        "Column": "7"
                     },
                     {
                         "Type": "RTID(tutorial@ZombieTypes)",
@@ -628,7 +617,7 @@
                     }
                 ],
                 "AdditionalPlantfood": 1,
-                "JitterOffsets": "RTID(NormalOffsets@CurrentLevel)"
+                "JitterOffsets": "RTID(CombatOffsets@CurrentLevel)"
             }
         },
         {
@@ -641,7 +630,8 @@
                     {
                         "Type": "RTID(tutorial_armor2@ZombieTypes)",
                         "Row": "1",
-                        "Level": 1
+                        "Level": 1,
+                        "Column": "6"
                     },
                     {
                         "Type": "RTID(tutorial@ZombieTypes)",
@@ -656,7 +646,8 @@
                     {
                         "Type": "RTID(tutorial_armor2@ZombieTypes)",
                         "Row": "4",
-                        "Level": 1
+                        "Level": 1,
+                        "Column": "5"
                     },
                     {
                         "Type": "RTID(tutorial_armor1@ZombieTypes)",
@@ -671,7 +662,8 @@
                     {
                         "Type": "RTID(tutorial_armor2@ZombieTypes)",
                         "Row": "5",
-                        "Level": 1
+                        "Level": 1,
+                        "Column": "7"
                     },
                     {
                         "Type": "RTID(tutorial@ZombieTypes)",
@@ -680,16 +672,6 @@
                     },
                     {
                         "Type": "RTID(tutorial_armor1@ZombieTypes)",
-                        "Row": "4",
-                        "Level": 1
-                    },
-                    {
-                        "Type": "RTID(modern_miner@ZombieTypes)",
-                        "Row": "2",
-                        "Level": 1
-                    },
-                    {
-                        "Type": "RTID(modern_miner@ZombieTypes)",
                         "Row": "4",
                         "Level": 1
                     },
@@ -705,7 +687,7 @@
                     }
                 ],
                 "AdditionalPlantfood": 0,
-                "JitterOffsets": "RTID(NormalOffsets@CurrentLevel)"
+                "JitterOffsets": "RTID(CombatOffsets@CurrentLevel)"
             }
         },
         {
@@ -718,7 +700,8 @@
                     {
                         "Type": "RTID(tutorial_armor2@ZombieTypes)",
                         "Row": "1",
-                        "Level": 1
+                        "Level": 1,
+                        "Column": "6"
                     },
                     {
                         "Type": "RTID(tutorial@ZombieTypes)",
@@ -733,7 +716,8 @@
                     {
                         "Type": "RTID(tutorial_armor2@ZombieTypes)",
                         "Row": "4",
-                        "Level": 1
+                        "Level": 1,
+                        "Column": "6"
                     },
                     {
                         "Type": "RTID(tutorial_armor1@ZombieTypes)",
@@ -748,7 +732,8 @@
                     {
                         "Type": "RTID(tutorial_armor2@ZombieTypes)",
                         "Row": "5",
-                        "Level": 1
+                        "Level": 1,
+                        "Column": "7"
                     },
                     {
                         "Type": "RTID(tutorial@ZombieTypes)",
@@ -763,7 +748,8 @@
                     {
                         "Type": "RTID(tutorial_armor2@ZombieTypes)",
                         "Row": "3",
-                        "Level": 1
+                        "Level": 1,
+                        "Column": "5"
                     },
                     {
                         "Type": "RTID(tutorial_armor1@ZombieTypes)",
@@ -773,16 +759,6 @@
                     {
                         "Type": "RTID(tutorial@ZombieTypes)",
                         "Row": "5",
-                        "Level": 1
-                    },
-                    {
-                        "Type": "RTID(modern_miner@ZombieTypes)",
-                        "Row": "2",
-                        "Level": 1
-                    },
-                    {
-                        "Type": "RTID(modern_miner@ZombieTypes)",
-                        "Row": "3",
                         "Level": 1
                     },
                     {
@@ -792,22 +768,12 @@
                     },
                     {
                         "Type": "RTID(tutorial_gargantuar@ZombieTypes)",
-                        "Row": "5",
-                        "Level": 1
-                    },
-                    {
-                        "Type": "RTID(modern_miner@ZombieTypes)",
-                        "Row": "4",
-                        "Level": 1
-                    },
-                    {
-                        "Type": "RTID(modern_miner@ZombieTypes)",
                         "Row": "5",
                         "Level": 1
                     }
                 ],
-                "AdditionalPlantfood": 1,
-                "JitterOffsets": "RTID(NormalOffsets@CurrentLevel)"
+                "AdditionalPlantfood": 0,
+                "JitterOffsets": "RTID(CombatOffsets@CurrentLevel)"
             }
         },
         {
@@ -819,40 +785,50 @@
                 "Add": [
                     {
                         "Type": "RTID(laser_bean@PlantTypes)",
-                        "Weight": 170,
+                        "Weight": 100,
                         "MinCount": 0,
                         "MinWeightFactor": 1,
-                        "MaxCount": 5,
+                        "MaxCount": 7,
                         "MaxWeightFactor": 0,
                         "iLevel": 1,
                         "iAvatar": -1
                     },
                     {
                         "Type": "RTID(splitpea@PlantTypes)",
-                        "Weight": 220,
+                        "Weight": 100,
                         "MinCount": 0,
                         "MinWeightFactor": 1,
-                        "MaxCount": 6,
+                        "MaxCount": 2,
+                        "MaxWeightFactor": 0,
+                        "iLevel": 1,
+                        "iAvatar": -1
+                    },
+                    {
+                        "Type": "RTID(repeater@PlantTypes)",
+                        "Weight": 140,
+                        "MinCount": 0,
+                        "MinWeightFactor": 1,
+                        "MaxCount": 5,
                         "MaxWeightFactor": 0,
                         "iLevel": 1,
                         "iAvatar": -1
                     },
                     {
                         "Type": "RTID(wallnut@PlantTypes)",
-                        "Weight": 190,
+                        "Weight": 120,
                         "MinCount": 0,
                         "MinWeightFactor": 1,
-                        "MaxCount": 5,
+                        "MaxCount": 4,
                         "MaxWeightFactor": 0,
                         "iLevel": 1,
                         "iAvatar": -1
                     },
                     {
                         "Type": "RTID(magnetshroom@PlantTypes)",
-                        "Weight": 160,
-                        "MinCount": 0,
-                        "MinWeightFactor": 1,
-                        "MaxCount": 5,
+                        "Weight": 140,
+                        "MinCount": 1,
+                        "MinWeightFactor": 2,
+                        "MaxCount": 3,
                         "MaxWeightFactor": 0,
                         "iLevel": 1,
                         "iAvatar": -1
@@ -862,7 +838,7 @@
                         "Weight": 35,
                         "MinCount": 0,
                         "MinWeightFactor": 1,
-                        "MaxCount": 2,
+                        "MaxCount": 1,
                         "MaxWeightFactor": 0,
                         "iLevel": 1,
                         "iAvatar": -1
@@ -873,6 +849,26 @@
                         "MinCount": 0,
                         "MinWeightFactor": 1,
                         "MaxCount": 0,
+                        "MaxWeightFactor": 0,
+                        "iLevel": 1,
+                        "iAvatar": -1
+                    },
+                    {
+                        "Type": "RTID(empea@PlantTypes)",
+                        "Weight": 60,
+                        "MinCount": 1,
+                        "MinWeightFactor": 3,
+                        "MaxCount": 1,
+                        "MaxWeightFactor": 0.25,
+                        "iLevel": 1,
+                        "iAvatar": -1
+                    },
+                    {
+                        "Type": "RTID(pumpkin@PlantTypes)",
+                        "Weight": 120,
+                        "MinCount": 1,
+                        "MinWeightFactor": 3,
+                        "MaxCount": 3,
                         "MaxWeightFactor": 0,
                         "iLevel": 1,
                         "iAvatar": -1
@@ -889,47 +885,17 @@
                 "Add": [
                     {
                         "Type": "RTID(laser_bean@PlantTypes)",
-                        "Weight": 150,
+                        "Weight": 90,
                         "MinCount": 0,
                         "MinWeightFactor": 1,
-                        "MaxCount": 6,
+                        "MaxCount": 7,
                         "MaxWeightFactor": 0,
                         "iLevel": 1,
                         "iAvatar": -1
                     },
                     {
                         "Type": "RTID(splitpea@PlantTypes)",
-                        "Weight": 180,
-                        "MinCount": 0,
-                        "MinWeightFactor": 1,
-                        "MaxCount": 6,
-                        "MaxWeightFactor": 0,
-                        "iLevel": 1,
-                        "iAvatar": -1
-                    },
-                    {
-                        "Type": "RTID(wallnut@PlantTypes)",
-                        "Weight": 170,
-                        "MinCount": 0,
-                        "MinWeightFactor": 1,
-                        "MaxCount": 5,
-                        "MaxWeightFactor": 0,
-                        "iLevel": 1,
-                        "iAvatar": -1
-                    },
-                    {
-                        "Type": "RTID(magnetshroom@PlantTypes)",
-                        "Weight": 160,
-                        "MinCount": 0,
-                        "MinWeightFactor": 1,
-                        "MaxCount": 5,
-                        "MaxWeightFactor": 0,
-                        "iLevel": 1,
-                        "iAvatar": -1
-                    },
-                    {
-                        "Type": "RTID(cherry_bomb@PlantTypes)",
-                        "Weight": 60,
+                        "Weight": 90,
                         "MinCount": 0,
                         "MinWeightFactor": 1,
                         "MaxCount": 2,
@@ -938,11 +904,81 @@
                         "iAvatar": -1
                     },
                     {
-                        "Type": "RTID(wintermelon@PlantTypes)",
-                        "Weight": 180,
+                        "Type": "RTID(repeater@PlantTypes)",
+                        "Weight": 130,
+                        "MinCount": 0,
+                        "MinWeightFactor": 1,
+                        "MaxCount": 3,
+                        "MaxWeightFactor": 0,
+                        "iLevel": 1,
+                        "iAvatar": -1
+                    },
+                    {
+                        "Type": "RTID(wallnut@PlantTypes)",
+                        "Weight": 110,
                         "MinCount": 0,
                         "MinWeightFactor": 1,
                         "MaxCount": 4,
+                        "MaxWeightFactor": 0,
+                        "iLevel": 1,
+                        "iAvatar": -1
+                    },
+                    {
+                        "Type": "RTID(magnetshroom@PlantTypes)",
+                        "Weight": 200,
+                        "MinCount": 0,
+                        "MinWeightFactor": 1,
+                        "MaxCount": 4,
+                        "MaxWeightFactor": 0,
+                        "iLevel": 1,
+                        "iAvatar": -1
+                    },
+                    {
+                        "Type": "RTID(cherry_bomb@PlantTypes)",
+                        "Weight": 45,
+                        "MinCount": 0,
+                        "MinWeightFactor": 1,
+                        "MaxCount": 1,
+                        "MaxWeightFactor": 0,
+                        "iLevel": 1,
+                        "iAvatar": -1
+                    },
+                    {
+                        "Type": "RTID(wintermelon@PlantTypes)",
+                        "Weight": 70,
+                        "MinCount": 0,
+                        "MinWeightFactor": 1,
+                        "MaxCount": 2,
+                        "MaxWeightFactor": 0,
+                        "iLevel": 1,
+                        "iAvatar": -1
+                    },
+                    {
+                        "Type": "RTID(empea@PlantTypes)",
+                        "Weight": 50,
+                        "MinCount": 1,
+                        "MinWeightFactor": 1,
+                        "MaxCount": 1,
+                        "MaxWeightFactor": 0.25,
+                        "iLevel": 1,
+                        "iAvatar": -1
+                    },
+                    {
+                        "Type": "RTID(nekotail@PlantTypes)",
+                        "Weight": 100,
+                        "MinCount": 1,
+                        "MinWeightFactor": 3,
+                        "MaxCount": 3,
+                        "MaxWeightFactor": 0,
+                        "iLevel": 1,
+                        "iAvatar": -1
+                    },
+                    {
+                        "Type": "RTID(pumpkin@PlantTypes)",
+                        "Weight": 70,
+                        "MinCount": 1,
+                        "MinWeightFactor": 3,
+                        "MaxCount": 3,
                         "MaxWeightFactor": 0,
                         "iLevel": 1,
                         "iAvatar": -1
@@ -980,15 +1016,18 @@
                 "Waves": [
                     [
                         "RTID(Wave01@CurrentLevel)",
-                        "RTID(Boxes1@CurrentLevel)"
+                        "RTID(Boxes1@CurrentLevel)",
+                        "RTID(TextRuleNotice@CurrentLevel)"
                     ],
                     [
                         "RTID(Wave02@CurrentLevel)",
                         "RTID(Boxes2@CurrentLevel)"
                     ],
                     [
+                        "RTID(TileSupply3@CurrentLevel)",
                         "RTID(Wave03@CurrentLevel)",
-                        "RTID(Boxes3@CurrentLevel)"
+                        "RTID(Boxes3@CurrentLevel)",
+                        "RTID(Mechs3@CurrentLevel)"
                     ],
                     [
                         "RTID(Supply4@CurrentLevel)",
@@ -996,8 +1035,10 @@
                         "RTID(Boxes4@CurrentLevel)"
                     ],
                     [
+                        "RTID(TileStop5@CurrentLevel)",
                         "RTID(Wave05@CurrentLevel)",
-                        "RTID(Boxes5@CurrentLevel)"
+                        "RTID(Boxes5@CurrentLevel)",
+                        "RTID(Mechs5@CurrentLevel)"
                     ],
                     [
                         "RTID(Wave06@CurrentLevel)",
@@ -1006,19 +1047,24 @@
                     [
                         "RTID(Supply7@CurrentLevel)",
                         "RTID(Wave07@CurrentLevel)",
-                        "RTID(Boxes7@CurrentLevel)"
+                        "RTID(Boxes7@CurrentLevel)",
+                        "RTID(Mechs7@CurrentLevel)"
                     ],
                     [
                         "RTID(Wave08@CurrentLevel)",
-                        "RTID(Boxes8@CurrentLevel)"
+                        "RTID(Boxes8@CurrentLevel)",
+                        "RTID(Mechs8@CurrentLevel)"
                     ],
                     [
                         "RTID(Wave09@CurrentLevel)",
-                        "RTID(Boxes9@CurrentLevel)"
+                        "RTID(Boxes9@CurrentLevel)",
+                        "RTID(Mechs9@CurrentLevel)"
                     ],
                     [
                         "RTID(Wave10@CurrentLevel)",
-                        "RTID(Boxes10@CurrentLevel)"
+                        "RTID(Boxes10@CurrentLevel)",
+                        "RTID(Mechs10@CurrentLevel)",
+                        "RTID(CenterMechs10@CurrentLevel)"
                     ]
                 ],
                 "ZombieCountdownFirstWaveConveyorSecs": 6
@@ -1052,7 +1098,7 @@
                     {
                         "Type": "RTID(Neuropathy@ZombieTypes)",
                         "Row": "2",
-                        "Column": "8",
+                        "Column": "7",
                         "Level": 1
                     },
                     {
@@ -1075,19 +1121,13 @@
                 "Zombies": [
                     {
                         "Type": "RTID(Neuropathy@ZombieTypes)",
-                        "Row": "2",
-                        "Column": "8",
+                        "Row": "4",
+                        "Column": "7",
                         "Level": 1
                     },
                     {
                         "Type": "RTID(Neuropathy@ZombieTypes)",
                         "Row": "3",
-                        "Column": "8",
-                        "Level": 1
-                    },
-                    {
-                        "Type": "RTID(Neuropathy@ZombieTypes)",
-                        "Row": "4",
                         "Column": "8",
                         "Level": 1
                     }
@@ -1105,25 +1145,19 @@
                 "Zombies": [
                     {
                         "Type": "RTID(Neuropathy@ZombieTypes)",
-                        "Row": "2",
-                        "Column": "8",
-                        "Level": 1
-                    },
-                    {
-                        "Type": "RTID(Neuropathy@ZombieTypes)",
                         "Row": "3",
                         "Column": "8",
                         "Level": 1
                     },
                     {
                         "Type": "RTID(Neuropathy@ZombieTypes)",
-                        "Row": "4",
-                        "Column": "8",
+                        "Row": "2",
+                        "Column": "7",
                         "Level": 1
                     }
                 ],
                 "AdditionalPlantfood": 0,
-                "JitterOffsets": "RTID(CrowdOffsets@CurrentLevel)"
+                "JitterOffsets": "RTID(BoxPressureOffsets@CurrentLevel)"
             }
         },
         {
@@ -1136,13 +1170,7 @@
                     {
                         "Type": "RTID(Neuropathy@ZombieTypes)",
                         "Row": "2",
-                        "Column": "8",
-                        "Level": 1
-                    },
-                    {
-                        "Type": "RTID(Neuropathy@ZombieTypes)",
-                        "Row": "3",
-                        "Column": "8",
+                        "Column": "7",
                         "Level": 1
                     },
                     {
@@ -1150,16 +1178,10 @@
                         "Row": "4",
                         "Column": "8",
                         "Level": 1
-                    },
-                    {
-                        "Type": "RTID(Neuropathy@ZombieTypes)",
-                        "Row": "2",
-                        "Column": "8",
-                        "Level": 1
                     }
                 ],
                 "AdditionalPlantfood": 0,
-                "JitterOffsets": "RTID(CrowdOffsets@CurrentLevel)"
+                "JitterOffsets": "RTID(BoxPressureOffsets@CurrentLevel)"
             }
         },
         {
@@ -1171,18 +1193,6 @@
                 "Zombies": [
                     {
                         "Type": "RTID(Neuropathy@ZombieTypes)",
-                        "Row": "2",
-                        "Column": "8",
-                        "Level": 1
-                    },
-                    {
-                        "Type": "RTID(Neuropathy@ZombieTypes)",
-                        "Row": "3",
-                        "Column": "8",
-                        "Level": 1
-                    },
-                    {
-                        "Type": "RTID(Neuropathy@ZombieTypes)",
                         "Row": "4",
                         "Column": "8",
                         "Level": 1
@@ -1190,12 +1200,18 @@
                     {
                         "Type": "RTID(Neuropathy@ZombieTypes)",
                         "Row": "2",
+                        "Column": "7",
+                        "Level": 1
+                    },
+                    {
+                        "Type": "RTID(Neuropathy@ZombieTypes)",
+                        "Row": "3",
                         "Column": "8",
                         "Level": 1
                     }
                 ],
                 "AdditionalPlantfood": 0,
-                "JitterOffsets": "RTID(CrowdOffsets@CurrentLevel)"
+                "JitterOffsets": "RTID(BoxPressureOffsets@CurrentLevel)"
             }
         },
         {
@@ -1207,12 +1223,6 @@
                 "Zombies": [
                     {
                         "Type": "RTID(Neuropathy@ZombieTypes)",
-                        "Row": "2",
-                        "Column": "8",
-                        "Level": 1
-                    },
-                    {
-                        "Type": "RTID(Neuropathy@ZombieTypes)",
                         "Row": "3",
                         "Column": "8",
                         "Level": 1
@@ -1220,7 +1230,7 @@
                     {
                         "Type": "RTID(Neuropathy@ZombieTypes)",
                         "Row": "4",
-                        "Column": "8",
+                        "Column": "7",
                         "Level": 1
                     },
                     {
@@ -1228,16 +1238,10 @@
                         "Row": "2",
                         "Column": "8",
                         "Level": 1
-                    },
-                    {
-                        "Type": "RTID(Neuropathy@ZombieTypes)",
-                        "Row": "3",
-                        "Column": "8",
-                        "Level": 1
                     }
                 ],
                 "AdditionalPlantfood": 0,
-                "JitterOffsets": "RTID(CrowdOffsets@CurrentLevel)"
+                "JitterOffsets": "RTID(BoxPressureOffsets@CurrentLevel)"
             }
         },
         {
@@ -1249,20 +1253,8 @@
                 "Zombies": [
                     {
                         "Type": "RTID(Neuropathy@ZombieTypes)",
-                        "Row": "2",
-                        "Column": "8",
-                        "Level": 1
-                    },
-                    {
-                        "Type": "RTID(Neuropathy@ZombieTypes)",
-                        "Row": "3",
-                        "Column": "8",
-                        "Level": 1
-                    },
-                    {
-                        "Type": "RTID(Neuropathy@ZombieTypes)",
                         "Row": "4",
-                        "Column": "8",
+                        "Column": "7",
                         "Level": 1
                     },
                     {
@@ -1274,18 +1266,12 @@
                     {
                         "Type": "RTID(Neuropathy@ZombieTypes)",
                         "Row": "3",
-                        "Column": "8",
-                        "Level": 1
-                    },
-                    {
-                        "Type": "RTID(Neuropathy@ZombieTypes)",
-                        "Row": "4",
                         "Column": "8",
                         "Level": 1
                     }
                 ],
                 "AdditionalPlantfood": 0,
-                "JitterOffsets": "RTID(CrowdOffsets@CurrentLevel)"
+                "JitterOffsets": "RTID(BoxPressureOffsets@CurrentLevel)"
             }
         },
         {
@@ -1297,12 +1283,6 @@
                 "Zombies": [
                     {
                         "Type": "RTID(Neuropathy@ZombieTypes)",
-                        "Row": "2",
-                        "Column": "8",
-                        "Level": 1
-                    },
-                    {
-                        "Type": "RTID(Neuropathy@ZombieTypes)",
                         "Row": "3",
                         "Column": "8",
                         "Level": 1
@@ -1310,30 +1290,18 @@
                     {
                         "Type": "RTID(Neuropathy@ZombieTypes)",
                         "Row": "4",
-                        "Column": "8",
+                        "Column": "7",
                         "Level": 1
                     },
                     {
                         "Type": "RTID(Neuropathy@ZombieTypes)",
                         "Row": "2",
-                        "Column": "8",
-                        "Level": 1
-                    },
-                    {
-                        "Type": "RTID(Neuropathy@ZombieTypes)",
-                        "Row": "3",
-                        "Column": "8",
-                        "Level": 1
-                    },
-                    {
-                        "Type": "RTID(Neuropathy@ZombieTypes)",
-                        "Row": "4",
                         "Column": "8",
                         "Level": 1
                     }
                 ],
                 "AdditionalPlantfood": 0,
-                "JitterOffsets": "RTID(CrowdOffsets@CurrentLevel)"
+                "JitterOffsets": "RTID(BoxPressureOffsets@CurrentLevel)"
             }
         },
         {
@@ -1346,12 +1314,12 @@
                     {
                         "Type": "RTID(Neuropathy@ZombieTypes)",
                         "Row": "2",
-                        "Column": "8",
+                        "Column": "7",
                         "Level": 1
                     },
                     {
                         "Type": "RTID(Neuropathy@ZombieTypes)",
-                        "Row": "3",
+                        "Row": "1",
                         "Column": "8",
                         "Level": 1
                     },
@@ -1363,49 +1331,285 @@
                     },
                     {
                         "Type": "RTID(Neuropathy@ZombieTypes)",
-                        "Row": "2",
-                        "Column": "8",
-                        "Level": 1
-                    },
-                    {
-                        "Type": "RTID(Neuropathy@ZombieTypes)",
                         "Row": "3",
                         "Column": "8",
                         "Level": 1
                     },
                     {
                         "Type": "RTID(Neuropathy@ZombieTypes)",
-                        "Row": "4",
-                        "Column": "8",
-                        "Level": 1
-                    },
-                    {
-                        "Type": "RTID(Neuropathy@ZombieTypes)",
-                        "Row": "1",
-                        "Column": "8",
-                        "Level": 1
-                    },
-                    {
-                        "Type": "RTID(Neuropathy@ZombieTypes)",
-                        "Row": "1",
-                        "Column": "8",
-                        "Level": 1
-                    },
-                    {
-                        "Type": "RTID(Neuropathy@ZombieTypes)",
                         "Row": "5",
-                        "Column": "8",
-                        "Level": 1
-                    },
-                    {
-                        "Type": "RTID(Neuropathy@ZombieTypes)",
-                        "Row": "5",
-                        "Column": "8",
+                        "Column": "7",
                         "Level": 1
                     }
                 ],
                 "AdditionalPlantfood": 0,
-                "JitterOffsets": "RTID(CrowdOffsets@CurrentLevel)"
+                "JitterOffsets": "RTID(BoxPressureOffsets@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "CombatOffsets"
+            ],
+            "objclass": "ZombieJitterOffsets",
+            "objdata": {
+                "ZombieSpawningOffsetIncrement": 35,
+                "ZombieSpawningRandomJitter": 55
+            }
+        },
+        {
+            "aliases": [
+                "BoxPressureOffsets"
+            ],
+            "objclass": "ZombieJitterOffsets",
+            "objdata": {
+                "ZombieSpawningOffsetIncrement": 420,
+                "ZombieSpawningRandomJitter": 30
+            }
+        },
+        {
+            "aliases": [
+                "TextRuleNotice"
+            ],
+            "objclass": "SpawnZombiesFromGridItemSpawnerProps",
+            "objdata": {
+                "Zombies": [],
+                "GridTypes": [],
+                "SuppressActionIfNoGridItemsFound": false,
+                "ZombieSpawnWaitTime": 0,
+                "WaveStartMessage": "[S34_MEMORY_HARD_SELF_CONSUME_RULE_013]"
+            }
+        },
+        {
+            "aliases": [
+                "MechOffsets"
+            ],
+            "objclass": "ZombieJitterOffsets",
+            "objdata": {
+                "ZombieSpawningOffsetIncrement": 50,
+                "ZombieSpawningRandomJitter": 45
+            }
+        },
+        {
+            "aliases": [
+                "Mechs3"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(mech_cone@ZombieTypes)",
+                        "Row": "2",
+                        "Level": 1,
+                        "Column": "7"
+                    }
+                ],
+                "AdditionalPlantfood": 0,
+                "JitterOffsets": "RTID(MechOffsets@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "Mechs5"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(mech_cone@ZombieTypes)",
+                        "Row": "3",
+                        "Level": 1,
+                        "Column": "8"
+                    }
+                ],
+                "AdditionalPlantfood": 0,
+                "JitterOffsets": "RTID(MechOffsets@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "Mechs7"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(mech_cone@ZombieTypes)",
+                        "Row": "1",
+                        "Level": 1,
+                        "Column": "7"
+                    },
+                    {
+                        "Type": "RTID(mech_cone@ZombieTypes)",
+                        "Row": "5",
+                        "Level": 1,
+                        "Column": "8"
+                    }
+                ],
+                "AdditionalPlantfood": 0,
+                "JitterOffsets": "RTID(MechOffsets@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "Mechs8"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(mech_cone@ZombieTypes)",
+                        "Row": "5",
+                        "Level": 1,
+                        "Column": "7"
+                    }
+                ],
+                "AdditionalPlantfood": 0,
+                "JitterOffsets": "RTID(MechOffsets@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "Mechs9"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(mech_cone@ZombieTypes)",
+                        "Row": "1",
+                        "Level": 1,
+                        "Column": "8"
+                    },
+                    {
+                        "Type": "RTID(mech_cone@ZombieTypes)",
+                        "Row": "5",
+                        "Level": 1,
+                        "Column": "7"
+                    }
+                ],
+                "AdditionalPlantfood": 0,
+                "JitterOffsets": "RTID(MechOffsets@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "Mechs10"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(mech_cone@ZombieTypes)",
+                        "Row": "1",
+                        "Level": 1,
+                        "Column": "7"
+                    },
+                    {
+                        "Type": "RTID(mech_cone@ZombieTypes)",
+                        "Row": "5",
+                        "Level": 1,
+                        "Column": "8"
+                    },
+                    {
+                        "Type": "RTID(mech_cone@ZombieTypes)",
+                        "Row": "1",
+                        "Level": 1
+                    }
+                ],
+                "AdditionalPlantfood": 0,
+                "JitterOffsets": "RTID(MechOffsets@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "TileSupply3"
+            ],
+            "objclass": "ModifyConveyorWaveActionProps",
+            "objdata": {
+                "Add": [
+                    {
+                        "Type": "RTID(powerplant@PlantTypes)",
+                        "Weight": 200,
+                        "MinCount": 2,
+                        "MinWeightFactor": 3,
+                        "MaxCount": 2,
+                        "MaxWeightFactor": 0,
+                        "iLevel": 1,
+                        "iAvatar": -1
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "TileStop5"
+            ],
+            "objclass": "ModifyConveyorWaveActionProps",
+            "objdata": {
+                "Add": [
+                    {
+                        "Type": "RTID(powerplant@PlantTypes)",
+                        "Weight": 0,
+                        "MinCount": 2,
+                        "MinWeightFactor": 3,
+                        "MaxCount": 2,
+                        "MaxWeightFactor": 0,
+                        "iLevel": 1,
+                        "iAvatar": -1
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "CenterMechOffsets"
+            ],
+            "objclass": "ZombieJitterOffsets",
+            "objdata": {
+                "ZombieSpawningOffsetIncrement": 240,
+                "ZombieSpawningRandomJitter": 45
+            }
+        },
+        {
+            "aliases": [
+                "CenterMechs10"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(mech_cone@ZombieTypes)",
+                        "Row": "3",
+                        "Level": 1,
+                        "Column": "8"
+                    },
+                    {
+                        "Type": "RTID(mech_cone@ZombieTypes)",
+                        "Row": "3",
+                        "Level": 1,
+                        "Column": "8"
+                    },
+                    {
+                        "Type": "RTID(mech_cone@ZombieTypes)",
+                        "Row": "3",
+                        "Level": 1,
+                        "Column": "8"
+                    },
+                    {
+                        "Type": "RTID(mech_cone@ZombieTypes)",
+                        "Row": "3",
+                        "Level": 1,
+                        "Column": "8"
+                    },
+                    {
+                        "Type": "RTID(mech_cone@ZombieTypes)",
+                        "Row": "3",
+                        "Level": 1,
+                        "Column": "8"
+                    }
+                ],
+                "AdditionalPlantfood": 0,
+                "JitterOffsets": "RTID(CenterMechOffsets@CurrentLevel)"
             }
         }
     ]

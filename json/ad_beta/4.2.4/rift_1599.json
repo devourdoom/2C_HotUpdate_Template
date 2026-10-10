@@ -5,14 +5,14 @@
             "objclass": "LevelDefinition",
             "objdata": {
                 "Description": "[PLAYERS_TRIP_TO_RIFT]",
-                "LevelNumber": 3,
+                "LevelNumber": 2,
                 "Loot": "",
                 "Modules": [
                     "RTID(DefaultSunDropper@LevelModules)",
                     "RTID(StandardRiftIntro@LevelModules)",
                     "RTID(DefaultSunDropper@LevelModules)",
                     "RTID(ZombiesDeadWinCon@LevelModules)",
-                    "RTID(ModernMowers@LevelModules)",
+                    "RTID(DinoMowers@LevelModules)",
                     "RTID(SeedBank@CurrentLevel)",
                     "RTID(DefaultZombieWinCondition@LevelModules)",
                     "RTID(NewWaves@CurrentLevel)",
@@ -23,7 +23,7 @@
                 "ShinyPresentTable": "egypt_shiny_01",
                 "VictoryModule": "RTID(RiftOutro@LevelModules)",
                 "LevelMutator": "RTID(LevelMutator@CurrentLevel)",
-                "StageModule": "RTID(FairyTaleStage@LevelModules)",
+                "StageModule": "RTID(Birthday9DaylightStage@LevelModules)",
                 "PerksDisabledInLevel": [
                     "moarscore",
                     "bossbustercannon"
@@ -125,22 +125,17 @@
             ],
             "objclass": "ProtectThePlantChallengeProperties",
             "objdata": {
-                "MustProtectCount": 3,
+                "MustProtectCount": 2,
                 "Plants": [
                   {
                     "GridX": 2,
                     "GridY": 1,
-                    "PlantType": "springprincess"
+                    "PlantType": "headbutterlettuce"
                   },
                   {
                     "GridX": 2,
                     "GridY": 3,
-                    "PlantType": "springprincess"
-                  },
-                  {
-                    "GridX": 2,
-                    "GridY": 2,
-                    "PlantType": "springprincess"
+                    "PlantType": "headbutterlettuce"
                   }
                 ]
             }
@@ -152,7 +147,7 @@
             "objclass": "ApplyZombieConditionsChallengeProps",
             "objdata": {
                 "ConditionToInflict": ["stun"],
-                "NumZombieConditionsToApply": 75
+                "NumZombieConditionsToApply": 150
             }
         },
         {
@@ -167,28 +162,40 @@
                         "Level": 0,
                         "Swaps": [
                             {
-                                "From": "RTID(fairy_tale@ZombieTypes)",
+                                "From": "RTID(dino@ZombieTypes)",
                                 "To": [
-                                    "RTID(fairy_tale@ZombieTypes)"
+                                    "RTID(roman@ZombieTypes)"
                                 ]
                             },
                             
                             {
-                                "From": "RTID(fairy_tale_armor1@ZombieTypes)",
+                                "From": "RTID(dino_armor1@ZombieTypes)",
                                 "To": [
-                                    "RTID(fairy_tale_armor1@ZombieTypes)"
+                                    "RTID(roman_armor1@ZombieTypes)"
                                 ]
                             },
                             {
-                                "From": "RTID(fairy_tale_armor2@ZombieTypes)",
+                                "From": "RTID(dino_armor2@ZombieTypes)",
                                 "To": [
-                                    "RTID(fairy_tale_armor2@ZombieTypes)"
+                                    "RTID(birthday_pharaoh@ZombieTypes)"
                                 ]
                             },
                             {
-                                "From": "RTID(fairy_tale_gargantuar@ZombieTypes)",
+                                "From": "RTID(roman_ballista@ZombieTypes)",
                                 "To": [
-                                    "RTID(fairy_tale_gargantuar@ZombieTypes)"
+                                    "RTID(dino_bully@ZombieTypes)"
+                                ]
+                            },
+                            {
+                                "From": "RTID(dino_bully@ZombieTypes)",
+                                "To": [
+                                    "RTID(birthday_juggler@ZombieTypes)"
+                                ]
+                            },
+                            {
+                                "From": "RTID(dino_gargantuar@ZombieTypes)",
+                                "To": [
+                                    "RTID(birthday_gargantuar@ZombieTypes)"
                                 ]
                             }
                         ]
@@ -197,31 +204,45 @@
                         "Level": 4,
                         "Swaps": [
                             {
-                                "From": "RTID(fairy_tale@ZombieTypes)",
+                                "From": "RTID(dino@ZombieTypes)",
                                 "To": [
-                                    "RTID(fairy_tale@ZombieTypes)"
-                                ]
-                            },
-                            
-                            {
-                                "From": "RTID(fairy_tale_armor1@ZombieTypes)",
-                                "To": [
-                                    "RTID(fairy_tale_armor1@ZombieTypes)",
-                                    "RTID(fairy_tale@ZombieTypes)"
+                                    "RTID(roman@ZombieTypes)",
+                                    "RTID(dino_armor1@ZombieTypes)"
                                 ]
                             },
                             {
-                                "From": "RTID(fairy_tale_armor2@ZombieTypes)",
+                                "From": "RTID(dino_armor1@ZombieTypes)",
                                 "To": [
-                                    "RTID(fairy_tale_armor2@ZombieTypes)",
-                                    "RTID(fairy_tale_armor1@ZombieTypes)"
+                                    "RTID(roman_armor1@ZombieTypes)",
+                                    "RTID(birthday_pharaoh@ZombieTypes)"
                                 ]
                             },
                             {
-                                "From": "RTID(fairy_tale_gargantuar@ZombieTypes)",
+                                "From": "RTID(dino_armor2@ZombieTypes)",
                                 "To": [
-                                    "RTID(fairy_tale_gargantuar@ZombieTypes)",
-                                    "RTID(fairy_tale_armor2@ZombieTypes)"
+                                    "RTID(roman_armor1@ZombieTypes)",
+                                    "RTID(dino_armor3@ZombieTypes)",
+                                    "RTID(birthday_juggler@ZombieTypes)"
+                                ]
+                            },
+                            {
+                                "From": "RTID(roman_ballista@ZombieTypes)",
+                                "To": [
+                                    "RTID(roman_ballista@ZombieTypes)"
+                                ]
+                            },
+                            {
+                                "From": "RTID(dino_bully@ZombieTypes)",
+                                "To": [
+                                    "RTID(birthday_juggler@ZombieTypes)",
+                                    "RTID(dino_pushegg@ZombieTypes)"
+                                ]
+                            },
+                            {
+                                "From": "RTID(dino_gargantuar@ZombieTypes)",
+                                "To": [
+                                    "RTID(birthday_gargantuar@ZombieTypes)",
+                                    "RTID(birthday_gargantuar@ZombieTypes)"
                                 ]
                             }
                         ]
@@ -230,32 +251,42 @@
                         "Level": 7,
                         "Swaps": [
                             {
-                                "From": "RTID(fairy_tale@ZombieTypes)",
+                                "From": "RTID(dino@ZombieTypes)",
                                 "To": [
-                                    "RTID(fairy_tale@ZombieTypes)",
-                                    "RTID(fairy_tale@ZombieTypes)"
-                                ]
-                            },
-                            
-                            {
-                                "From": "RTID(fairy_tale_armor1@ZombieTypes)",
-                                "To": [
-                                    "RTID(fairy_tale_armor1@ZombieTypes)",
-                                    "RTID(fairy_tale_armor1@ZombieTypes)"
+                                    "RTID(roman_armor1@ZombieTypes)",
+                                    "RTID(dino_armor1@ZombieTypes)"
                                 ]
                             },
                             {
-                                "From": "RTID(fairy_tale_armor2@ZombieTypes)",
+                                "From": "RTID(dino_armor1@ZombieTypes)",
                                 "To": [
-                                    "RTID(fairy_tale_armor2@ZombieTypes)",
-                                    "RTID(fairy_tale_armor2@ZombieTypes)"
+                                    "RTID(birthday_pharaoh@ZombieTypes)",
+                                    "RTID(birthday_troglobite@ZombieTypes)"
                                 ]
                             },
                             {
-                                "From": "RTID(fairy_tale_gargantuar@ZombieTypes)",
+                                "From": "RTID(dino_armor2@ZombieTypes)",
                                 "To": [
-                                    "RTID(fairy_tale_armed_gargantuar@ZombieTypes)",
-                                    "RTID(fairy_tale_armor2@ZombieTypes)"
+                                    "RTID(birthday_troglobite@ZombieTypes)",
+                                    "RTID(birthday_troglobite@ZombieTypes)"
+                                ]
+                            },
+                            {
+                                "From": "RTID(roman_ballista@ZombieTypes)",
+                                "To": [
+                                    "RTID(roman_ballista@ZombieTypes)"
+                                ]
+                            },
+                            {
+                                "From": "RTID(dino_bully@ZombieTypes)",
+                                "To": [
+                                    "RTID(dino_pushegg@ZombieTypes)"
+                                ]
+                            },
+                            {
+                                "From": "RTID(dino_gargantuar@ZombieTypes)",
+                                "To": [
+                                    "RTID(birthday_gargantuar@ZombieTypes)"
                                 ]
                             }
                         ]
@@ -285,7 +316,7 @@
                         "StartingPoints": 1000,
                         "StartingWave": 10,
                         "ZombiePool": [
-                            "RTID(fairy_tale_armor2@ZombieTypes)"
+                            "RTID(roman_ballista@ZombieTypes)"
                         ]
                     }
                 ],
@@ -310,7 +341,8 @@
                         "RTID(Wave2@CurrentLevel)"
                     ],
                     [
-                        "RTID(Wave3@CurrentLevel)"
+                        "RTID(Wave3@CurrentLevel)",
+                        "RTID(Wave3DinoTimeEvent0@CurrentLevel)"
                     ],
                     [
                         "RTID(Wave4@CurrentLevel)"
@@ -319,25 +351,30 @@
                         "RTID(Wave5@CurrentLevel)"
                     ],
                     [
-                        "RTID(Wave6@CurrentLevel)"
+                        "RTID(Wave6@CurrentLevel)",
+                        "RTID(Wave6DinoTimeEvent0@CurrentLevel)"
                     ],
                     [
-                        "RTID(Wave7@CurrentLevel)"
+                        "RTID(Wave7@CurrentLevel)",
+                        "RTID(Wave7DinoTimeEvent0@CurrentLevel)"
                     ],
                     [
                         "RTID(Wave8@CurrentLevel)"
                     ],
                     [
-                        "RTID(Wave9@CurrentLevel)"
+                        "RTID(Wave9@CurrentLevel)",
+                        "RTID(Wave9DinoTimeEvent0@CurrentLevel)"
                     ],
                     [
                         "RTID(Wave10@CurrentLevel)"
                     ],
                     [
-                        "RTID(Wave11@CurrentLevel)"
+                        "RTID(Wave11@CurrentLevel)",
+                        "RTID(Wave11DinoTimeEvent0@CurrentLevel)"
                     ],
                     [
-                        "RTID(Wave12@CurrentLevel)"
+                        "RTID(Wave12@CurrentLevel)",
+                        "RTID(Wave12DinoTimeEvent0@CurrentLevel)"
                     ]
                 ]
             }
@@ -350,7 +387,7 @@
                 "Zombies": [
                     {
                         "Row": "3",
-                        "Type": "RTID(fairy_tale@ZombieTypes)"
+                        "Type": "RTID(dino_imp@ZombieTypes)"
                     }
                 ]
             }
@@ -363,19 +400,19 @@
                 "Zombies": [
                     {
                         "Row": "3",
-                        "Type": "RTID(fairy_tale_armor1@ZombieTypes)"
+                        "Type": "RTID(dino_armor1@ZombieTypes)"
                     },
                     {
-                        "Row": "5",
-                        "Type": "RTID(fairy_tale_armor1@ZombieTypes)"
+                        "Row": "3",
+                        "Type": "RTID(dino@ZombieTypes)"
                     },
                     {
                         "Row": "2",
-                        "Type": "RTID(fairy_tale@ZombieTypes)"
+                        "Type": "RTID(dino_imp@ZombieTypes)"
                     },
                     {
                         "Row": "4",
-                        "Type": "RTID(fairy_tale@ZombieTypes)"
+                        "Type": "RTID(dino_imp@ZombieTypes)"
                     }
                 ]
             }
@@ -388,31 +425,35 @@
                 "Zombies": [
                     {
                         "Row": "3",
-                        "Type": "RTID(fairy_tale_armor1@ZombieTypes)"
+                        "Type": "RTID(dino_bully@ZombieTypes)"
                     },
                     {
                         "Row": "3",
-                        "Type": "RTID(fairy_tale_armor1@ZombieTypes)"
+                        "Type": "RTID(dino_imp@ZombieTypes)"
                     },
                     {
                         "Row": "2",
-                        "Type": "RTID(fairy_tale_armor1@ZombieTypes)"
+                        "Type": "RTID(dino_imp@ZombieTypes)"
                     },
                     {
                         "Row": "1",
-                        "Type": "RTID(fairy_tale_armor1@ZombieTypes)"
+                        "Type": "RTID(dino@ZombieTypes)"
                     },
                     {
                         "Row": "5",
-                        "Type": "RTID(fairy_tale_armor2@ZombieTypes)"
+                        "Type": "RTID(dino@ZombieTypes)"
                     },
                     {
                         "Row": "4",
-                        "Type": "RTID(fairy_tale@ZombieTypes)"
+                        "Type": "RTID(dino_imp@ZombieTypes)"
                     },
                     {
                         "Row": "3",
-                        "Type": "RTID(fairy_tale_witch@ZombieTypes)"
+                        "Type": "RTID(dino_armor2@ZombieTypes)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(dino@ZombieTypes)"
                     }
                 ]
             }
@@ -424,23 +465,23 @@
                 "Zombies": [
                     {
                         "Row": "5",
-                        "Type": "RTID(fairy_tale_armor1@ZombieTypes)"
+                        "Type": "RTID(dino_imp@ZombieTypes)"
                     },
                     {
                         "Row": "4",
-                        "Type": "RTID(fairy_tale_armor1@ZombieTypes)"
+                        "Type": "RTID(dino_armor1@ZombieTypes)"
                     },
                     {
                         "Row": "3",
-                        "Type": "RTID(fairy_tale_armor1@ZombieTypes)"
+                        "Type": "RTID(dino_armor1@ZombieTypes)"
                     },
                     {
                         "Row": "2",
-                        "Type": "RTID(fairy_tale_witch@ZombieTypes)"
+                        "Type": "RTID(dino_armor1@ZombieTypes)"
                     },
                     {
                         "Row": "1",
-                        "Type": "RTID(fairy_tale_witch@ZombieTypes)"
+                        "Type": "RTID(dino_imp@ZombieTypes)"
                     }
                 ]
             }
@@ -453,19 +494,11 @@
                 "Zombies": [
                     {
                         "Row": "1",
-                        "Type": "RTID(fairy_tale_armor2@ZombieTypes)"
+                        "Type": "RTID(dino_armor2@ZombieTypes)"
                     },
                     {
                         "Row": "5",
-                        "Type": "RTID(fairy_tale_armor2@ZombieTypes)"
-                    },
-                    {
-                        "Row": "5",
-                        "Type": "RTID(dark_archmage@ZombieTypes)"
-                    },
-                    {
-                        "Row": "5",
-                        "Type": "RTID(dark_archmage@ZombieTypes)"
+                        "Type": "RTID(dino_armor2@ZombieTypes)"
                     }
                 ]
             }
@@ -474,39 +507,38 @@
             "aliases": ["Wave6"],
             "objclass": "SpawnZombiesJitteredWaveActionProps",
             "objdata": {
-                "AdditionalPlantfood": 2,
                 "Zombies": [
                     {
                         "Row": "2",
-                        "Type": "RTID(fairy_tale_gargantuar@ZombieTypes)"
+                        "Type": "RTID(dino_gargantuar@ZombieTypes)"
                     },
                     {
                         "Row": "2",
-                        "Type": "RTID(fairy_tale@ZombieTypes)"
+                        "Type": "RTID(dino_imp@ZombieTypes)"
                     },
                     {
                         "Row": "2",
-                        "Type": "RTID(fairy_tale@ZombieTypes)"
+                        "Type": "RTID(dino_imp@ZombieTypes)"
                     },
                     {
                         "Row": "2",
-                        "Type": "RTID(fairy_tale@ZombieTypes)"
+                        "Type": "RTID(dino_imp@ZombieTypes)"
                     },
                     {
                         "Row": "3",
-                        "Type": "RTID(fairy_tale@ZombieTypes)"
+                        "Type": "RTID(dino_bully@ZombieTypes)"
                     },
                     {
                         "Row": "4",
-                        "Type": "RTID(fairy_tale_witch@ZombieTypes)"
+                        "Type": "RTID(dino_bully@ZombieTypes)"
                     },
                     {
                         "Row": "4",
-                        "Type": "RTID(fairy_tale_witch@ZombieTypes)"
+                        "Type": "RTID(dino@ZombieTypes)"
                     },
                     {
                         "Row": "4",
-                        "Type": "RTID(fairy_tale@ZombieTypes)"
+                        "Type": "RTID(dino@ZombieTypes)"
                     }
                 ]
             }
@@ -518,31 +550,31 @@
                 "Zombies": [
                     {
                         "Row": "4",
-                        "Type": "RTID(fairy_tale_armor1@ZombieTypes)"
+                        "Type": "RTID(dino_armor3@ZombieTypes)"
                     },
                     {
                         "Row": "5",
-                        "Type": "RTID(fairy_tale_armor1@ZombieTypes)"
+                        "Type": "RTID(dino_bully@ZombieTypes)"
                     },
                     {
                         "Row": "5",
-                        "Type": "RTID(fairy_tale_armor2@ZombieTypes)"
+                        "Type": "RTID(dino_imp@ZombieTypes)"
                     },
                     {
                         "Row": "3",
-                        "Type": "RTID(fairy_tale_armor2@ZombieTypes)"
+                        "Type": "RTID(dino_imp@ZombieTypes)"
                     },
                     {
                         "Row": "2",
-                        "Type": "RTID(dark_wizard@ZombieTypes)"
+                        "Type": "RTID(dino_imp@ZombieTypes)"
                     },
                     {
                         "Row": "1",
-                        "Type": "RTID(dark_wizard@ZombieTypes)"
+                        "Type": "RTID(dino_bully@ZombieTypes)"
                     },
                     {
                         "Row": "1",
-                        "Type": "RTID(dark_wizard@ZombieTypes)"
+                        "Type": "RTID(dino_imp@ZombieTypes)"
                     }
                 ]
             }
@@ -555,43 +587,43 @@
                 "Zombies": [
                     {
                         "Row": "3",
-                        "Type": "RTID(fairy_tale_armor2@ZombieTypes)"
+                        "Type": "RTID(dino_armor2@ZombieTypes)"
                     },
                     {
                         "Row": "4",
-                        "Type": "RTID(fairy_tale_armor2@ZombieTypes)"
+                        "Type": "RTID(dino_bully@ZombieTypes)"
                     },
                     {
                         "Row": "4",
-                        "Type": "RTID(fairy_tale_armor2@ZombieTypes)"
+                        "Type": "RTID(dino_imp@ZombieTypes)"
                     },
                     {
                         "Row": "2",
-                        "Type": "RTID(dark_archmage@ZombieTypes)"
+                        "Type": "RTID(dino_bully@ZombieTypes)"
                     },
                     {
                         "Row": "2",
-                        "Type": "RTID(dark_archmage@ZombieTypes)"
+                        "Type": "RTID(dino_imp@ZombieTypes)"
                     },
                     {
                         "Row": "5",
-                        "Type": "RTID(fairy_tale@ZombieTypes)"
+                        "Type": "RTID(dino@ZombieTypes)"
                     },
                     {
                         "Row": "1",
-                        "Type": "RTID(fairy_tale@ZombieTypes)"
+                        "Type": "RTID(dino@ZombieTypes)"
                     },
                     {
                         "Row": "4",
-                        "Type": "RTID(fairy_tale@ZombieTypes)"
+                        "Type": "RTID(dino_armor1@ZombieTypes)"
                     },
                     {
                         "Row": "3",
-                        "Type": "RTID(fairy_tale@ZombieTypes)"
+                        "Type": "RTID(dino_armor1@ZombieTypes)"
                     },
                     {
                         "Row": "2",
-                        "Type": "RTID(fairy_tale@ZombieTypes)"
+                        "Type": "RTID(dino_armor1@ZombieTypes)"
                     }
                 ]
             }
@@ -604,35 +636,35 @@
                 "Zombies": [
                     {
                         "Row": "1",
-                        "Type": "RTID(fairy_tale_armor1@ZombieTypes)"
+                        "Type": "RTID(dino_bully@ZombieTypes)"
                     },
                     {
                         "Row": "1",
-                        "Type": "RTID(fairy_tale_armor1@ZombieTypes)"
+                        "Type": "RTID(dino_gargantuar@ZombieTypes)"
                     },
                     {
                         "Row": "5",
-                        "Type": "RTID(fairy_tale_armor1@ZombieTypes)"
+                        "Type": "RTID(dino_armor1@ZombieTypes)"
                     },
                     {
                         "Row": "4",
-                        "Type": "RTID(dark_archmage@ZombieTypes)"
+                        "Type": "RTID(dino_armor3@ZombieTypes)"
                     },
                     {
                         "Row": "4",
-                        "Type": "RTID(dark_archmage@ZombieTypes)"
+                        "Type": "RTID(dino_bully@ZombieTypes)"
                     },
                     {
                         "Row": "3",
-                        "Type": "RTID(dark_wizard@ZombieTypes)"
+                        "Type": "RTID(dino_armor1@ZombieTypes)"
                     },
                     {
                         "Row": "2",
-                        "Type": "RTID(dark_wizard@ZombieTypes)"
+                        "Type": "RTID(dino_armor3@ZombieTypes)"
                     },
                     {
                         "Row": "2",
-                        "Type": "RTID(fairy_tale@ZombieTypes)"
+                        "Type": "RTID(dino_bully@ZombieTypes)"
                     }
                 ]
             }
@@ -644,35 +676,35 @@
                 "Zombies": [
                     {
                         "Row": "5",
-                        "Type": "RTID(fairy_tale_armor1@ZombieTypes)"
+                        "Type": "RTID(dino_imp@ZombieTypes)"
                     },
                     {
                         "Row": "4",
-                        "Type": "RTID(fairy_tale_armor1@ZombieTypes)"
+                        "Type": "RTID(dino_armor1@ZombieTypes)"
                     },
                     {
                         "Row": "3",
-                        "Type": "RTID(fairy_tale_armor1@ZombieTypes)"
+                        "Type": "RTID(dino_bully@ZombieTypes)"
                     },
                     {
                         "Row": "3",
-                        "Type": "RTID(fairy_tale_armor2@ZombieTypes)"
+                        "Type": "RTID(dino_imp@ZombieTypes)"
                     },
                     {
                         "Row": "2",
-                        "Type": "RTID(fairy_tale_armor2@ZombieTypes)"
+                        "Type": "RTID(dino_armor1@ZombieTypes)"
                     },
                     {
                         "Row": "1",
-                        "Type": "RTID(fairy_tale_armor2@ZombieTypes)"
+                        "Type": "RTID(dino_imp@ZombieTypes)"
                     },
                     {
                         "Row": "4",
-                        "Type": "RTID(dark_wizard@ZombieTypes)"
+                        "Type": "RTID(dino_armor2@ZombieTypes)"
                     },
                     {
                         "Row": "3",
-                        "Type": "RTID(dark_wizard@ZombieTypes)"
+                        "Type": "RTID(dino_bully@ZombieTypes)"
                     }
                 ]
             }
@@ -681,43 +713,43 @@
             "aliases": ["Wave11"],
             "objclass": "SpawnZombiesJitteredWaveActionProps",
             "objdata": {
-                "AdditionalPlantfood": 2,
+                "AdditionalPlantfood": 1,
                 "Zombies": [
                     {
                         "Row": "1",
-                        "Type": "RTID(fairy_tale_armor2@ZombieTypes)"
-                    },
-                    {
-                        "Row": "4",
-                        "Type": "RTID(fairy_tale_armor2@ZombieTypes)"
+                        "Type": "RTID(dino_bully@ZombieTypes)"
                     },
                     {
                         "Row": "1",
-                        "Type": "RTID(fairy_tale_armor1@ZombieTypes)"
-                    },
-                    {
-                        "Row": "3",
-                        "Type": "RTID(fairy_tale_armor1@ZombieTypes)"
+                        "Type": "RTID(dino_armor1@ZombieTypes)"
                     },
                     {
                         "Row": "1",
-                        "Type": "RTID(fairy_tale@ZombieTypes)"
+                        "Type": "RTID(dino_imp@ZombieTypes)"
                     },
                     {
-                        "Row": "4",
-                        "Type": "RTID(fairy_tale@ZombieTypes)"
+                        "Row": "1",
+                        "Type": "RTID(dino_imp@ZombieTypes)"
                     },
                     {
-                        "Row": "3",
-                        "Type": "RTID(fairy_tale_witch@ZombieTypes)"
-                    },
-                    {
-                        "Row": "5",
-                        "Type": "RTID(fairy_tale_witch@ZombieTypes)"
+                        "Row": "1",
+                        "Type": "RTID(dino_armor2@ZombieTypes)"
                     },
                     {
                         "Row": "2",
-                        "Type": "RTID(fairy_tale_witch@ZombieTypes)"
+                        "Type": "RTID(dino_bully@ZombieTypes)"
+                    },
+                    {
+                        "Row": "2",
+                        "Type": "RTID(dino_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Row": "2",
+                        "Type": "RTID(dino_imp@ZombieTypes)"
+                    },
+                    {
+                        "Row": "2",
+                        "Type": "RTID(dino_imp@ZombieTypes)"
                     }
                 ]
             }
@@ -726,69 +758,135 @@
             "aliases": ["Wave12"],
             "objclass": "SpawnZombiesJitteredWaveActionProps",
             "objdata": {
-                "AdditionalPlantfood": 1,
+                "AdditionalPlantfood": 0,
                 "Zombies": [
                     {
                         "Row": "5",
-                        "Type": "RTID(fairy_tale_gargantuar@ZombieTypes)"
-                    },
-                    {
-                        "Row": "3",
-                        "Type": "RTID(fairy_tale_armed_gargantuar@ZombieTypes)"
-                    },
-                    {
-                        "Row": "3",
-                        "Type": "RTID(fairy_tale_witch@ZombieTypes)"
-                    },
-                    {
-                        "Row": "2",
-                        "Type": "RTID(fairy_tale_witch@ZombieTypes)"
-                    },
-                    {
-                        "Row": "1",
-                        "Type": "RTID(dark_archmage@ZombieTypes)"
-                    },
-                    {
-                        "Row": "5",
-                        "Type": "RTID(dark_archmage@ZombieTypes)"
+                        "Type": "RTID(dino_bully@ZombieTypes)"
                     },
                     {
                         "Row": "4",
-                        "Type": "RTID(dark_wizard@ZombieTypes)"
+                        "Type": "RTID(dino_bully@ZombieTypes)"
                     },
                     {
                         "Row": "3",
-                        "Type": "RTID(dark_wizard@ZombieTypes)"
+                        "Type": "RTID(dino_bully@ZombieTypes)"
                     },
                     {
                         "Row": "2",
-                        "Type": "RTID(fairy_tale_armor2@ZombieTypes)"
+                        "Type": "RTID(dino_bully@ZombieTypes)"
                     },
                     {
                         "Row": "1",
-                        "Type": "RTID(fairy_tale_armor2@ZombieTypes)"
+                        "Type": "RTID(dino_bully@ZombieTypes)"
                     },
                     {
                         "Row": "5",
-                        "Type": "RTID(fairy_tale_armor1@ZombieTypes)"
+                        "Type": "RTID(dino_imp@ZombieTypes)"
                     },
                     {
                         "Row": "4",
-                        "Type": "RTID(fairy_tale_armor1@ZombieTypes)"
+                        "Type": "RTID(dino_imp@ZombieTypes)"
                     },
                     {
                         "Row": "3",
-                        "Type": "RTID(fairy_tale@ZombieTypes)"
+                        "Type": "RTID(dino_gargantuar@ZombieTypes)"
                     },
                     {
                         "Row": "2",
-                        "Type": "RTID(fairy_tale@ZombieTypes)"
+                        "Type": "RTID(dino_imp@ZombieTypes)"
                     },
                     {
                         "Row": "1",
-                        "Type": "RTID(fairy_tale@ZombieTypes)"
+                        "Type": "RTID(dino_imp@ZombieTypes)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(dino_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(dino_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(dino_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Row": "2",
+                        "Type": "RTID(dino_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Row": "1",
+                        "Type": "RTID(dino_armor1@ZombieTypes)"
                     }
                 ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave3DinoTimeEvent0"
+            ],
+            "objclass": "DinoWaveActionProps",
+            "objdata": {
+                "DinoRow": "2",
+                "DinoType": "ptero",
+                "DinoWaveDuration": 3
+            }
+        },
+        {
+            "aliases": [
+                "Wave6DinoTimeEvent0"
+            ],
+            "objclass": "DinoWaveActionProps",
+            "objdata": {
+                "DinoRow": 3,
+                "DinoType": "raptor",
+                "DinoWaveDuration": 3
+            }
+        },
+        {
+            "aliases": [
+                "Wave7DinoTimeEvent0"
+            ],
+            "objclass": "DinoWaveActionProps",
+            "objdata": {
+                "DinoRow": 1,
+                "DinoType": "tyranno",
+                "DinoWaveDuration": "0"
+            }
+        },
+        {
+            "aliases": [
+                "Wave9DinoTimeEvent0"
+            ],
+            "objclass": "DinoWaveActionProps",
+            "objdata": {
+                "DinoRow": 0,
+                "DinoType": "raptor",
+                "DinoWaveDuration": 3
+            }
+        },
+        {
+            "aliases": [
+                "Wave11DinoTimeEvent0"
+            ],
+            "objclass": "DinoWaveActionProps",
+            "objdata": {
+                "DinoRow": 1,
+                "DinoType": "raptor",
+                "DinoWaveDuration": "0"
+            }
+        },
+        {
+            "aliases": [
+                "Wave12DinoTimeEvent0"
+            ],
+            "objclass": "DinoWaveActionProps",
+            "objdata": {
+                "DinoRow": "2",
+                "DinoType": "tyranno",
+                "DinoWaveDuration": "0"
             }
         }
     ],
