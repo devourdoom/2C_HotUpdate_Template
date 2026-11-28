@@ -1,0 +1,889 @@
+{
+  "version": 1,
+  "#comment": "PVZ1 S35 hard 6",
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "[S35_H06_MEME_TITLE]",
+        "Name": "[S35_H06_MEME_TITLE]",
+        "LevelNumber": 1,
+        "StartingSun": 400,
+        "ZombieMaxLevel": 1,
+        "IsArtifactDisabled": false,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "VictoryModule": "RTID(PVZ1ModeOutro@LevelModules)",
+        "StageModule": "RTID(SnowModernStage@LevelModules)",
+        "Modules": [
+          "RTID(RiftThemeDemo@CurrentLevel)",
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(Challenges@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultSunDropper@LevelModules)",
+          "RTID(SpeedUpTile@CurrentLevel)",
+          "RTID(MoldColumn@CurrentLevel)",
+          "RTID(WaveModule@CurrentLevel)"
+        ],
+        "ShowZombies": [
+          "needforspeed",
+          "needforspeed_armor1",
+          "needforspeed_armor2",
+          "beach_octopus",
+          "needforspeed_gargantuar",
+          "beach_fisherman",
+          "modern_miner"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Challenges"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(Goal1@CurrentLevel)",
+            "RTID(Goal2@CurrentLevel)",
+            "RTID(Goal3@CurrentLevel)"
+          ]
+        ],
+        "ChallengesAlwaysAvailable": true
+      }
+    },
+    {
+      "aliases": [
+        "Goal1"
+      ],
+      "objclass": "PlantDefeatZombieChallengeProps",
+      "objdata": {
+        "Description": "[KILL_DESC]",
+        "PlantTypeName": "squash",
+        "NumZombiesToKill": 4
+      }
+    },
+    {
+      "aliases": [
+        "Goal2"
+      ],
+      "objclass": "StarChallengeSimultaneousPlantsProps",
+      "objdata": {
+        "MaximumPlants": 16
+      }
+    },
+    {
+      "aliases": [
+        "Goal3"
+      ],
+      "objclass": "StarChallengePlantsLostProps",
+      "objdata": {
+        "MaximumPlantsLost": 6
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "SelectionMethod": "chooser",
+        "OverrideSeedSlotsCount": 6,
+        "GlobalLevel": 1,
+        "PresetPlantList": []
+      }
+    },
+    {
+      "aliases": [
+        "SpeedUpTile"
+      ],
+      "objclass": "SpeedUpTileModuleProperties",
+      "objdata": {
+        "Roads": [
+          {
+            "GridX": 5,
+            "GridY": 0,
+            "Img": "IMAGE_UI_SPEEDUPTILE_SPEED_UP_TILE_DOWN"
+          },
+          {
+            "GridX": 6,
+            "GridY": 0,
+            "Img": "IMAGE_UI_SPEEDUPTILE_SPEED_UP_TILE_LEFT"
+          },
+          {
+            "GridX": 7,
+            "GridY": 0,
+            "Img": "IMAGE_UI_SPEEDUPTILE_SPEED_UP_TILE_LEFT"
+          },
+          {
+            "GridX": 3,
+            "GridY": 1,
+            "Img": "IMAGE_UI_SPEEDUPTILE_SPEED_UP_TILE_LEFT"
+          },
+          {
+            "GridX": 4,
+            "GridY": 1,
+            "Img": "IMAGE_UI_SPEEDUPTILE_SPEED_UP_TILE_LEFT"
+          },
+          {
+            "GridX": 5,
+            "GridY": 1,
+            "Img": "IMAGE_UI_SPEEDUPTILE_SPEED_UP_TILE_LEFT"
+          },
+          {
+            "GridX": 6,
+            "GridY": 1,
+            "Img": "IMAGE_UI_SPEEDUPTILE_SPEED_UP_TILE_LEFT"
+          },
+          {
+            "GridX": 7,
+            "GridY": 1,
+            "Img": "IMAGE_UI_SPEEDUPTILE_SPEED_UP_TILE_LEFT"
+          },
+          {
+            "GridX": 3,
+            "GridY": 4,
+            "Img": "IMAGE_UI_SPEEDUPTILE_SPEED_UP_TILE_LEFT"
+          },
+          {
+            "GridX": 4,
+            "GridY": 4,
+            "Img": "IMAGE_UI_SPEEDUPTILE_SPEED_UP_TILE_LEFT"
+          },
+          {
+            "GridX": 5,
+            "GridY": 4,
+            "Img": "IMAGE_UI_SPEEDUPTILE_SPEED_UP_TILE_LEFT"
+          },
+          {
+            "GridX": 6,
+            "GridY": 4,
+            "Img": "IMAGE_UI_SPEEDUPTILE_SPEED_UP_TILE_LEFT"
+          },
+          {
+            "GridX": 7,
+            "GridY": 4,
+            "Img": "IMAGE_UI_SPEEDUPTILE_SPEED_UP_TILE_LEFT"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "MoldColumn"
+      ],
+      "objclass": "MoldColonyChallengeProps",
+      "objdata": {
+        "Locations": "RTID(MoldColumnMap@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "MoldColumnMap"
+      ],
+      "objclass": "BoardGridMapProps",
+      "objdata": {
+        "Values": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Offsets"
+      ],
+      "objclass": "ZombieJitterOffsets",
+      "objdata": {
+        "ZombieSpawningOffsetIncrement": 37,
+        "ZombieSpawningRandomJitter": 104
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(needforspeed@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          }
+        ],
+        "JitterOffsets": "RTID(Offsets@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(needforspeed@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(needforspeed_armor1@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(needforspeed@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(needforspeed@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          }
+        ],
+        "JitterOffsets": "RTID(Offsets@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Zombies": [
+          {
+            "Type": "RTID(needforspeed@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(needforspeed_armor1@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(needforspeed_armor1@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(needforspeed_armor1@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(beach_fisherman@ZombieTypes)",
+            "Row": "3",
+            "Level": 1
+          }
+        ],
+        "JitterOffsets": "RTID(Offsets@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(needforspeed_armor1@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(needforspeed@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(needforspeed_armor1@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(needforspeed_armor1@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(modern_miner@ZombieTypes)",
+            "Row": "4",
+            "Level": 1
+          }
+        ],
+        "JitterOffsets": "RTID(Offsets@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(needforspeed_armor2@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(needforspeed@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(needforspeed_armor1@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(needforspeed@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(needforspeed_armor1@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(needforspeed@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          }
+        ],
+        "JitterOffsets": "RTID(Offsets@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(needforspeed_armor1@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(needforspeed_armor2@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(needforspeed@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(needforspeed_armor1@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(beach_fisherman@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          }
+        ],
+        "JitterOffsets": "RTID(Offsets@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Zombies": [
+          {
+            "Type": "RTID(needforspeed@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(needforspeed_armor2@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(needforspeed_armor1@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(needforspeed_armor2@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(needforspeed@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(needforspeed@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(modern_miner@ZombieTypes)",
+            "Row": "3",
+            "Level": 1
+          }
+        ],
+        "JitterOffsets": "RTID(Offsets@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(needforspeed_armor2@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(needforspeed_armor1@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(needforspeed@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(needforspeed_armor1@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(needforspeed_armor1@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(beach_fisherman@ZombieTypes)",
+            "Row": "4",
+            "Level": 1
+          }
+        ],
+        "JitterOffsets": "RTID(Offsets@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(needforspeed_armor1@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(needforspeed@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(needforspeed@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(modern_miner@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          }
+        ],
+        "JitterOffsets": "RTID(Offsets@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(needforspeed_armor1@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(needforspeed@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(needforspeed_armor2@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(needforspeed_armor1@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(needforspeed@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(needforspeed_armor1@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(needforspeed_armor1@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          }
+        ],
+        "JitterOffsets": "RTID(Offsets@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "Flag5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(needforspeed_flag@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          }
+        ],
+        "JitterOffsets": "RTID(Offsets@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "Flag10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(needforspeed_flag@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          }
+        ],
+        "JitterOffsets": "RTID(Offsets@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveModule"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "WaveManagerPropsVector": [
+          "RTID(Waves@CurrentLevel)",
+          "RTID(Waves@CurrentLevel)",
+          "RTID(Waves@CurrentLevel)",
+          "RTID(Waves@CurrentLevel)"
+        ],
+        "DynamicZombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Waves"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "WaveCount": 10,
+        "Waves": [
+          [
+            "RTID(CopyRulesNotice@CurrentLevel)",
+            "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)",
+            "RTID(Special4_1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)",
+            "RTID(Flag5@CurrentLevel)",
+            "RTID(Special5_1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)",
+            "RTID(Special6_1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)",
+            "RTID(Special8_1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)",
+            "RTID(Special9_1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)",
+            "RTID(Flag10@CurrentLevel)",
+            "RTID(Special10_1@CurrentLevel)",
+            "RTID(Special10_2@CurrentLevel)"
+          ]
+        ],
+        "FlagWaveInterval": 5,
+        "SuppressFlagZombie": true,
+        "MinNextWaveHealthPercentage": 0.6,
+        "MaxNextWaveHealthPercentage": 0.6,
+        "ZombieCountdownFirstWaveSecs": 8,
+        "ZombieCountdownHugeWaveDelay": 5,
+        "DescriptionName": "[S35_H6_ROAD_PRESSURE_MODE]",
+        "Description": "[S35_H6_ROAD_PRESSURE_DESC]"
+      }
+    },
+    {
+      "aliases": [
+        "SpecialOffsets"
+      ],
+      "objclass": "ZombieJitterOffsets",
+      "objdata": {
+        "ZombieSpawningOffsetIncrement": 0,
+        "ZombieSpawningRandomJitter": 18
+      }
+    },
+    {
+      "aliases": [
+        "Special4_1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(beach_octopus@ZombieTypes)",
+            "Row": "3",
+            "Level": 1
+          }
+        ],
+        "JitterOffsets": "RTID(SpecialOffsets@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "Special5_1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(needforspeed_gargantuar@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          }
+        ],
+        "JitterOffsets": "RTID(SpecialOffsets@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "Special6_1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(beach_octopus@ZombieTypes)",
+            "Row": "4",
+            "Level": 1
+          }
+        ],
+        "JitterOffsets": "RTID(SpecialOffsets@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "Special8_1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(beach_octopus@ZombieTypes)",
+            "Row": "3",
+            "Level": 1
+          }
+        ],
+        "JitterOffsets": "RTID(SpecialOffsets@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "Special9_1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(beach_octopus@ZombieTypes)",
+            "Row": "4",
+            "Level": 1
+          }
+        ],
+        "JitterOffsets": "RTID(SpecialOffsets@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "Special10_1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(needforspeed_gargantuar@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          }
+        ],
+        "JitterOffsets": "RTID(SpecialOffsets@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "Special10_2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(beach_octopus@ZombieTypes)",
+            "Row": "3",
+            "Level": 1
+          }
+        ],
+        "JitterOffsets": "RTID(SpecialOffsets@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "CopyRulesNotice"
+      ],
+      "objclass": "SpawnZombiesFromGridItemSpawnerProps",
+      "objdata": {
+        "Zombies": [],
+        "GridTypes": [],
+        "SuppressActionIfNoGridItemsFound": false,
+        "ZombieSpawnWaitTime": 0,
+        "WaveStartMessage": "[S35_H06_COPY_RULE]",
+        "AdditionalPlantfood": 0
+      }
+    },
+    {
+      "aliases": [
+        "RiftThemeDemo"
+      ],
+      "objclass": "RiftThemeDemoModuleProperties",
+      "objdata": {
+        "DemoRiftThemeName": [
+          "rusher"
+        ]
+      }
+    }
+  ]
+}

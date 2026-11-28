@@ -1,0 +1,324 @@
+{
+	"#comment": "Memory",
+	"objects": [
+		{
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "[S35_MEMORY_HARD_NAME_015]",
+				"LevelNumber": 1,
+				"GameOverDialogTaskFailed": true,
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [
+					"RTID(StandardIntro@LevelModules)",
+					"RTID(EvilDave3@CurrentLevel)",
+					"RTID(Future3SeedBank@CurrentLevel)",
+					"RTID(ChallengeModule@CurrentLevel)",
+					"RTID(NewWaves@CurrentLevel)",
+					"RTID(RiftTheme@CurrentLevel)",
+					"RTID(InitialPlant@CurrentLevel)"
+				],
+				"MusicType": "MiniGame_A",
+				"Name": "[S35_MEMORY_HARD_NAME_015]",
+				"NormalPresentTable": "future_normal_01",
+				"ShinyPresentTable": "future_shiny_01",
+				"DisablePeavine": true,
+				"IsArtifactDisabled": true,
+				"VictoryModule": "RTID(PVZ1ModeOutro@LevelModules)",
+				"StageModule": "RTID(NightStage@LevelModules)",
+				"StartingSun": 500,
+				"ShowZombies": []
+			}
+		},
+		{
+			"aliases": [
+				"ChallengeModule"
+			],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [
+					[
+						"RTID(SpendSunHoldout@CurrentLevel)",
+						"RTID(PlantFoodNonuse@CurrentLevel)",
+						"RTID(BeatTheLevel@CurrentLevel)"
+					]
+				],
+				"ChallengesAlwaysAvailable": true
+			}
+		},
+		{
+			"aliases": [
+				"SpendSunHoldout"
+			],
+			"objclass": "StarChallengeSpendSunHoldoutProps",
+			"objdata": {
+				"HoldoutSeconds": 5
+			}
+		},
+        {
+            "aliases": [
+                "PlantFoodNonuse"
+            ],
+            "objclass": "StarChallengePlantFoodNonuseProps",
+            "objdata": {}
+        },
+		{
+			"aliases": [
+				"BeatTheLevel"
+			],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Description": "[STARCHALLENGE_EVIL]",
+				"DescriptiveName": "[STARCHALLENGE_EVIL_NAME]"
+			}
+		},
+        {
+            "aliases": [
+                "RiftTheme"
+            ],
+            "objclass": "RiftThemeDemoModuleProperties",
+            "objdata": {
+                "DemoRiftThemeName": [
+                    "disable_boost"
+                ]
+            }
+        },
+		{
+			"aliases": [
+				"NewWaves"
+			],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {
+				"DynamicZombies": [],
+				"WaveManagerPropsVector": [
+					"RTID(WaveManagerPropsWeek1@CurrentLevel)",
+					"RTID(WaveManagerPropsWeek1@CurrentLevel)",
+					"RTID(WaveManagerPropsWeek1@CurrentLevel)",
+					"RTID(WaveManagerPropsWeek1@CurrentLevel)"
+				]
+			}
+		},
+		{
+			"aliases": [
+				"WaveManagerPropsWeek1"
+			],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"FlagWaveInterval": 0,
+				"WaveCount": 0,
+				"WaveSpendingPointIncrement": 100,
+				"WaveSpendingPoints": 100,
+                "DescriptionName": "[S35_MEMORY_HARD_MODE_015]",
+                "Description": "[S35_MEMORY_HARD_MODE_DESC_015]",
+				"Waves": []
+			}
+		},
+		{
+			"aliases": [
+				"InitialPlant"
+			],
+			"objclass": "InitialPlantEntryProperties",
+			"objdata": {
+				"Plants": [
+					{
+						"GridX": 0,
+						"GridY": 0,
+						"PlantTypes": [
+							"peashooter"
+						]
+					},
+					{
+						"GridX": 0,
+						"GridY": 0,
+						"PlantTypes": [
+							"peavine"
+						]
+					},
+					{
+						"GridX": 1,
+						"GridY": 0,
+						"PlantTypes": [
+							"snowpea"
+						]
+					},
+					{
+						"GridX": 2,
+						"GridY": 0,
+						"PlantTypes": [
+							"splitpea"
+						]
+					},
+					{
+						"GridX": 3,
+						"GridY": 0,
+						"PlantTypes": [
+							"peanut"
+						]
+					},
+					{
+						"GridX": 0,
+						"GridY": 1,
+						"PlantTypes": [
+							"repeater"
+						]
+					},
+					{
+						"GridX": 1,
+						"GridY": 1,
+						"PlantTypes": [
+							"threepeater"
+						]
+					},
+					{
+						"GridX": 1,
+						"GridY": 1,
+						"PlantTypes": [
+							"peavine"
+						]
+					},
+					{
+						"GridX": 2,
+						"GridY": 1,
+						"PlantTypes": [
+							"shadowpeashooter"
+						]
+					},
+					{
+						"GridX": 3,
+						"GridY": 1,
+						"PlantTypes": [
+							"peapod"
+						]
+					},
+					{
+						"GridX": 0,
+						"GridY": 2,
+						"PlantTypes": [
+							"snappea"
+						]
+					},
+					{
+						"GridX": 1,
+						"GridY": 2,
+						"PlantTypes": [
+							"bitpeashooter"
+						]
+					},
+					{
+						"GridX": 2,
+						"GridY": 2,
+						"PlantTypes": [
+							"seashooter"
+						]
+					},
+					{
+						"GridX": 3,
+						"GridY": 2,
+						"PlantTypes": [
+							"slingpea"
+						]
+					},
+					{
+						"GridX": 0,
+						"GridY": 3,
+						"PlantTypes": [
+							"gatlingpea"
+						]
+					},
+					{
+						"GridX": 0,
+						"GridY": 3,
+						"PlantTypes": [
+							"peavine"
+						]
+					},
+					{
+						"GridX": 1,
+						"GridY": 3,
+						"PlantTypes": [
+							"cosmicpea"
+						]
+					},
+					{
+						"GridX": 2,
+						"GridY": 3,
+						"PlantTypes": [
+							"slingpea"
+						]
+					},
+					{
+						"GridX": 3,
+						"GridY": 3,
+						"PlantTypes": [
+							"firepeashooter"
+						]
+					},
+					{
+						"GridX": 0,
+						"GridY": 4,
+						"PlantTypes": [
+							"electricpeashooter"
+						]
+					},
+					{
+						"GridX": 0,
+						"GridY": 4,
+						"PlantTypes": [
+							"peavine"
+						]
+					},
+					{
+						"GridX": 1,
+						"GridY": 4,
+						"PlantTypes": [
+							"primalpeashooter"
+						]
+					},
+					{
+						"GridX": 2,
+						"GridY": 4,
+						"PlantTypes": [
+							"poisonpeashooter"
+						]
+					},
+					{
+						"GridX": 3,
+						"GridY": 4,
+						"PlantTypes": [
+							"splitpea"
+						]
+					}
+				]
+			}
+		},
+		{
+			"aliases": [
+				"EvilDave3"
+			],
+			"objclass": "EvilDaveProperties",
+			"objdata": {
+				"PlantDistance": 4
+			}
+		},
+		{
+			"aliases": [
+				"Future3SeedBank"
+			],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"PresetPlantList": [
+				    "tutorial",
+				    "tutorial_armor1",
+				    "tutorial_armor2",
+				    "pvz1_bungee",
+				    "modern_newspaper",
+				    "modern_allstar",
+				    "modern_miner",
+				    "tutorial_gargantuar"
+				],
+				"SelectionMethod": "preset",
+				"ZombieMode": true
+			}
+		}
+	],
+	"version": 1
+}

@@ -1,0 +1,990 @@
+{
+  "version": 1,
+  "#comment": "PVZ1 S35 H2",
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "[S35_H02_SNOWBALL_DESC]",
+        "Name": "[S35_H02_SNOWBALL_NAME]",
+        "LevelNumber": 2,
+        "StartingSun": 400,
+        "ZombieMaxLevel": 1,
+        "IsArtifactDisabled": false,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "VictoryModule": "RTID(PVZ1ModeOutro@LevelModules)",
+        "StageModule": "RTID(SnowModernStage@LevelModules)",
+        "Modules": [
+          "RTID(RiftThemeDemo@CurrentLevel)",
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(Challenges@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(SkySun@CurrentLevel)",
+          "RTID(ProtectColumn@CurrentLevel)",
+          "RTID(InitialPods@CurrentLevel)",
+          "RTID(BallLane@CurrentLevel)",
+          "RTID(WaveModule@CurrentLevel)",
+          "RTID(StartingPlantfood@CurrentLevel)"
+        ],
+        "ShowZombies": [
+          "christmas",
+          "christmas_armor1",
+          "christmas_armor2",
+          "christmas_imp2",
+          "modern_newspaper",
+          "nutcracker",
+          "christmas_poncho"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Challenges"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(GoalSun@CurrentLevel)",
+            "RTID(GoalCount@CurrentLevel)",
+            "RTID(GoalLost@CurrentLevel)"
+          ]
+        ],
+        "ChallengesAlwaysAvailable": true
+      }
+    },
+    {
+      "aliases": [
+        "GoalSun"
+      ],
+      "objclass": "StarChallengeSunUsedProps",
+      "objdata": {
+        "MaximumSun": 4000
+      }
+    },
+    {
+      "aliases": [
+        "GoalCount"
+      ],
+      "objclass": "StarChallengeSimultaneousPlantsProps",
+      "objdata": {
+        "MaximumPlants": 16
+      }
+    },
+    {
+      "aliases": [
+        "GoalLost"
+      ],
+      "objclass": "StarChallengePlantsLostProps",
+      "objdata": {
+        "MaximumPlantsLost": 10
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "SelectionMethod": "preset",
+        "OverrideSeedSlotsCount": 4,
+        "GlobalLevel": 1,
+        "PresetPlantList": [
+          "gatlingpea",
+          "zoybeanpod",
+          "jalapeno",
+          "garlic"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "SkySun"
+      ],
+      "objclass": "SunDropperProperties",
+      "objdata": {
+        "InitialSunDropDelay": 6,
+        "SunCountdownBase": 10,
+        "SunCountdownRange": 0,
+        "SunCountdownMax": 10,
+        "SunCountdownIncreasePerSun": 0
+      }
+    },
+    {
+      "aliases": [
+        "ProtectColumn"
+      ],
+      "objclass": "ProtectThePlantChallengeProperties",
+      "objdata": {
+        "MustProtectCount": 5,
+        "Plants": [
+          {
+            "PlantType": "sunflower",
+            "GridX": 0,
+            "GridY": 0
+          },
+          {
+            "PlantType": "sunflower",
+            "GridX": 0,
+            "GridY": 1
+          },
+          {
+            "PlantType": "sunflower",
+            "GridX": 0,
+            "GridY": 2
+          },
+          {
+            "PlantType": "sunflower",
+            "GridX": 0,
+            "GridY": 3
+          },
+          {
+            "PlantType": "sunflower",
+            "GridX": 0,
+            "GridY": 4
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "InitialPods"
+      ],
+      "objclass": "InitialPlantProperties",
+      "objdata": {
+        "InitialPlantPlacements": [
+          {
+            "TypeName": "zoybeanpod",
+            "GridX": 1,
+            "GridY": 1,
+            "Level": 1
+          },
+          {
+            "TypeName": "zoybeanpod",
+            "GridX": 1,
+            "GridY": 3,
+            "Level": 1
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "BallLane"
+      ],
+      "objclass": "MoldColonyChallengeProps",
+      "objdata": {
+        "Locations": "RTID(BallLaneMap@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "BallLaneMap"
+      ],
+      "objclass": "BoardGridMapProps",
+      "objdata": {
+        "Values": [
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "OpeningRule"
+      ],
+      "objclass": "SpawnZombiesFromGridItemSpawnerProps",
+      "objdata": {
+        "Zombies": [],
+        "GridTypes": [],
+        "SuppressActionIfNoGridItemsFound": false,
+        "ZombieSpawnWaitTime": 0,
+        "WaveStartMessage": "[S35_H02_SNOWBALL_ADVICE]"
+      }
+    },
+    {
+      "aliases": [
+        "WaveModule"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "WaveManagerPropsVector": [
+          "RTID(Waves@CurrentLevel)",
+          "RTID(Waves@CurrentLevel)",
+          "RTID(Waves@CurrentLevel)",
+          "RTID(Waves@CurrentLevel)"
+        ],
+        "DynamicZombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Waves"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "WaveCount": 10,
+        "Waves": [
+          [
+            "RTID(OpeningRule@CurrentLevel)",
+            "RTID(W01ChristmasSupport@CurrentLevel)"
+          ],
+          [
+            "RTID(W02SnowballPair@CurrentLevel)",
+            "RTID(W02ChristmasSupport@CurrentLevel)"
+          ],
+          [
+            "RTID(W03ChristmasSupport@CurrentLevel)"
+          ],
+          [
+            "RTID(W04SnowballPair@CurrentLevel)",
+            "RTID(W04ChristmasSupport@CurrentLevel)"
+          ],
+          [
+            "RTID(W05SnowballPair@CurrentLevel)",
+            "RTID(W05ChristmasSupport@CurrentLevel)"
+          ],
+          [
+            "RTID(W06SnowballPair@CurrentLevel)",
+            "RTID(W06ChristmasSupport@CurrentLevel)"
+          ],
+          [
+            "RTID(W07SnowballPair@CurrentLevel)",
+            "RTID(W07ChristmasSupport@CurrentLevel)"
+          ],
+          [
+            "RTID(W08SnowballPair@CurrentLevel)",
+            "RTID(W08ChristmasSupport@CurrentLevel)"
+          ],
+          [
+            "RTID(W09SnowballPair@CurrentLevel)",
+            "RTID(W09ChristmasSupport@CurrentLevel)"
+          ],
+          [
+            "RTID(W10UpperSnowballPair@CurrentLevel)",
+            "RTID(W10LowerSnowballPair@CurrentLevel)",
+            "RTID(W10LowerSnowballAtMold@CurrentLevel)"
+          ]
+        ],
+        "FlagWaveInterval": 5,
+        "SuppressFlagZombie": false,
+        "SuppressedDynamicZombieWaves": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "MinNextWaveHealthPercentage": 0.4,
+        "MaxNextWaveHealthPercentage": 0.4,
+        "ZombieCountdownFirstWaveSecs": 8,
+        "ZombieCountdownHugeWaveDelay": 5,
+        "DescriptionName": "[S35_H02_SNOWBALL_MODE]",
+        "Description": "[S35_H02_SNOWBALL_RULE]"
+      }
+    },
+    {
+      "aliases": [
+        "StartingPlantfood"
+      ],
+      "objclass": "LevelMutatorStartingPlantfoodProps",
+      "objdata": {
+        "StartingPlantfoodOverride": 3
+      }
+    },
+    {
+      "objclass": "StageModuleProperties",
+      "aliases": [
+        "SnowballStage"
+      ],
+      "objdata": {
+        "ResourceGroupNames": [
+          "Egypt_Gravestone",
+          "Game_Tombstones_Dynamic",
+          "Tombstone_Dark_Effects",
+          "DelayLoad_Background_Autumn_Late",
+          "AudioTutorial"
+        ],
+        "GroupsToUnloadForAds": [
+          "DelayLoad_Background_Autumn_Late"
+        ],
+        "StagePrefix": "Autumn_Late",
+        "BackgroundResourceGroup": "DelayLoad_Background_Autumn_Late",
+        "BackgroundImagePrefix": "IMAGE_BACKGROUNDS_AUTUMN_LATE",
+        "LevelPowerupSet": "LevelPowerupsDefault",
+        "BasicZombieTypeName": "christmas",
+        "FlagZombieTypeName": "christmas_flag",
+        "Armor1ZombieTypeName": "christmas_armor1",
+        "Armor2ZombieTypeName": "christmas_armor2",
+        "MusicSuffix": "Twister",
+        "AmbientAudioSuffix": "Amb_Tutorial_Garden_BG_LP",
+        "RailcartDefaultTypeName": "railcart_tutotial",
+        "GravestoneDefaultTypeName": "gravestone_tutorial",
+        "DisabledStreetCells": [
+          {
+            "mX": 0,
+            "mY": 0
+          },
+          {
+            "mX": 0,
+            "mY": 1
+          },
+          {
+            "mX": 0,
+            "mY": 2
+          },
+          {
+            "mX": 0,
+            "mY": 3
+          },
+          {
+            "mX": 0,
+            "mY": 4
+          },
+          {
+            "mX": 0,
+            "mY": 5
+          },
+          {
+            "mX": 0,
+            "mY": 6
+          },
+          {
+            "mX": 0,
+            "mY": 7
+          },
+          {
+            "mX": 0,
+            "mY": 8
+          },
+          {
+            "mX": 0,
+            "mY": 9
+          },
+          {
+            "mX": 1,
+            "mY": 0
+          },
+          {
+            "mX": 1,
+            "mY": 1
+          },
+          {
+            "mX": 1,
+            "mY": 2
+          },
+          {
+            "mX": 1,
+            "mY": 3
+          },
+          {
+            "mX": 1,
+            "mY": 4
+          },
+          {
+            "mX": 1,
+            "mY": 5
+          },
+          {
+            "mX": 1,
+            "mY": 6
+          },
+          {
+            "mX": 1,
+            "mY": 7
+          },
+          {
+            "mX": 1,
+            "mY": 8
+          },
+          {
+            "mX": 1,
+            "mY": 9
+          },
+          {
+            "mX": 2,
+            "mY": 0
+          },
+          {
+            "mX": 2,
+            "mY": 1
+          },
+          {
+            "mX": 2,
+            "mY": 2
+          },
+          {
+            "mX": 2,
+            "mY": 3
+          },
+          {
+            "mX": 2,
+            "mY": 4
+          },
+          {
+            "mX": 2,
+            "mY": 5
+          },
+          {
+            "mX": 2,
+            "mY": 6
+          },
+          {
+            "mX": 2,
+            "mY": 7
+          },
+          {
+            "mX": 2,
+            "mY": 8
+          },
+          {
+            "mX": 2,
+            "mY": 9
+          },
+          {
+            "mX": 3,
+            "mY": 9
+          },
+          {
+            "mX": 5,
+            "mY": 9
+          },
+          {
+            "mX": 7,
+            "mY": 9
+          },
+          {
+            "mX": 7,
+            "mY": 8
+          },
+          {
+            "mX": 7,
+            "mY": 7
+          },
+          {
+            "mX": 8,
+            "mY": 9
+          },
+          {
+            "mX": 8,
+            "mY": 8
+          },
+          {
+            "mX": 8,
+            "mY": 7
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "W01ChristmasSupport"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "Level": 1,
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "Level": 1,
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          }
+        ],
+        "JitterOffsets": "RTID(SupportOffsets@CurrentLevel)",
+        "AdditionalPlantfood": 0
+      }
+    },
+    {
+      "aliases": [
+        "W02SnowballPair"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "Level": 1,
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(snow_ball@ZombieTypes)",
+            "Level": 1,
+            "Row": "2"
+          }
+        ],
+        "FixedOffset": -396,
+        "AdditionalPlantfood": 0
+      }
+    },
+    {
+      "aliases": [
+        "W02ChristmasSupport"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "Level": 1,
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "Level": 1,
+            "Row": "5"
+          }
+        ],
+        "JitterOffsets": "RTID(SupportOffsets@CurrentLevel)",
+        "AdditionalPlantfood": 0
+      }
+    },
+    {
+      "aliases": [
+        "W03ChristmasSupport"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "Level": 1,
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "Level": 1,
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(christmas_imp2@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          }
+        ],
+        "JitterOffsets": "RTID(SupportOffsets@CurrentLevel)",
+        "AdditionalPlantfood": 0
+      }
+    },
+    {
+      "aliases": [
+        "W04SnowballPair"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "Level": 1,
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(snow_ball@ZombieTypes)",
+            "Level": 1,
+            "Row": "4"
+          }
+        ],
+        "FixedOffset": -396,
+        "AdditionalPlantfood": 0
+      }
+    },
+    {
+      "aliases": [
+        "W04ChristmasSupport"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "Level": 1,
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "Level": 1,
+            "Row": "5"
+          }
+        ],
+        "JitterOffsets": "RTID(SupportOffsets@CurrentLevel)",
+        "AdditionalPlantfood": 0
+      }
+    },
+    {
+      "aliases": [
+        "W05SnowballPair"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(christmas_armor2@ZombieTypes)",
+            "Level": 1,
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(snow_ball@ZombieTypes)",
+            "Level": 1,
+            "Row": "2"
+          }
+        ],
+        "FixedOffset": -332,
+        "AdditionalPlantfood": 0
+      }
+    },
+    {
+      "aliases": [
+        "W05ChristmasSupport"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(modern_newspaper@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "Level": 1,
+            "Row": "4"
+          }
+        ],
+        "JitterOffsets": "RTID(SupportOffsets@CurrentLevel)",
+        "AdditionalPlantfood": 0
+      }
+    },
+    {
+      "aliases": [
+        "W06SnowballPair"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(christmas_armor2@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(snow_ball@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          }
+        ],
+        "FixedOffset": -332,
+        "AdditionalPlantfood": 0
+      }
+    },
+    {
+      "aliases": [
+        "W06ChristmasSupport"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "Level": 1,
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "Level": 1,
+            "Row": "5"
+          }
+        ],
+        "JitterOffsets": "RTID(SupportOffsets@CurrentLevel)",
+        "AdditionalPlantfood": 0
+      }
+    },
+    {
+      "aliases": [
+        "W07SnowballPair"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(christmas_poncho_plate@ZombieTypes)",
+            "Level": 1,
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(snow_ball@ZombieTypes)",
+            "Level": 1,
+            "Row": "5"
+          }
+        ],
+        "FixedOffset": -332,
+        "AdditionalPlantfood": 0
+      }
+    },
+    {
+      "aliases": [
+        "W07ChristmasSupport"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(nutcracker@ZombieTypes)",
+            "Level": 1,
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(christmas_imp2@ZombieTypes)",
+            "Level": 1,
+            "Row": "5"
+          }
+        ],
+        "JitterOffsets": "RTID(SupportOffsets@CurrentLevel)",
+        "AdditionalPlantfood": 0
+      }
+    },
+    {
+      "aliases": [
+        "W08SnowballPair"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "Level": 1,
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(snow_ball@ZombieTypes)",
+            "Level": 1,
+            "Row": "3"
+          }
+        ],
+        "FixedOffset": -332,
+        "AdditionalPlantfood": 0
+      }
+    },
+    {
+      "aliases": [
+        "W08ChristmasSupport"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(christmas_imp2@ZombieTypes)",
+            "Level": 1,
+            "Row": "5"
+          }
+        ],
+        "JitterOffsets": "RTID(SupportOffsets@CurrentLevel)",
+        "AdditionalPlantfood": 0
+      }
+    },
+    {
+      "aliases": [
+        "W09SnowballPair"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dancer_king@ZombieTypes)",
+            "Level": 1,
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(snow_ball@ZombieTypes)",
+            "Level": 1,
+            "Row": "5"
+          }
+        ],
+        "FixedOffset": -332,
+        "AdditionalPlantfood": 0
+      }
+    },
+    {
+      "aliases": [
+        "W09ChristmasSupport"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(modern_newspaper@ZombieTypes)",
+            "Level": 1,
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "Level": 1,
+            "Row": "4"
+          }
+        ],
+        "JitterOffsets": "RTID(SupportOffsets@CurrentLevel)",
+        "AdditionalPlantfood": 0
+      }
+    },
+    {
+      "aliases": [
+        "W10UpperSnowballPair"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "Level": 1,
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(snow_ball@ZombieTypes)",
+            "Level": 1,
+            "Row": "2"
+          }
+        ],
+        "FixedOffset": -396,
+        "AdditionalPlantfood": 0
+      }
+    },
+    {
+      "aliases": [
+        "W10LowerSnowballPair"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(christmas_armor2@ZombieTypes)",
+            "Level": 1,
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(dancer_king@ZombieTypes)",
+            "Level": 1,
+            "Row": "4"
+          }
+        ],
+        "FixedOffset": -332,
+        "AdditionalPlantfood": 0
+      }
+    },
+    {
+      "aliases": [
+        "W10LowerSnowballAtMold"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(snow_ball@ZombieTypes)",
+            "Level": 1,
+            "Row": "4",
+            "Column": "5"
+          }
+        ],
+        "FixedOffset": 1,
+        "AdditionalPlantfood": 0
+      }
+    },
+    {
+      "aliases": [
+        "SupportOffsets"
+      ],
+      "objclass": "ZombieJitterOffsets",
+      "objdata": {
+        "ZombieSpawningOffsetIncrement": 57,
+        "ZombieSpawningRandomJitter": 90
+      }
+    },
+    {
+      "aliases": [
+        "RiftThemeDemo"
+      ],
+      "objclass": "RiftThemeDemoModuleProperties",
+      "objdata": {
+        "DemoRiftThemeName": [
+          "gravestone"
+        ]
+      }
+    }
+  ]
+}

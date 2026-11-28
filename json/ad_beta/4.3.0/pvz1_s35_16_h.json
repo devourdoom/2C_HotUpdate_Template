@@ -1,0 +1,1932 @@
+{
+  "version": 1,
+  "#comment": "PVZ1 S35 H16",
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "[S35_H16_QUEEN_DESC]",
+        "LevelNumber": 16,
+        "StartingSun": 500,
+        "IsArtifactDisabled": false,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(RiftThemeDemo@CurrentLevel)",
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(SkySun@CurrentLevel)",
+          "RTID(Challenges@CurrentLevel)",
+          "RTID(WaveModule@CurrentLevel)",
+          "RTID(TimeEnergy@CurrentLevel)"
+        ],
+        "Name": "[S35_H16_QUEEN_NAME]",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "VictoryModule": "RTID(PVZ1ModeOutro@LevelModules)",
+        "StageModule": "RTID(SnowModernStage@LevelModules)",
+        "ShowZombies": [
+          "christmas",
+          "christmas_armor1",
+          "christmas_armor2",
+          "christmas_poncho_plate",
+          "ladder_festival",
+          "pole_vaulting_feastivus",
+          "christmas_imp2",
+          "christmas_gargantuar2",
+          "fairy_tale_imp_Elite",
+          "dark_cavalry",
+          "christmas_caketank",
+          "fairy_tale_gargantuar",
+          "dark_juggler"
+        ],
+        "ZombieMaxLevel": 1
+      }
+    },
+    {
+      "objclass": "ModernStageProperties",
+      "aliases": [
+        "QueenStage"
+      ],
+      "objdata": {
+        "ResourceGroupNames": [
+          "Modern_Gravestone",
+          "Game_Tombstones_Dynamic",
+          "Tombstone_Dark_Effects",
+          "DelayLoad_Background_Modern_Compressed",
+          "Dirt_Spawn_Modern",
+          "AudioModern",
+          "ModernLootPinatas"
+        ],
+        "GroupsToUnloadForAds": [
+          "DelayLoad_Background_Modern_Compressed"
+        ],
+        "StagePrefix": "modern",
+        "BackgroundResourceGroup": "DelayLoad_Background_Modern_Compressed",
+        "BackgroundImagePrefix": "IMAGE_BACKGROUNDS_MODERN",
+        "LevelPowerupSet": "LevelPowerupsDefault",
+        "BasicZombieTypeName": "christmas",
+        "FlagZombieTypeName": "christmas_flag",
+        "FlagVeteranZombieTypeNames": [
+          "tutorial_flag_veteran"
+        ],
+        "Armor1ZombieTypeName": "christmas_armor1",
+        "Armor2ZombieTypeName": "christmas_armor2",
+        "RailcartDefaultTypeName": "railcart_egypt",
+        "GravestoneDefaultTypeName": "gravestone_tutorial",
+        "DirtSpawnEffectName": "POPANIM_EFFECTS_DIRT_SPAWN_MODERN",
+        "MusicSuffix": "Twister",
+        "DisabledStreetCells": [
+          {
+            "mX": 0,
+            "mY": 0
+          },
+          {
+            "mX": 0,
+            "mY": 1
+          },
+          {
+            "mX": 0,
+            "mY": 2
+          },
+          {
+            "mX": 0,
+            "mY": 3
+          },
+          {
+            "mX": 0,
+            "mY": 4
+          },
+          {
+            "mX": 0,
+            "mY": 5
+          },
+          {
+            "mX": 0,
+            "mY": 6
+          },
+          {
+            "mX": 0,
+            "mY": 7
+          },
+          {
+            "mX": 0,
+            "mY": 8
+          },
+          {
+            "mX": 0,
+            "mY": 9
+          },
+          {
+            "mX": 1,
+            "mY": 0
+          },
+          {
+            "mX": 1,
+            "mY": 1
+          },
+          {
+            "mX": 1,
+            "mY": 2
+          },
+          {
+            "mX": 1,
+            "mY": 3
+          },
+          {
+            "mX": 1,
+            "mY": 4
+          },
+          {
+            "mX": 1,
+            "mY": 5
+          },
+          {
+            "mX": 1,
+            "mY": 6
+          },
+          {
+            "mX": 1,
+            "mY": 7
+          },
+          {
+            "mX": 1,
+            "mY": 8
+          },
+          {
+            "mX": 1,
+            "mY": 9
+          },
+          {
+            "mX": 2,
+            "mY": 0
+          },
+          {
+            "mX": 2,
+            "mY": 1
+          },
+          {
+            "mX": 2,
+            "mY": 2
+          },
+          {
+            "mX": 2,
+            "mY": 3
+          },
+          {
+            "mX": 2,
+            "mY": 4
+          },
+          {
+            "mX": 2,
+            "mY": 5
+          },
+          {
+            "mX": 2,
+            "mY": 6
+          },
+          {
+            "mX": 2,
+            "mY": 7
+          },
+          {
+            "mX": 2,
+            "mY": 8
+          },
+          {
+            "mX": 2,
+            "mY": 9
+          },
+          {
+            "mX": 5,
+            "mY": 9
+          },
+          {
+            "mX": 6,
+            "mY": 0
+          },
+          {
+            "mX": 6,
+            "mY": 1
+          },
+          {
+            "mX": 6,
+            "mY": 2
+          },
+          {
+            "mX": 6,
+            "mY": 3
+          },
+          {
+            "mX": 6,
+            "mY": 4
+          },
+          {
+            "mX": 6,
+            "mY": 5
+          },
+          {
+            "mX": 6,
+            "mY": 6
+          },
+          {
+            "mX": 6,
+            "mY": 7
+          },
+          {
+            "mX": 6,
+            "mY": 8
+          },
+          {
+            "mX": 6,
+            "mY": 9
+          },
+          {
+            "mX": 7,
+            "mY": 0
+          },
+          {
+            "mX": 7,
+            "mY": 6
+          },
+          {
+            "mX": 7,
+            "mY": 7
+          },
+          {
+            "mX": 7,
+            "mY": 8
+          },
+          {
+            "mX": 7,
+            "mY": 9
+          },
+          {
+            "mX": 8,
+            "mY": 0
+          },
+          {
+            "mX": 8,
+            "mY": 6
+          },
+          {
+            "mX": 8,
+            "mY": 7
+          },
+          {
+            "mX": 8,
+            "mY": 8
+          },
+          {
+            "mX": 8,
+            "mY": 9
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "SelectionMethod": "chooser",
+        "OverrideSeedSlotsCount": 8,
+        "GlobalLevel": 1,
+        "PresetPlantList": [],
+        "PlantWhiteList": [
+          "sunflower",
+          "peashooter",
+          "wallnut",
+          "potatomine",
+          "cabbagepult",
+          "repeater",
+          "tallnut",
+          "spikerock",
+          "threepeater",
+          "wintermelon",
+          "gravebuster",
+          "snowpea",
+          "torchwood",
+          "kernelpult",
+          "lightningreed",
+          "coconutcannon",
+          "melonpult",
+          "peapod",
+          "imitater",
+          "cherry_bomb",
+          "iceburg",
+          "bloomerang",
+          "twinsunflower",
+          "bonkchoy",
+          "springbean",
+          "spikeweed",
+          "snapdragon",
+          "powerlily",
+          "squash",
+          "chilibean",
+          "splitpea",
+          "jalapeno",
+          "turnip",
+          "firegourd",
+          "peach",
+          "bamboo",
+          "laser_bean",
+          "blover",
+          "citron",
+          "empea",
+          "holonut",
+          "magnifyinggrass",
+          "powerplant",
+          "starfruit",
+          "hypnoshroom",
+          "sunshroom",
+          "puffshroom",
+          "fumeshroom",
+          "sunbean",
+          "peanut",
+          "magnetshroom",
+          "oakshooter",
+          "iceshroom",
+          "coffeebean",
+          "carrotlauncher",
+          "fireshroom",
+          "streetlamp",
+          "dandelion",
+          "broccoli",
+          "pamegranate",
+          "chomper",
+          "lemon",
+          "sweetpotato",
+          "cracker",
+          "lotusshower",
+          "lilypad",
+          "bowlingbulb",
+          "banana",
+          "guacodile",
+          "tanglekelp",
+          "homingthistle",
+          "sapfling",
+          "ghostpepper",
+          "hurrikale",
+          "firepeashooter",
+          "hotpotato",
+          "pepperpult",
+          "chardguard",
+          "stunion",
+          "xshot",
+          "rafflesia",
+          "acorn",
+          "chestnut",
+          "sugarcane",
+          "magicshroom",
+          "roseswordman",
+          "doublesamara",
+          "asparagus",
+          "saucer",
+          "horsebean",
+          "groundcherry",
+          "anthurium",
+          "pineapple",
+          "electricblueberry",
+          "greenturnip",
+          "endurian",
+          "toadstool",
+          "pumpkinwitch",
+          "birthsunflower",
+          "goldleaf",
+          "akee",
+          "lavaguava",
+          "redstinger",
+          "stallia",
+          "cottonyeti",
+          "jackfruit",
+          "agave",
+          "kiwifruit",
+          "wintersweet",
+          "dragonfruit",
+          "pinkstarfruit",
+          "flamelady",
+          "matchflower",
+          "gatlingpea",
+          "morningglory",
+          "nekotail",
+          "phatbeet",
+          "thymewarp",
+          "celerystalker",
+          "sporeshroom",
+          "garlic",
+          "intensivecarrot",
+          "cactus",
+          "primalpeashooter",
+          "primalwallnut",
+          "perfumeshroom",
+          "primalsunflower",
+          "primalpotatomine",
+          "grapeshot",
+          "coldsnapdragon",
+          "shrinkingviolet",
+          "primalrafflesia",
+          "dragonroar",
+          "bramble",
+          "dragoncane",
+          "cobcannon",
+          "applemortar",
+          "witchhazel",
+          "escaperoot",
+          "electriccurrant",
+          "whitemelon",
+          "shadowshroom",
+          "caulipower",
+          "moonflower",
+          "grimrose",
+          "nightshade",
+          "dusklobber",
+          "bloominghearts",
+          "wasabiwhip",
+          "explodeonut",
+          "parsnip",
+          "missiletoe",
+          "kiwibeast",
+          "hotdate",
+          "electricpeashooter",
+          "icycurrant",
+          "tuliptrumpeter",
+          "eggplantninja",
+          "goldbloom",
+          "flattenedshroom",
+          "lotusshooter",
+          "vanilla",
+          "passionflower",
+          "convallariachemist",
+          "mulberry",
+          "electricitea",
+          "imppear",
+          "plantain",
+          "pinecone",
+          "narcissusshooter",
+          "alarmsagittifolia",
+          "hollyknight",
+          "shadowpeashooter",
+          "snappea",
+          "thundersnapdragon",
+          "monotropa",
+          "aloes",
+          "slingpea",
+          "bearberry",
+          "waxgourd",
+          "olive",
+          "pomegranatejeweler",
+          "egretflower",
+          "strawburst",
+          "poisonpeashooter",
+          "elaeocarpus",
+          "dartichoke",
+          "eleocurling",
+          "pokra",
+          "hydrocotyledrummer",
+          "ultomato",
+          "shadowvanilla",
+          "bromelblade",
+          "icelotus",
+          "stephania",
+          "tupistrastalker",
+          "dendrobiumguard",
+          "cypripedium",
+          "gumnut",
+          "olivepit",
+          "boophonegeisha",
+          "nukelauncher",
+          "stickybombrice",
+          "headbutterlettuce",
+          "dazeychain",
+          "boomflower",
+          "beercoconut",
+          "clawgloriosa",
+          "flowerpot",
+          "impatiensshooter",
+          "turkeypult",
+          "hammerflower",
+          "tigerstool",
+          "draftodil",
+          "mangosteen",
+          "inferno",
+          "gardenergrass",
+          "fishhookgrass",
+          "ents",
+          "heathseeker",
+          "hatmushroom",
+          "hocuscrocus",
+          "byttneriameteorhammer",
+          "buttercup",
+          "crownflower",
+          "jewelrabbit",
+          "burdockbatter",
+          "deodarcedar",
+          "springprincess",
+          "riflebamboo",
+          "zoybeanpod",
+          "orchidmage",
+          "jackolantern",
+          "beanchemist",
+          "lancerhoya",
+          "vamporcini",
+          "pumpkin",
+          "geraniifencer",
+          "powervine",
+          "sarracenia",
+          "meteorflower",
+          "mandrake",
+          "cthulhuactinia",
+          "devilsflower",
+          "hoyacordata",
+          "peavine",
+          "maybee",
+          "rapeflower",
+          "dracaena",
+          "spartanbamboo",
+          "shinevine",
+          "nightcap",
+          "happyleek",
+          "pyrevine",
+          "gluttonydragon",
+          "waterrabbit",
+          "heliconiagunner",
+          "electricpeel",
+          "wizardthorns",
+          "tristerixaphyllus",
+          "chainsawburmannii",
+          "dragonbruit",
+          "gloomvine",
+          "eagleclaw",
+          "heavendatura",
+          "firecrackerflower",
+          "twinshoneysuckle",
+          "rhubarbarian",
+          "aquavine",
+          "winterrambutan",
+          "wiregelsemium",
+          "iceweed",
+          "bubblecoral",
+          "eywa",
+          "paphiopedilum",
+          "buduhboom",
+          "mapleblade",
+          "guardshroom",
+          "rheumnobile",
+          "megagatling",
+          "kelpguard",
+          "seashroom",
+          "oxygenalgae",
+          "aquaweed",
+          "seaderris",
+          "seashooter",
+          "actinostemma",
+          "animnuts",
+          "marigold",
+          "scaredyshroom",
+          "aeonium",
+          "poisonvine",
+          "peonychi",
+          "doomshroom",
+          "umbrellaleaf",
+          "duckpear",
+          "goldencassia",
+          "longmalily",
+          "moton",
+          "levitater",
+          "apsarlotus",
+          "goldmagnet",
+          "exorcislily",
+          "gloombara",
+          "doombell",
+          "glaciershroom",
+          "solarsage",
+          "pineclone",
+          "cosmoss",
+          "cosmicpea",
+          "gravitree",
+          "cosmicmushroom",
+          "cosmicnut",
+          "dmdragonfruit",
+          "phoenixfloat",
+          "cosmicsaucer",
+          "nagasalak",
+          "mangofier",
+          "heatherbot",
+          "sunflowerzombie",
+          "armorflame"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "SkySun"
+      ],
+      "objclass": "SunDropperProperties",
+      "objdata": {
+        "InitialSunDropDelay": 6,
+        "SunCountdownBase": 8,
+        "SunCountdownRange": 0,
+        "SunCountdownMax": 8,
+        "SunCountdownIncreasePerSun": 0
+      }
+    },
+    {
+      "aliases": [
+        "Challenges"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(GoalFlowers@CurrentLevel)",
+            "RTID(GoalCount@CurrentLevel)",
+            "RTID(GoalStormKill@CurrentLevel)"
+          ]
+        ],
+        "ChallengesAlwaysAvailable": true
+      }
+    },
+    {
+      "aliases": [
+        "GoalFlowers"
+      ],
+      "objclass": "StarChallengeZombieDistanceProps",
+      "objdata": {
+        "TargetDistance": 4
+      }
+    },
+    {
+      "aliases": [
+        "GoalCount"
+      ],
+      "objclass": "StarChallengeSimultaneousPlantsProps",
+      "objdata": {
+        "MaximumPlants": 25
+      }
+    },
+    {
+      "aliases": [
+        "GoalStormKill"
+      ],
+      "objclass": "StarChallengeSandstormZombieKillProps",
+      "objdata": {
+        "Count": 6
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "Queen"
+      ],
+      "objdata": {
+        "TypeName": "fairy_tale_imp_Elite",
+        "ZombieClass": "ZombieFairyTaleImpElite",
+        "Properties": "RTID(QueenProps@CurrentLevel)",
+        "ResourceGroups": [
+          "ZombieFairyTaleImpGroup",
+          "ZombieFairyTaleGargantuarGroup"
+        ],
+        "AudioGroups": [
+          "ZombieGlobalGargantuarAudio"
+        ],
+        "AnimRigClass": "ZombieAnimRig_FairyTaleImp",
+        "PopAnim": "POPANIM_ZOMBIE_ZOMBIE_FAIRY_TALE_IMP_ELITE",
+        "BoardAlmanac": true,
+        "AlmanacBackdropName": "warp",
+        "HomeWorld": "christmas",
+        "Resistences": [
+          1,
+          0.4,
+          0.2,
+          0.9,
+          0.9,
+          0.5,
+          0.5
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieFairyTaleImpEliteProps",
+      "aliases": [
+        "QueenProps"
+      ],
+      "objdata": {
+        "EnableShowHealthBarByDamage": true,
+        "EnableEliteImmunities": true,
+        "EnableNoInvincibleTakeDamage": true,
+        "NoInvincibleTakeDamagePlantsList": [
+          "escaperoot"
+        ],
+        "Speed": 0.22,
+        "Hitpoints": 6000,
+        "EatDPS": 200,
+        "CanSpawnPlantFood": false,
+        "RunSpeed": 0.7,
+        "CallKnightDelay": 1.0,
+        "CallKnightType": "dark_cavalry",
+        "ChillInsteadOfFreeze": true,
+        "CanBeLaunchedByPlants": false,
+        "HeadDropFraction": -1,
+        "ArmDropFraction": -1,
+        "HitRect": {
+          "mX": 10,
+          "mY": 10,
+          "mWidth": 32,
+          "mHeight": 80
+        },
+        "AttackRect": {
+          "mX": 15,
+          "mY": 0,
+          "mWidth": 20,
+          "mHeight": 80
+        },
+        "HypnoshroomEffectOffset": {
+          "x": -6,
+          "y": 36
+        },
+        "Cost": 150,
+        "WavePointCost": 100,
+        "Weight": 1000,
+        "ArtCenter": {
+          "x": 102,
+          "y": 124
+        },
+        "ShadowOffset": {
+          "x": 5,
+          "y": 0,
+          "z": 0.8
+        },
+        "GroundTrackName": "ground_swatch",
+        "ZombieStats": [
+          {
+            "Type": "toughness",
+            "Value": "toughness0"
+          },
+          {
+            "Type": "speed",
+            "Value": "speed4"
+          }
+        ],
+        "ZombieLevelStats": [
+          {
+            "AttackLevel": 1,
+            "HitPointsLevel": 1
+          },
+          {
+            "AttackLevel": 2,
+            "HitPointsLevel": 2
+          },
+          {
+            "AttackLevel": 3,
+            "HitPointsLevel": 3
+          },
+          {
+            "AttackLevel": 4.5,
+            "HitPointsLevel": 4.5
+          },
+          {
+            "AttackLevel": 5,
+            "HitPointsLevel": 5
+          }
+        ],
+        "Resilience": "RTID(ResilienceFairyTaleImp@ResilienceConfig)"
+      }
+    },
+    {
+      "aliases": [
+        "Offsets"
+      ],
+      "objclass": "ZombieJitterOffsets",
+      "objdata": {
+        "ZombieSpawningOffsetIncrement": 53,
+        "ZombieSpawningRandomJitter": 90
+      }
+    },
+    {
+      "aliases": [
+        "WaveModule"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "WaveManagerPropsVector": [
+          "RTID(Waves@CurrentLevel)",
+          "RTID(Waves@CurrentLevel)",
+          "RTID(Waves@CurrentLevel)",
+          "RTID(Waves@CurrentLevel)"
+        ],
+        "DynamicZombies": [
+          {
+            "PointIncrementPerWave": 60,
+            "StartingPoints": 400,
+            "StartingWave": 3,
+            "ZombieLevel": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "ZombiePool": [
+              "RTID(christmas@ZombieTypes)",
+              "RTID(christmas_armor1@ZombieTypes)",
+              "RTID(christmas_armor2@ZombieTypes)",
+              "RTID(christmas_poncho_plate@ZombieTypes)"
+            ]
+          }
+        ],
+        "WaveManagerProps": "RTID(Waves@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "BattleRule"
+      ],
+      "objclass": "SpawnZombiesFromGridItemSpawnerProps",
+      "objdata": {
+        "Zombies": [],
+        "GridTypes": [],
+        "WaveStartMessage": "[S35_H16_QUEEN_BATTLE_RULE]",
+        "SuppressActionIfNoGridItemsFound": false,
+        "ZombieSpawnWaitTime": 0
+      }
+    },
+    {
+      "aliases": [
+        "ColdPrelude"
+      ],
+      "objclass": "FrostWindWaveActionProps",
+      "objdata": {
+        "Winds": [
+          {
+            "Direction": "left",
+            "Row": 2
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(christmas@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)"
+          }
+        ],
+        "AdditionalPlantfood": 0,
+        "JitterOffsets": {
+          "OffsetIncrement": 36,
+          "RandomJitter": 110
+        }
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)"
+          }
+        ],
+        "AdditionalPlantfood": 1,
+        "JitterOffsets": {
+          "OffsetIncrement": 36,
+          "RandomJitter": 110
+        }
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(christmas_imp2@ZombieTypes)"
+          }
+        ],
+        "AdditionalPlantfood": 0,
+        "JitterOffsets": {
+          "OffsetIncrement": 36,
+          "RandomJitter": 110
+        }
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(christmas_armor2@ZombieTypes)"
+          }
+        ],
+        "AdditionalPlantfood": 0,
+        "JitterOffsets": {
+          "OffsetIncrement": 36,
+          "RandomJitter": 110
+        }
+      }
+    },
+    {
+      "aliases": [
+        "ColdStorm4"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "Type": "excoldstorm",
+        "Zombies": [
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "HasPlantfood": false
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "HasPlantfood": false
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "HasPlantfood": false
+          }
+        ],
+        "ColumnStart": 4,
+        "ColumnEnd": 6,
+        "GroupSize": 3,
+        "TimeBetweenGroups": 3,
+        "TimeBeforeFullSpawn": 6,
+        "AdditionalPlantfood": 0
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(christmas_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(christmas_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pole_vaulting_feastivus@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pole_vaulting_feastivus@ZombieTypes)"
+          }
+        ],
+        "AdditionalPlantfood": 0,
+        "JitterOffsets": {
+          "OffsetIncrement": 36,
+          "RandomJitter": 110
+        }
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Row": "2",
+            "Type": "RTID(ChristmasTank@CurrentLevel)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(ladder_festival@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)"
+          }
+        ],
+        "AdditionalPlantfood": 0,
+        "JitterOffsets": {
+          "OffsetIncrement": 36,
+          "RandomJitter": 110
+        }
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Row": "4",
+            "Type": "RTID(christmas_gargantuar2@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(ladder_festival@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(ladder_festival@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(christmas_armor2@ZombieTypes)"
+          }
+        ],
+        "AdditionalPlantfood": 0,
+        "JitterOffsets": {
+          "OffsetIncrement": 36,
+          "RandomJitter": 110
+        }
+      }
+    },
+    {
+      "aliases": [
+        "ColdStorm7"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "Type": "excoldstorm",
+        "Zombies": [
+          {
+            "Type": "RTID(christmas_armor2@ZombieTypes)",
+            "HasPlantfood": false
+          },
+          {
+            "Type": "RTID(christmas_imp2@ZombieTypes)",
+            "HasPlantfood": false
+          },
+          {
+            "Type": "RTID(christmas_imp2@ZombieTypes)",
+            "HasPlantfood": false
+          },
+          {
+            "Type": "RTID(christmas_imp2@ZombieTypes)",
+            "HasPlantfood": false
+          }
+        ],
+        "ColumnStart": 4,
+        "ColumnEnd": 6,
+        "GroupSize": 4,
+        "TimeBetweenGroups": 3,
+        "TimeBeforeFullSpawn": 6,
+        "AdditionalPlantfood": 0
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Row": "3",
+            "Type": "RTID(Queen@CurrentLevel)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(ladder_festival@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(christmas_imp2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pole_vaulting_feastivus@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pole_vaulting_feastivus@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(christmas_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)"
+          }
+        ],
+        "AdditionalPlantfood": 2,
+        "SpawnPlantName": [
+          "megagatling"
+        ],
+        "JitterOffsets": {
+          "OffsetIncrement": 36,
+          "RandomJitter": 110
+        }
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Row": "5",
+            "Type": "RTID(christmas_poncho_plate@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(ladder_festival@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(christmas_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(christmas_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(fairy_tale_gargantuar@ZombieTypes)",
+            "Level": 1
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(dark_juggler@ZombieTypes)",
+            "Level": 1
+          }
+        ],
+        "AdditionalPlantfood": 1,
+        "JitterOffsets": {
+          "OffsetIncrement": 36,
+          "RandomJitter": 110
+        }
+      }
+    },
+    {
+      "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Row": "2",
+            "Type": "RTID(christmas_gargantuar2@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(ladder_festival@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(ladder_festival@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(fairy_tale_gargantuar@ZombieTypes)",
+            "Level": 1
+          }
+        ],
+        "AdditionalPlantfood": 0,
+        "JitterOffsets": {
+          "OffsetIncrement": 36,
+          "RandomJitter": 110
+        }
+      }
+    },
+    {
+      "aliases": [
+        "ColdStorm10"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "Type": "excoldstorm",
+        "Zombies": [
+          {
+            "Type": "RTID(pole_vaulting_feastivus@ZombieTypes)",
+            "HasPlantfood": false
+          },
+          {
+            "Type": "RTID(pole_vaulting_feastivus@ZombieTypes)",
+            "HasPlantfood": false
+          },
+          {
+            "Type": "RTID(christmas_imp2@ZombieTypes)",
+            "HasPlantfood": false
+          }
+        ],
+        "ColumnStart": 4,
+        "ColumnEnd": 5,
+        "GroupSize": 3,
+        "TimeBetweenGroups": 3,
+        "TimeBeforeFullSpawn": 6,
+        "AdditionalPlantfood": 0
+      }
+    },
+    {
+      "aliases": [
+        "Wave11"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Row": "3",
+            "Type": "RTID(christmas_poncho_plate@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(ladder_festival@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(ladder_festival@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(ladder_festival@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(christmas_imp2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(christmas_imp2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(christmas_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(christmas_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(fairy_tale_gargantuar@ZombieTypes)",
+            "Level": 1
+          }
+        ],
+        "AdditionalPlantfood": 0,
+        "JitterOffsets": {
+          "OffsetIncrement": 36,
+          "RandomJitter": 110
+        }
+      }
+    },
+    {
+      "aliases": [
+        "Wave12"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Row": "1",
+            "Type": "RTID(christmas_poncho_plate@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(ChristmasTank@CurrentLevel)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(christmas_gargantuar2@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(ladder_festival@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(ladder_festival@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(christmas_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(christmas_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pole_vaulting_feastivus@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pole_vaulting_feastivus@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(christmas_imp2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(christmas_imp2@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(dark_juggler@ZombieTypes)",
+            "Level": 1
+          }
+        ],
+        "AdditionalPlantfood": 0,
+        "JitterOffsets": {
+          "OffsetIncrement": 36,
+          "RandomJitter": 110
+        }
+      }
+    },
+    {
+      "aliases": [
+        "Wave13"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Row": "2",
+            "Type": "RTID(christmas_poncho_plate@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(christmas_poncho_plate@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(ladder_festival@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(ladder_festival@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(ladder_festival@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(ladder_festival@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(fairy_tale_gargantuar@ZombieTypes)",
+            "Level": 1
+          }
+        ],
+        "AdditionalPlantfood": 0,
+        "JitterOffsets": {
+          "OffsetIncrement": 36,
+          "RandomJitter": 110
+        }
+      }
+    },
+    {
+      "aliases": [
+        "ColdStorm13"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "Type": "excoldstorm",
+        "Zombies": [
+          {
+            "Type": "RTID(pole_vaulting_feastivus@ZombieTypes)",
+            "HasPlantfood": false
+          },
+          {
+            "Type": "RTID(pole_vaulting_feastivus@ZombieTypes)",
+            "HasPlantfood": false
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "HasPlantfood": false
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "HasPlantfood": false
+          }
+        ],
+        "ColumnStart": 4,
+        "ColumnEnd": 5,
+        "GroupSize": 4,
+        "TimeBetweenGroups": 3,
+        "TimeBeforeFullSpawn": 6,
+        "AdditionalPlantfood": 0
+      }
+    },
+    {
+      "aliases": [
+        "Wave14"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Row": "2",
+            "Type": "RTID(christmas_gargantuar2@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(christmas_gargantuar2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(christmas_imp2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(christmas_imp2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(christmas_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(christmas_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(christmas_armor2@ZombieTypes)"
+          }
+        ],
+        "AdditionalPlantfood": 0,
+        "JitterOffsets": {
+          "OffsetIncrement": 36,
+          "RandomJitter": 110
+        }
+      }
+    },
+    {
+      "aliases": [
+        "Wave15"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Row": "5",
+            "Type": "RTID(christmas_gargantuar2@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(ladder_festival@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(christmas_poncho_plate@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(ladder_festival@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(christmas_gargantuar2@ZombieTypes)"
+          }
+        ],
+        "AdditionalPlantfood": 0,
+        "JitterOffsets": {
+          "OffsetIncrement": 36,
+          "RandomJitter": 110
+        }
+      }
+    },
+    {
+      "aliases": [
+        "ColdStorm16"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "Type": "excoldstorm",
+        "Zombies": [
+          {
+            "Type": "RTID(ladder_festival@ZombieTypes)",
+            "HasPlantfood": false
+          },
+          {
+            "Type": "RTID(christmas_poncho_plate@ZombieTypes)",
+            "HasPlantfood": false
+          },
+          {
+            "Type": "RTID(ladder_festival@ZombieTypes)",
+            "HasPlantfood": false
+          },
+          {
+            "Type": "RTID(christmas_gargantuar2@ZombieTypes)",
+            "HasPlantfood": false
+          },
+          {
+            "Type": "RTID(ladder_festival@ZombieTypes)",
+            "HasPlantfood": false
+          }
+        ],
+        "ColumnStart": 4,
+        "ColumnEnd": 4,
+        "GroupSize": 5,
+        "TimeBetweenGroups": 3,
+        "TimeBeforeFullSpawn": 6,
+        "AdditionalPlantfood": 0
+      }
+    },
+    {
+      "aliases": [
+        "Waves"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "WaveCount": 16,
+        "FlagWaveInterval": 8,
+        "SuppressFlagZombie": false,
+        "MinNextWaveHealthPercentage": 0.4,
+        "MaxNextWaveHealthPercentage": 0.4,
+        "ZombieCountdownFirstWaveSecs": 8,
+        "ZombieCountdownHugeWaveDelay": 5,
+        "DescriptionName": "[S35_H16_QUEEN_MODE]",
+        "Description": "[S35_H16_QUEEN_RULE]",
+        "Waves": [
+          [
+            "RTID(BattleRule@CurrentLevel)",
+            "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(ColdPrelude@CurrentLevel)",
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)",
+            "RTID(ColdStorm4@CurrentLevel)"
+          ],
+          [
+            "RTID(EscapeRule@CurrentLevel)",
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)",
+            "RTID(ColdStorm7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)",
+            "RTID(ColdStorm10@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave12@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave13@CurrentLevel)",
+            "RTID(ColdStorm13@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave14@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave15@CurrentLevel)"
+          ],
+          [
+            "RTID(ColdStorm16@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "ChristmasTank"
+      ],
+      "objdata": {
+        "TypeName": "christmas_caketank",
+        "ZombieClass": "ZombieCakeTank",
+        "Properties": "RTID(ChristmasTankProps@CurrentLevel)",
+        "ResourceGroups": [
+          "ZombieChristmasCakeTankGroup",
+          "PlantHypnoShroom"
+        ],
+        "AudioGroups": [
+          "ZombiePremiumCakeTank"
+        ],
+        "AnimRigClass": "ZombieAnimRig_CakeTank",
+        "PopAnim": "POPANIM_ZOMBIE_CHRISTMAS_CAKE_TANK",
+        "BoardAlmanac": true,
+        "HomeWorld": "christmas",
+        "Placeable": true
+      }
+    },
+    {
+      "aliases": [
+        "ChristmasTankProps"
+      ],
+      "objclass": "ZombieCakeTankProps",
+      "objdata": {
+        "Actions": [
+          "RTID(ZombieGeneralCakeTankWalkOn@ZombieActions)",
+          "RTID(ZombieGeneralIdle@ZombieActions)",
+          "RTID(ZombieGeneralWalkOff@ZombieActions)",
+          "RTID(ZombieGeneralDying@ZombieActions)",
+          "RTID(ChristmasTankDrop1@CurrentLevel)",
+          "RTID(ChristmasTankDrop2@CurrentLevel)",
+          "RTID(ChristmasTankDrop3@CurrentLevel)",
+          "RTID(ChristmasTankDrop4@CurrentLevel)"
+        ],
+        "LifetimeSeconds": 90,
+        "GeneralPhase": 0,
+        "ScoreOverride": 100000,
+        "CanBeFlicked": false,
+        "CanBeFlickedOff": false,
+        "EnableEliteImmunities": true,
+        "SizeType": "big",
+        "IsEliteZombie": false,
+        "StreetSize": {
+          "x": 3,
+          "y": 2
+        },
+        "AlmanacOffset": {
+          "x": 0,
+          "y": 60
+        },
+        "AlmanacScale": 0.9,
+        "ArtCenter": {
+          "x": 90,
+          "y": 120
+        },
+        "ShadowOffset": {
+          "x": 10,
+          "y": 0,
+          "z": 1.2
+        },
+        "AttackRect": {
+          "mHeight": 95,
+          "mWidth": 110,
+          "mX": 0,
+          "mY": 0
+        },
+        "HitRect": {
+          "mHeight": 95,
+          "mWidth": 110,
+          "mX": 0,
+          "mY": 10
+        },
+        "CrosshairAnimation": "missile_lock_reticle",
+        "CrosshairPopAnim": "POPANIM_EFFECTS_ZOMBOSS_MISSILE_EXPLOSION_FUTURE",
+        "FoeEatDamageReflectPct": 0.5,
+        "RocketAnimation": "missile",
+        "RocketExplosionAnimation": "missile_explosion",
+        "CraterLifetime": 5,
+        "CanSpawnPlantFood": false,
+        "Cost": 150,
+        "EatDPS": 100,
+        "GroundTrackName": "ground_swatch",
+        "Hitpoints": 3330,
+        "ScaledProps": [
+          {
+            "Arg1": 1.3,
+            "Arg2": 0.05,
+            "Formula": "standard",
+            "Key": "Hitpoints"
+          },
+          {
+            "Formula": "constant",
+            "Key": "Speed"
+          }
+        ],
+        "ConditionImmunities": [
+          {
+            "Condition": "chill"
+          },
+          {
+            "Condition": "freeze"
+          },
+          {
+            "Condition": "stun"
+          },
+          {
+            "Condition": "stalled"
+          },
+          {
+            "Condition": "sapped"
+          },
+          {
+            "Condition": "poisoned"
+          },
+          {
+            "Condition": "decaypoison"
+          },
+          {
+            "Condition": "shrinking"
+          },
+          {
+            "Condition": "shrunken"
+          },
+          {
+            "Condition": "contagiouspoison"
+          },
+          {
+            "Condition": "dazeystunned"
+          },
+          {
+            "Condition": "stackableslow"
+          },
+          {
+            "Condition": "sweetheartslow"
+          }
+        ],
+        "CustomDamageSteps": [
+          {
+            "MaxDamagePercent": 1
+          },
+          {
+            "MaxDamagePercent": 0.94,
+            "ActionOnStart": "RTID(ChristmasTankDrop1@CurrentLevel)"
+          },
+          {
+            "MaxDamagePercent": 0.77,
+            "ActionOnStart": "RTID(ChristmasTankDrop2@CurrentLevel)"
+          },
+          {
+            "MaxDamagePercent": 0.38,
+            "ActionOnStart": "RTID(ChristmasTankDrop3@CurrentLevel)"
+          },
+          {
+            "MaxDamagePercent": 0.0,
+            "ActionOnStart": "RTID(ChristmasTankDrop4@CurrentLevel)"
+          }
+        ],
+        "CollideHypnotizedZombies": "ignore",
+        "Speed": 0.5,
+        "WavePointCost": 900,
+        "Weight": 3500,
+        "ZombieStats": [
+          {
+            "Type": "toughness",
+            "Value": "toughness5"
+          },
+          {
+            "Type": "speed",
+            "Value": "speed0"
+          }
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieDropActionDefinition",
+      "aliases": [
+        "ChristmasTankDrop1"
+      ],
+      "objdata": {
+        "Weight": 1,
+        "RepeatMin": 0,
+        "RepeatMax": 0,
+        "Phase": "None",
+        "Invulnerable": "true",
+        "Animation": "IDLE",
+        "AwardDrop": "RTID(CakeTankDrops1@AwardConfig)",
+        "EffectPam": "POPANIM_EFFECTS_CHRISTMAS_CAKE_BREAK_FX",
+        "EffectAnim": "break_power_tier4",
+        "EffectOffsetX": 30,
+        "EffectOffsetY": -90
+      }
+    },
+    {
+      "objclass": "ZombieDropActionDefinition",
+      "aliases": [
+        "ChristmasTankDrop2"
+      ],
+      "objdata": {
+        "Weight": 1,
+        "RepeatMin": 0,
+        "RepeatMax": 0,
+        "Phase": "None",
+        "Invulnerable": "true",
+        "Animation": "IDLE",
+        "AwardDrop": "RTID(CakeTankDrops2@AwardConfig)",
+        "EffectPam": "POPANIM_EFFECTS_CHRISTMAS_CAKE_BREAK_FX",
+        "EffectAnim": "break_power_tier3",
+        "EffectOffsetX": 15,
+        "EffectOffsetY": -90
+      }
+    },
+    {
+      "objclass": "ZombieDropActionDefinition",
+      "aliases": [
+        "ChristmasTankDrop3"
+      ],
+      "objdata": {
+        "Weight": 1,
+        "RepeatMin": 0,
+        "RepeatMax": 0,
+        "Phase": "None",
+        "Invulnerable": "true",
+        "Animation": "IDLE",
+        "AwardDrop": "RTID(CakeTankDrops3@AwardConfig)",
+        "EffectPam": "POPANIM_EFFECTS_CHRISTMAS_CAKE_BREAK_FX",
+        "EffectAnim": "break_power_tier2",
+        "EffectOffsetX": 10,
+        "EffectOffsetY": -30
+      }
+    },
+    {
+      "objclass": "ZombieDropActionDefinition",
+      "aliases": [
+        "ChristmasTankDrop4"
+      ],
+      "objdata": {
+        "Weight": 1,
+        "RepeatMin": 0,
+        "RepeatMax": 0,
+        "Phase": "None",
+        "PhaseAfter": "Dying",
+        "Invulnerable": "true",
+        "Animation": "",
+        "AwardDrop": "RTID(CakeTankDrops4@AwardConfig)",
+        "EffectPam": "POPANIM_EFFECTS_CHRISTMAS_CAKE_BREAK_FX",
+        "EffectAnim": "break_power_tier1",
+        "EffectOffsetX": 0,
+        "EffectOffsetY": -10
+      }
+    },
+    {
+      "aliases": [
+        "EscapeRule"
+      ],
+      "objclass": "SpawnZombiesFromGridItemSpawnerProps",
+      "objdata": {
+        "Zombies": [],
+        "GridTypes": [],
+        "WaveStartMessage": "[S35_H16_QUEEN_ESCAPE_RULE]",
+        "SuppressActionIfNoGridItemsFound": false,
+        "ZombieSpawnWaitTime": 0
+      }
+    },
+    {
+      "aliases": [
+        "RiftThemeDemo"
+      ],
+      "objclass": "RiftThemeDemoModuleProperties",
+      "objdata": {
+        "DemoRiftThemeName": [
+          "blizzard"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "TimeEnergy"
+      ],
+      "objclass": "TimeEnergyModuleProperties",
+      "objdata": {
+        "TimeEnergyValueMax": 400.0,
+        "TimeEnergyTriggers": []
+      }
+    }
+  ]
+}

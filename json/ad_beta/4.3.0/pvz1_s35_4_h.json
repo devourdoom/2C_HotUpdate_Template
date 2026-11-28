@@ -1,0 +1,165 @@
+{
+	"version": 1,
+	"objects": [
+		{
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "[S35_MEMORY_HARD_NAME_04]",
+				"DisablePeavine": true,
+				"IsArtifactDisabled": true,
+				"LevelNumber": 1,
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [
+					"RTID(VaseBreakerArcade@LevelModules)",
+                    "RTID(NewWaves@CurrentLevel)",
+					"RTID(VaseBreakerFlow@LevelModules)",
+					"RTID(VaseBreakerProps@CurrentLevel)",
+					"RTID(ZombiesDeadWinCon@LevelModules)",
+					"RTID(DefaultZombieWinCondition@LevelModules)",
+					"RTID(ChallengeModule@CurrentLevel)",
+					"RTID(RiftTheme@CurrentLevel)"
+				],
+				"MusicType": "MiniGame_B",
+				"IsVasebreaker": true,
+				"Name": "[S35_MEMORY_HARD_NAME_04]",
+				"StageModule": "RTID(SnowModernStage@LevelModules)",
+				"StartingSun": 200,
+				"VictoryModule": "RTID(PVZ1ModeOutro@LevelModules)"
+			}
+		},
+		{
+			"aliases": [
+				"ChallengeModule"
+			],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [
+					[
+						"RTID(PlantsSurvive@CurrentLevel)",
+						"RTID(KillZombiesInTime@CurrentLevel)",
+						"RTID(SpendSunHoldout@CurrentLevel)"
+					]
+				],
+				"ChallengesAlwaysAvailable": true
+			}
+		},
+		{
+			"aliases": [
+				"PlantsSurvive"
+			],
+			"objclass": "StarChallengePlantsSurviveProps",
+			"objdata": {
+				"Count": 5
+			}
+		},
+		{
+			"aliases": [
+				"KillZombiesInTime"
+			],
+			"objclass": "StarChallengeKillZombiesInTimeProps",
+			"objdata": {
+				"ZombiesToKill": 3,
+				"Time": 10
+			}
+		},
+		{
+			"aliases": [
+				"SpendSunHoldout"
+			],
+			"objclass": "StarChallengeSpendSunHoldoutProps",
+			"objdata": {
+				"HoldoutSeconds": 10
+			}
+		},
+        {
+            "aliases": [
+                "RiftTheme"
+            ],
+            "objclass": "RiftThemeDemoModuleProperties",
+            "objdata": {
+                "DemoRiftThemeName": [
+                    "disable_boost"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "NewWaves"
+            ],
+            "objclass": "WaveManagerModuleProperties",
+            "objdata": {
+                "DynamicZombies": [],
+                "WaveManagerPropsVector": [
+                    "RTID(WaveManagerPropsWeek1@CurrentLevel)",
+                    "RTID(WaveManagerPropsWeek1@CurrentLevel)",
+                    "RTID(WaveManagerPropsWeek1@CurrentLevel)",
+                    "RTID(WaveManagerPropsWeek1@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "WaveManagerPropsWeek1"
+            ],
+            "objclass": "WaveManagerProperties",
+            "objdata": {
+                "FlagWaveInterval": 0,
+                "WaveCount": 0,
+                "WaveSpendingPointIncrement": 100,
+                "WaveSpendingPoints": 100,
+                "DescriptionName": "[S35_MEMORY_HARD_MODE_013]",
+                "Description": "[S35_MEMORY_HARD_MODE_DESC_013]",
+                "Waves": []
+            }
+        },
+		{
+			"aliases": [
+				"VaseBreakerProps"
+			],
+			"objclass": "VaseBreakerPresetProperties",
+			"objdata": {
+				"GridSquareBlacklist": [
+				],
+				"PowerUpDisabled": true,
+				"MaxColumnIndex": 8,
+				"MinColumnIndex": 4,
+				"NumColoredPlantVases": 5,
+				"NumColoredZombieVases": 2,
+				"Vases": [
+					{
+						"Count": 2,
+						"ZombieTypeName": "dark_juggler"
+					},
+					{
+						"Count": 1,
+						"ZombieTypeName": "zombie_supernova_gargantuar"
+					},
+					{
+						"Count": 4,
+						"ZombieTypeName": "lostcity_excavator"
+					},
+					{
+						"Count": 2,
+						"ZombieTypeName": "tutorial"
+					},
+					{
+						"Count": 5,
+						"PlantTypeName": "gatlingpea"
+					},
+					{
+						"Count": 2,
+						"PlantTypeName": "sweetpotato"
+					},
+					{
+						"Count": 2,
+						"PlantTypeName": "stunion"
+					},
+					{
+						"Count": 7,
+						"PlantTypeName": "perfumeshroom"
+					}
+				]
+			}
+		}
+	]
+}

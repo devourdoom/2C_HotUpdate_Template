@@ -1,0 +1,168 @@
+{
+  "version": 1,
+  "#comment": "PVZ1 S35 HARD 17",
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Name": "[ZOMBIE_ZOMBOSSMECH_COWBOY]",
+        "Description": "[ZOMBIE_ZOMBOSSMECH_COWBOY]",
+        "LevelNumber": 17,
+        "StartingSun": 6500,
+        "ZombieMaxLevel": 1,
+        "IsArtifactDisabled": false,
+        "IsBossFight": true,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "VictoryModule": "RTID(PVZ1ModeOutro@LevelModules)",
+        "StageModule": "RTID(SnowModernStage@LevelModules)",
+        "Modules": [
+          "RTID(BossLastStand@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(Challenges@CurrentLevel)",
+          "RTID(MaxSun@CurrentLevel)",
+          "RTID(BossBattle@CurrentLevel)",
+          "RTID(WaveModule@CurrentLevel)"
+        ],
+        "ShowZombies": [
+          "cowboy",
+          "cowboy_armor1",
+          "prospector",
+          "piano",
+          "west_bullrider",
+          "poncho_plate",
+          "cowboy_gargantuar",
+          "cowboy_armor2",
+          "chicken_farmer"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombossMechLastStandIntroProperties",
+      "objdata": {
+        "PanEndOffset": 468,
+        "PanLeftDuration": 1.5,
+        "PanRightDuration": 1.5,
+        "PanStartOffset": 78,
+        "ResourceGroupNames": [],
+        "StartingSun": 6500,
+        "StartingPlantfood": 3,
+        "DisablePlantTags": [
+          "sun_produce"
+        ]
+      },
+      "aliases": [
+        "BossLastStand"
+      ]
+    },
+    {
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "SelectionMethod": "chooser",
+        "OverrideSeedSlotsCount": 8,
+        "GlobalLevel": 1,
+        "PresetPlantList": []
+      },
+      "aliases": [
+        "SeedBank"
+      ]
+    },
+    {
+      "objclass": "LevelMutatorMaxSunProps",
+      "objdata": {
+        "MaxSunOverride": 6500
+      },
+      "aliases": [
+        "MaxSun"
+      ]
+    },
+    {
+      "objclass": "ZombossBattleModuleProperties",
+      "objdata": {
+        "ReservedColumnCount": 2,
+        "ZombossMechType": "zombossmech_cowboy",
+        "ZombossStageCount": 3,
+        "ZombossStartStageIndex": 0,
+        "ZombossDeathRow": 3,
+        "ZombossDeathColumn": 5,
+        "ZombossSpawnGridPosition": {
+          "mX": 6,
+          "mY": 3
+        }
+      },
+      "aliases": [
+        "BossBattle"
+      ]
+    },
+    {
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(SaveMowers@CurrentLevel)",
+            "RTID(PlantLimit@CurrentLevel)",
+            "RTID(Survivors@CurrentLevel)"
+          ]
+        ],
+        "ChallengesAlwaysAvailable": true
+      },
+      "aliases": [
+        "Challenges"
+      ]
+    },
+    {
+      "objclass": "StarChallengePlantsLostProps",
+      "objdata": {
+        "MaximumPlantsLost": 30
+      },
+      "aliases": [
+        "SaveMowers"
+      ]
+    },
+    {
+      "objclass": "StarChallengeSimultaneousPlantsProps",
+      "objdata": {
+        "MaximumPlants": 24
+      },
+      "aliases": [
+        "PlantLimit"
+      ]
+    },
+    {
+      "objclass": "StarChallengePlantsSurviveProps",
+      "objdata": {
+        "Count": 10
+      },
+      "aliases": [
+        "Survivors"
+      ]
+    },
+    {
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "ManualStartup": true,
+        "WaveManagerProps": "RTID(Waves@CurrentLevel)",
+        "WaveManagerPropsVector": [
+          "RTID(Waves@CurrentLevel)",
+          "RTID(Waves@CurrentLevel)",
+          "RTID(Waves@CurrentLevel)",
+          "RTID(Waves@CurrentLevel)"
+        ]
+      },
+      "aliases": [
+        "WaveModule"
+      ]
+    },
+    {
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "Waves": [],
+        "DescriptionName": "[ZOMBIE_ZOMBOSSMECH_COWBOY]",
+        "Description": "[ZOMBIE_ZOMBOSSMECH_COWBOY_DESCRIPTION_HEADER]"
+      },
+      "aliases": [
+        "Waves"
+      ]
+    }
+  ]
+}

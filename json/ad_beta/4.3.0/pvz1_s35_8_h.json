@@ -1,0 +1,1459 @@
+{
+  "version": 1,
+  "#comment": "PVZ1 S35 H08",
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "[S35_MEMORY_H008_JUGGLER_NAME]",
+        "Name": "[S35_MEMORY_H008_JUGGLER_NAME]",
+        "LevelNumber": 8,
+        "StartingSun": 500,
+        "ZombieMaxLevel": 1,
+        "IsArtifactDisabled": false,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "VictoryModule": "RTID(PVZ1ModeOutro@LevelModules)",
+        "StageModule": "RTID(SnowModernStage@LevelModules)",
+        "Modules": [
+          "RTID(RiftThemeDemo@CurrentLevel)",
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(Challenges@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(SkySun@CurrentLevel)",
+          "RTID(WaveModule@CurrentLevel)",
+          "RTID(TimeEnergy@CurrentLevel)"
+        ],
+        "ShowZombies": [
+          "christmas",
+          "christmas_armor1",
+          "christmas_armor2",
+          "pole_vaulting_feastivus",
+          "ladder_festival",
+          "nutcracker",
+          "christmas_gargantuar",
+          "dark_juggler_elite",
+          "christmas_flag"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Challenges"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(Goal1@CurrentLevel)",
+            "RTID(Goal2@CurrentLevel)",
+            "RTID(Goal3@CurrentLevel)"
+          ]
+        ],
+        "ChallengesAlwaysAvailable": true
+      }
+    },
+    {
+      "aliases": [
+        "Goal1"
+      ],
+      "objclass": "StarChallengeKillZombiesInTimeProps",
+      "objdata": {
+        "ZombiesToKill": 8,
+        "Time": 10
+      }
+    },
+    {
+      "aliases": [
+        "Goal2"
+      ],
+      "objclass": "StarChallengeSunUsedProps",
+      "objdata": {
+        "MaximumSun": 10000
+      }
+    },
+    {
+      "aliases": [
+        "Goal3"
+      ],
+      "objclass": "StarChallengeProtectPlantProps",
+      "objdata": {
+        "Plants": [
+          {
+            "PlantType": "threepeater",
+            "GridX": 0,
+            "GridY": 0
+          },
+          {
+            "PlantType": "threepeater",
+            "GridX": 0,
+            "GridY": 1
+          },
+          {
+            "PlantType": "threepeater",
+            "GridX": 0,
+            "GridY": 2
+          },
+          {
+            "PlantType": "threepeater",
+            "GridX": 0,
+            "GridY": 3
+          },
+          {
+            "PlantType": "threepeater",
+            "GridX": 0,
+            "GridY": 4
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "SelectionMethod": "chooser",
+        "OverrideSeedSlotsCount": 8,
+        "GlobalLevel": 1,
+        "PresetPlantList": []
+      }
+    },
+    {
+      "aliases": [
+        "SkySun"
+      ],
+      "objclass": "SunDropperProperties",
+      "objdata": {
+        "InitialSunDropDelay": 6,
+        "SunCountdownBase": 8,
+        "SunCountdownRange": 0,
+        "SunCountdownMax": 8,
+        "SunCountdownIncreasePerSun": 0
+      }
+    },
+    {
+      "aliases": [
+        "RulesNotice"
+      ],
+      "objclass": "SpawnZombiesFromGridItemSpawnerProps",
+      "objdata": {
+        "Zombies": [],
+        "GridTypes": [],
+        "SuppressActionIfNoGridItemsFound": false,
+        "ZombieSpawnWaitTime": 0,
+        "WaveStartMessage": "[S35_MEMORY_H008_CHRISTMAS_NOTICE]"
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          }
+        ],
+        "JitterOffsets": "RTID(Offsets1@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "Offsets1"
+      ],
+      "objclass": "ZombieJitterOffsets",
+      "objdata": {
+        "ZombieSpawningOffsetIncrement": 29,
+        "ZombieSpawningRandomJitter": 83
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Zombies": [
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "Row": "3",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "Row": "4",
+            "Level": 1
+          }
+        ],
+        "JitterOffsets": "RTID(Offsets2@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "Offsets2"
+      ],
+      "objclass": "ZombieJitterOffsets",
+      "objdata": {
+        "ZombieSpawningOffsetIncrement": 37,
+        "ZombieSpawningRandomJitter": 97
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas_armor2@ZombieTypes)",
+            "Row": "4",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(pole_vaulting_feastivus@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          }
+        ],
+        "JitterOffsets": "RTID(Offsets3@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "Offsets3"
+      ],
+      "objclass": "ZombieJitterOffsets",
+      "objdata": {
+        "ZombieSpawningOffsetIncrement": 31,
+        "ZombieSpawningRandomJitter": 89
+      }
+    },
+    {
+      "aliases": [
+        "ColdStorm3"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "Type": "excoldstorm",
+        "ColumnStart": 5,
+        "ColumnEnd": 6,
+        "GroupSize": 1,
+        "TimeBetweenGroups": 3,
+        "TimeBeforeFullSpawn": 12,
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "HasPlantfood": false
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "HasPlantfood": false
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "HasPlantfood": false
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(christmas_armor2@ZombieTypes)",
+            "Row": "3",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas_armor2@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(pole_vaulting_feastivus@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(ladder_festival@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "Row": "4",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "Row": "4",
+            "Level": 1
+          }
+        ],
+        "JitterOffsets": "RTID(Offsets4@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "Offsets4"
+      ],
+      "objclass": "ZombieJitterOffsets",
+      "objdata": {
+        "ZombieSpawningOffsetIncrement": 43,
+        "ZombieSpawningRandomJitter": 101
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(JugglerElite@CurrentLevel)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas_armor2@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(ladder_festival@ZombieTypes)",
+            "Row": "4",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(pole_vaulting_feastivus@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "Row": "3",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          }
+        ],
+        "JitterOffsets": "RTID(Offsets5@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "Offsets5"
+      ],
+      "objclass": "ZombieJitterOffsets",
+      "objdata": {
+        "ZombieSpawningOffsetIncrement": 33,
+        "ZombieSpawningRandomJitter": 109
+      }
+    },
+    {
+      "aliases": [
+        "ColdStorm5"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "Type": "excoldstorm",
+        "ColumnStart": 5,
+        "ColumnEnd": 7,
+        "GroupSize": 2,
+        "TimeBetweenGroups": 3,
+        "TimeBeforeFullSpawn": 12,
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "HasPlantfood": false
+          },
+          {
+            "Type": "RTID(christmas_armor2@ZombieTypes)",
+            "HasPlantfood": false
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "HasPlantfood": false
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "HasPlantfood": false
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "ChristmasFlag5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(christmas_flag@ZombieTypes)",
+            "Level": 1,
+            "Row": "2"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Zombies": [
+          {
+            "Type": "RTID(nutcracker@ZombieTypes)",
+            "Row": "4",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(ladder_festival@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(pole_vaulting_feastivus@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas_armor2@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "Row": "4",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas_armor2@ZombieTypes)",
+            "Row": "3",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          }
+        ],
+        "JitterOffsets": "RTID(Offsets6@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "Offsets6"
+      ],
+      "objclass": "ZombieJitterOffsets",
+      "objdata": {
+        "ZombieSpawningOffsetIncrement": 41,
+        "ZombieSpawningRandomJitter": 91
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(ladder_festival@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(pole_vaulting_feastivus@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(nutcracker@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas_armor2@ZombieTypes)",
+            "Row": "4",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "Row": "3",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "Row": "4",
+            "Level": 1
+          }
+        ],
+        "JitterOffsets": "RTID(Offsets7@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "Offsets7"
+      ],
+      "objclass": "ZombieJitterOffsets",
+      "objdata": {
+        "ZombieSpawningOffsetIncrement": 47,
+        "ZombieSpawningRandomJitter": 79
+      }
+    },
+    {
+      "aliases": [
+        "ColdStorm7"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "Type": "excoldstorm",
+        "ColumnStart": 4,
+        "ColumnEnd": 6,
+        "GroupSize": 2,
+        "TimeBetweenGroups": 3,
+        "TimeBeforeFullSpawn": 12,
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(christmas_armor2@ZombieTypes)",
+            "HasPlantfood": false
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "HasPlantfood": false
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "HasPlantfood": false
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "HasPlantfood": false
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Zombies": [
+          {
+            "Type": "RTID(christmas_gargantuar@ZombieTypes)",
+            "Row": "4",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(nutcracker@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(ladder_festival@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(pole_vaulting_feastivus@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas_armor2@ZombieTypes)",
+            "Row": "3",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "Row": "4",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas_armor2@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "Row": "3",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "Row": "4",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          }
+        ],
+        "JitterOffsets": "RTID(Offsets8@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "Offsets8"
+      ],
+      "objclass": "ZombieJitterOffsets",
+      "objdata": {
+        "ZombieSpawningOffsetIncrement": 35,
+        "ZombieSpawningRandomJitter": 103
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(nutcracker@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(ladder_festival@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(pole_vaulting_feastivus@ZombieTypes)",
+            "Row": "4",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas_armor2@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "Row": "3",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas_armor2@ZombieTypes)",
+            "Row": "4",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          }
+        ],
+        "JitterOffsets": "RTID(Offsets9@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "Offsets9"
+      ],
+      "objclass": "ZombieJitterOffsets",
+      "objdata": {
+        "ZombieSpawningOffsetIncrement": 39,
+        "ZombieSpawningRandomJitter": 87
+      }
+    },
+    {
+      "aliases": [
+        "ColdStorm9"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "Type": "excoldstorm",
+        "ColumnStart": 4,
+        "ColumnEnd": 6,
+        "GroupSize": 2,
+        "TimeBetweenGroups": 3,
+        "TimeBeforeFullSpawn": 12,
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "HasPlantfood": false
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "HasPlantfood": false
+          },
+          {
+            "Type": "RTID(christmas_armor2@ZombieTypes)",
+            "HasPlantfood": false
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "HasPlantfood": false
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "HasPlantfood": false
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(christmas_gargantuar@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(nutcracker@ZombieTypes)",
+            "Row": "4",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(ladder_festival@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(pole_vaulting_feastivus@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas_armor2@ZombieTypes)",
+            "Row": "3",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "Row": "4",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas_armor2@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "Row": "3",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "Row": "4",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          }
+        ],
+        "JitterOffsets": "RTID(Offsets10@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "Offsets10"
+      ],
+      "objclass": "ZombieJitterOffsets",
+      "objdata": {
+        "ZombieSpawningOffsetIncrement": 33,
+        "ZombieSpawningRandomJitter": 113
+      }
+    },
+    {
+      "aliases": [
+        "ColdStorm10"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "Type": "excoldstorm",
+        "ColumnStart": 4,
+        "ColumnEnd": 6,
+        "GroupSize": 2,
+        "TimeBetweenGroups": 3,
+        "TimeBeforeFullSpawn": 12,
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(christmas_armor2@ZombieTypes)",
+            "HasPlantfood": false
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "HasPlantfood": false
+          },
+          {
+            "Type": "RTID(christmas_armor1@ZombieTypes)",
+            "HasPlantfood": false
+          },
+          {
+            "Type": "RTID(christmas@ZombieTypes)",
+            "HasPlantfood": false
+          },
+          {
+            "Type": "RTID(christmas_armor2@ZombieTypes)",
+            "HasPlantfood": false
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "ChristmasFlag10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(christmas_flag@ZombieTypes)",
+            "Level": 1,
+            "Row": "4"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "WaveModule"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "WaveManagerPropsVector": [
+          "RTID(Waves@CurrentLevel)",
+          "RTID(Waves@CurrentLevel)",
+          "RTID(Waves@CurrentLevel)",
+          "RTID(Waves@CurrentLevel)"
+        ],
+        "DynamicZombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Waves"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "WaveCount": 8,
+        "FlagWaveInterval": 4,
+        "SuppressFlagZombie": true,
+        "Waves": [
+          [
+            "RTID(RulesNotice@CurrentLevel)",
+            "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)",
+            "RTID(Wave3@CurrentLevel)",
+            "RTID(ColdStorm3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)",
+            "RTID(ColdStorm5@CurrentLevel)",
+            "RTID(ChristmasFlag5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)",
+            "RTID(Wave7@CurrentLevel)",
+            "RTID(ColdStorm7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)",
+            "RTID(ColdStorm9@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)",
+            "RTID(ColdStorm10@CurrentLevel)",
+            "RTID(ChristmasFlag10@CurrentLevel)"
+          ]
+        ],
+        "SuppressedDynamicZombieWaves": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "MinNextWaveHealthPercentage": 0.6,
+        "MaxNextWaveHealthPercentage": 0.6,
+        "ZombieCountdownFirstWaveSecs": 8,
+        "ZombieCountdownHugeWaveDelay": 5,
+        "DescriptionName": "[S35_MEMORY_H008_CHRISTMAS_MODE]",
+        "Description": "[S35_MEMORY_H008_CHRISTMAS_RULES]"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "JugglerElite"
+      ],
+      "objdata": {
+        "TypeName": "dark_juggler_elite",
+        "ZombieClass": "ZombieDarkJugglerElite",
+        "Properties": "RTID(JugglerEliteProps@CurrentLevel)",
+        "ResourceGroups": [
+          "ZombieDarkJesterGroup"
+        ],
+        "AudioGroups": [
+          "ZombieDarkAgesJESTERAudio"
+        ],
+        "AnimRigClass": "ZombieAnimRig_DarkJuggler",
+        "PopAnim": "POPANIM_ZOMBIE_ZOMBIE_DARK_JESTER_ELITE",
+        "BoardAlmanac": true,
+        "RecommendPlants": [
+          "cherry_bomb"
+        ],
+        "HomeWorld": "christmas",
+        "Resistences": [
+          1,
+          0.2,
+          0.7,
+          0.7,
+          0.5,
+          0.5,
+          0.5
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieDarkJugglerEliteProps",
+      "aliases": [
+        "JugglerEliteProps"
+      ],
+      "objdata": {
+        "IsEliteZombie": true,
+        "EnableShowHealthBarByDamage": true,
+        "EnableEliteImmunities": true,
+        "EnableNoInvincibleTakeDamage": true,
+        "NoInvincibleTakeDamagePlantsList": [
+          "escaperoot"
+        ],
+        "CanBeLaunchedByPlants": false,
+        "CanBePlantTossedStrong": false,
+        "CanBePlantTossedweak": false,
+        "HeadDropFraction": -1,
+        "ArmDropFraction": -1,
+        "EliteScale": 1.2,
+        "EnableEliteScale": true,
+        "Resilience": "RTID(ResilienceJuggler@ResilienceConfig)",
+        "Speed": 0.165,
+        "Hitpoints": 10000,
+        "EatDPS": 200,
+        "CanSpawnPlantFood": true,
+        "SizeType": "mid",
+        "CostBrain": 300,
+        "JuggleCoolDown": 10,
+        "JuggleDuration": 8.5,
+        "ChangeLineTime": 0.5,
+        "ChangeLineGap": 0.5,
+        "HitRect": {
+          "mX": 10,
+          "mY": 10,
+          "mWidth": 32,
+          "mHeight": 95
+        },
+        "AttackRect": {
+          "mX": 15,
+          "mY": 0,
+          "mWidth": 20,
+          "mHeight": 95
+        },
+        "Cost": 150,
+        "FirstWave": 1,
+        "WavePointCost": 500,
+        "Weight": 3500,
+        "ArtCenter": {
+          "x": 90,
+          "y": 125
+        },
+        "ShadowOffset": {
+          "x": 10,
+          "y": 0,
+          "z": 1.2
+        },
+        "GroundTrackName": "ground_swatch",
+        "ZombieStats": [
+          {
+            "Type": "toughness",
+            "Value": "toughness3"
+          },
+          {
+            "Type": "speed",
+            "Value": "speed3"
+          }
+        ],
+        "ZombieLevelStats": [
+          {
+            "AttackLevel": 1,
+            "HitPointsLevel": 1
+          },
+          {
+            "AttackLevel": 2,
+            "HitPointsLevel": 2
+          },
+          {
+            "AttackLevel": 3,
+            "HitPointsLevel": 3
+          },
+          {
+            "AttackLevel": 4.5,
+            "HitPointsLevel": 4.5
+          },
+          {
+            "AttackLevel": 5,
+            "HitPointsLevel": 5
+          }
+        ],
+        "LaunchVelocity": {
+          "x": 500,
+          "y": 0,
+          "z": 0
+        },
+        "LaunchAcceleration": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "LaunchHeight": {
+          "Min": 50,
+          "Max": 50
+        },
+        "MaxProjectilesToJuggle": 1000,
+        "JuggleLaunchDelay": 2,
+        "MoveSpeedMultiplierWhileJuggling": 1.1,
+        "CatchArcDegrees": 120,
+        "JuggleableProjectiles": [
+          "NagaSalakTornado",
+          "NagaSalakLv5Tornado",
+          "NagaSalakPlantFood",
+          "NagaSalakMarineLife",
+          "NagaSalakSwordFish",
+          "DarkMatterProjectileDefault",
+          "GiantDarkMatterProjectileDefault",
+          "AnnihilationProjectileDefault",
+          "CosmicPeaProjectile",
+          "CosmicPeaPlantFoodProjectile",
+          "CosmicMushroomPuff",
+          "CosmicMushroomScaredy",
+          "PrimalPeashooterPea",
+          "ShadowPeashooterDefault",
+          "SoudacheMegaGatlingNormalDefault",
+          "SoudacheMegaGatlingFireDefault",
+          "PeaDefault",
+          "ThreepeaterPeaDefault",
+          "ThreepeaterPeaSnow",
+          "ThreepeaterPeaFire",
+          "ThreepeaterPeaUltraFire",
+          "PlantfoodPeaDefault",
+          "FirePeaDefault",
+          "UltraFirePeaDefault",
+          "SnowPeaDefault",
+          "GiantPeaDefault",
+          "GiantFirePeaDefault",
+          "GiantUltraFirePeaDefault",
+          "CannonballDefault",
+          "CabbageDefault",
+          "MelonDefault",
+          "WinterMelonDefault",
+          "KernelDefault",
+          "ButterDefault",
+          "StarFruitShot",
+          "BloomerangDefault",
+          "BloomerangAvatar",
+          "PlasmaBall",
+          "PuffSporeDefault",
+          "ThrownZombieParticle",
+          "GuacodileDefault",
+          "HomingThistleDefault",
+          "HomingThistlePlantfood",
+          "BowlingBulbDefault",
+          "BowlingBulbDefault2",
+          "BowlingBulbDefault3",
+          "PameBulletNormal",
+          "PameBulletPlantfood",
+          "PameBulletAvatarPlantfood",
+          "PeanutDefault",
+          "IceLancePeaDefault",
+          "PepperpultDefault",
+          "PepperpultPlantfoodDefault",
+          "XShotShot",
+          "XShotGiantShot",
+          "StingerDefault",
+          "AkeeDefault",
+          "MegaAkeeDefault",
+          "NekotailStabDefault",
+          "NekotailStabAdvance",
+          "HugeNekotailStab",
+          "wasabiwhipLevel5",
+          "BearberryDefaultProjectile",
+          "BearberryLevel2Projectile",
+          "PoisonPeaDefault",
+          "HeadbutterlettuceButterDefault",
+          "HeadbutterlettuceLevel2ButterDefault",
+          "HeadbutterlettucePlantfoodButterDefault",
+          "HeadbutterlettuceAvatarPlantfoodButterDefault",
+          "MegaGatlingNormalDefault",
+          "ScaredyShroomDefault",
+          "ScaredyShroomPlantfood",
+          "ScaredyShroomAvatarPlantfood",
+          "Lv5SpecialScaredyShroom",
+          "SnowPeaAvatarDefault",
+          "UltraFirePeaAvatarDefault",
+          "FirePeaAvatarDefault",
+          "PeaAvatarDefault",
+          "MegaGatlingFireDefault",
+          "MegaGatlingIceDefault",
+          "MegaGatlingPoisonDefault",
+          "MegaGatlingThreeDefault",
+          "MegaGatlingPrimalDefault",
+          "CactusDefault",
+          "CactusSpecial",
+          "CactusPlantfood",
+          "CactusPlantfoodStock",
+          "wallnutFire",
+          "wallnutIce",
+          "wallnutElectric",
+          "BloomerangDefault",
+          "BambooDefault",
+          "BambooPlantfoodDefault",
+          "BloomerangAvatar",
+          "MagnifyingGrassNormalShot",
+          "MagnifyingGrassPoweredShot",
+          "StarFruitShot",
+          "StarFruitSpecialShot",
+          "StarFruitGiantShot",
+          "PinkStarFruitShot",
+          "PinkStarFruitRedShot",
+          "PinkStarFruitSuperShot",
+          "PinkStarFruitBlueShot",
+          "PinkStarFruitBigShot",
+          "PinkStarFruitBigRedShot",
+          "PinkStarFruitBigBlueShot",
+          "PlasmaBall",
+          "PlasmaCloudBall",
+          "GiantPlasmaBall",
+          "GiantFirePeaDefault",
+          "GiantSnowPeaDefault",
+          "IceLancePeaDefault",
+          "BigIceLancePeaDefault",
+          "FireBombPeaDefault",
+          "GatlingPeaDefault",
+          "FireGatlingPeaDefault",
+          "DamageGatlingPeaDefault",
+          "DamageFireGatlingPeaDefault",
+          "DamageBlueGatlingPeaDefault",
+          "AvatarDamageBlueGatlingPeaDefault",
+          "NekotailStabDefault",
+          "level5BuleStarProjectileDefault",
+          "NekotailStabAdvance",
+          "HugeNekotailStab",
+          "NekotailReedArrow",
+          "PrimalPeashooterRockPea",
+          "PrimalRockFirePeaDefault",
+          "PrimalRockFireBluePeaDefault",
+          "AvatarPrimalRockFireBluePeaDefault",
+          "PrimalPeashooterPlantfoodRockPea",
+          "PrimalPlantfoodRockFirePeaDefault",
+          "PrimalPlantfoodRockFireBluePeaDefault",
+          "AvatarPrimalPlantfoodRockFireBluePeaDefault",
+          "PrimalPeashooterLevel5Pea",
+          "PrimalPeashooterLevel5FirePea",
+          "PrimalPeashooterLevel5FireBluePea",
+          "AvatarPrimalPeashooterLevel5FireBluePea",
+          "PrimalPeashooterPlantfoodLevel5Pea",
+          "PrimalPeashooterPlantfoodLevel5FirePea",
+          "PrimalPeashooterPlantfoodLevel5FireBluePea",
+          "AvatarPrimalPeashooterPlantfoodLevel5FireBluePea",
+          "MulberryDefault",
+          "MulberryAdvancedDefault",
+          "GiantPlasmaGrenade",
+          "GiantFlashGrenade",
+          "GiantGasGrenade",
+          "MulberryPlantfoodDefault",
+          "MulberryAvatarDefault",
+          "ElectricPeaDefault",
+          "ElectricPeaDefault99",
+          "ElectricPeaPlantfoodDefault",
+          "ElectricPeaPlantfoodSub",
+          "ElectricBall",
+          "ElectricPeaAvatarDefault",
+          "ElectricAdvancedPeaDefault",
+          "ThunderSnapdragonDefault",
+          "ThunderSnapdragonPurpleDefault",
+          "BearberryDefaultProjectile",
+          "BearberryLevel2Projectile",
+          "BearberryLevel5Projectile",
+          "BearberryPlantfoodProjectile",
+          "BearberryAvatarProjectile",
+          "InfernoProjectileDefault",
+          "InfernoProjectilePlantfood",
+          "InfernoProjectileAPlantfood",
+          "Riflebamboo_1_ProjectileDefault",
+          "Riflebamboo_2_ProjectileDefault",
+          "Riflebamboo_3_ProjectileDefault",
+          "CrownFlowerPlantfoodProjectile",
+          "CrownFlowerAvatarProjectile",
+          "BurdockBatterFallProjectile",
+          "BurdockBatterCriticalHit",
+          "Lv5SwordDefault",
+          "PFSwordDefault",
+          "PFSwordExtraDefault",
+          "SwordDefault",
+          "Lv5SunRedStarProjectileDefault",
+          "BuleStarDefault",
+          "RedStarDefault",
+          "ArgentMoonProjectileDefault",
+          "level5BuleStarProjectileDefault",
+          "GlodenSunProjectileDefault",
+          "BubbleCoralSmallBubble",
+          "BubbleCoralMediumBubble",
+          "BubbleCoralLargeBubble",
+          "BubbleCoralSmallAcidBubble",
+          "BubbleCoralMediumAcidBubble",
+          "BubbleCoralLargeAcidBubble",
+          "GeneBubbleProjectileDefault",
+          "DuckPearSmallWaterBallDefault",
+          "DuckPearMediumWaterBallDefault",
+          "DuckPearLargeWaterBallDefault",
+          "DuckPearSmallJellyWaterBallDefault",
+          "DuckPearMediumJellyWaterBallDefault",
+          "DuckPearLargeJellyWaterBallDefault",
+          "ScaredyShroomDefault",
+          "ScaredyShroomPlantfood",
+          "ScaredyShroomAvatarPlantfood",
+          "Lv5SpecialScaredyShroom",
+          "PlantfoodBlackHoleDefault",
+          "BlackHoleDefault",
+          "SeashooterProjectileDefault",
+          "SeashooterProjectileConverted",
+          "BigSharkDefault",
+          "PeaAvatarDefault",
+          "DamageGatlingPeaAvatarDefault",
+          "DamageFireGatlingPeaAvatarDefault",
+          "FirePeaAvatarDefault",
+          "DamageBlueGatlingPeaAvatarDefault",
+          "SnowPeaAvatarDefault",
+          "AvatarDamageBlueGatlingPeaAvatarDefault",
+          "UltraFirePeaAvatarDefault",
+          "GiantDamagePeaDefault",
+          "FlashbangsDefault",
+          "ClayExplodeProjectileDefault",
+          "ClayAvatarPFProjectileDefault",
+          "ClayTankProjectileDefault",
+          "SplitShellsProjectileDefault",
+          "SuicideClayTankProjectileDefault",
+          "ClayPFProjectileDefault",
+          "ArtifactSwarmFirePeaDefault",
+          "ArtifactSwarmUltraFirePeaDefault",
+          "AvatarArtifactSwarmUltraFirePeaDefault",
+          "ArtifactSwarmBlueFirePeaDefault",
+          "AvatarArtifactSwarmBlueFirePeaDefault",
+          "ArtifactSwarmBlueBigPeaDefault",
+          "AvatarArtifactSwarmBlueBigPeaDefault",
+          "RepeaterDefault",
+          "RepeaterFirePeaDefault",
+          "UltraRepeaterFirePeaDefault",
+          "AvatarUltraRepeaterFirePeaDefault",
+          "RepeaterSnowPeaDefault",
+          "PeapodLv5Default",
+          "PeapodLv6Default",
+          "FirePeapodLv5Default",
+          "FirePeapodLv6Default",
+          "UltraFirePeapodLv5Default",
+          "UltraFirePeapodLv6Default",
+          "PeapodLv5PlantfoodPea",
+          "PeapodLv6PlantfoodPea",
+          "PeapodLv5GiantFirePeaDefault",
+          "PeapodLv6GiantFirePeaDefault",
+          "PeapodLv5GiantUltraFirePeaDefault2",
+          "PeapodLv6GiantUltraFirePeaDefault2",
+          "PeapodLv5GiantUltraFirePeaDefault",
+          "PeapodLv6GiantUltraFirePeaDefault",
+          "TrackerFuluProjectileDefault",
+          "SpiritFuluProjectileDefault",
+          "ShrinkFuluProjectileDefault",
+          "NagaSalakTornado",
+          "NagaSalakLv5Tornado",
+          "NagaSalakPlantFood",
+          "NagaSalakMarineLife",
+          "NagaSalakSwordFish",
+          "DarkMatterProjectileDefault",
+          "GiantDarkMatterProjectileDefault",
+          "AnnihilationProjectileDefault"
+        ],
+        "UnthrowableProjectiles": [
+          "MegaGatlingElectricDefault",
+          "SoudacheMegaGatlingElectricDefault"
+        ],
+        "AngleAgnosticProjectiles": [
+          "HomingThistleDefault",
+          "HomingThistlePlantfood"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "RiftThemeDemo"
+      ],
+      "objclass": "RiftThemeDemoModuleProperties",
+      "objdata": {
+        "DemoRiftThemeName": [
+          "sun"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "TimeEnergy"
+      ],
+      "objclass": "TimeEnergyModuleProperties",
+      "objdata": {
+        "TimeEnergyValueMax": 400.0,
+        "TimeEnergyTriggers": []
+      }
+    }
+  ]
+}

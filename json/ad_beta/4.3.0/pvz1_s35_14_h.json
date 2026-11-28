@@ -1,0 +1,1141 @@
+{
+  "version": 1,
+  "#comment": "PVZ1 S35 H14 - Ghost conveyor snow-night remake",
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Name": "[S35_H14_GHOSTBELT_NAME]",
+        "Description": "[S35_H14_GHOSTBELT_DESC]",
+        "LevelNumber": 14,
+        "StartingSun": 0,
+        "ZombieMaxLevel": 1,
+        "IsArtifactDisabled": false,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "VictoryModule": "RTID(PVZ1ModeOutro@LevelModules)",
+        "StageModule": "RTID(SnowNightHalloweenStage@CurrentLevel)",
+        "Modules": [
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(Challenges@CurrentLevel)",
+          "RTID(ConveyorBelt@CurrentLevel)",
+          "RTID(InitialPlants@CurrentLevel)",
+          "RTID(StartingFood@CurrentLevel)",
+          "RTID(RiftThemeDemo@CurrentLevel)",
+          "RTID(WaveModule@CurrentLevel)"
+        ],
+        "ShowZombies": [
+          "halloween",
+          "halloween_armor1",
+          "halloween_armor2",
+          "zombie_werewolf",
+          "mausoleum_basic_ghost",
+          "mausoleum_armor1_ghost",
+          "iceage_imp",
+          "mausoleum_archer_ghost_spirit",
+          "mausoleum_drunkard_ghost_spirit"
+        ],
+        "LevelPowerupSet": "LevelPowerupsDisabled"
+      }
+    },
+    {
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(GoalMowers@CurrentLevel)",
+            "RTID(GoalGhostKills@CurrentLevel)",
+            "RTID(GoalSurvive@CurrentLevel)"
+          ]
+        ],
+        "ChallengesAlwaysAvailable": true
+      },
+      "aliases": [
+        "Challenges"
+      ]
+    },
+    {
+      "objclass": "StarChallengeKillZombiesInTimeProps",
+      "objdata": {
+        "ZombiesToKill": 6,
+        "Time": 10
+      },
+      "aliases": [
+        "GoalMowers"
+      ]
+    },
+    {
+      "objclass": "PlantDefeatZombieChallengeProps",
+      "objdata": {
+        "Description": "[S35_H14_GHOSTBELT_GOAL_KILLS]",
+        "NumZombiesToKill": 12,
+        "PlantTypeName": "ghostpepper"
+      },
+      "aliases": [
+        "GoalGhostKills"
+      ]
+    },
+    {
+      "objclass": "StarChallengePlantsSurviveProps",
+      "objdata": {
+        "Count": 4
+      },
+      "aliases": [
+        "GoalSurvive"
+      ]
+    },
+    {
+      "objclass": "ConveyorSeedBankProperties",
+      "objdata": {
+        "InitialPlantList": [
+          {
+            "PlantType": "ghostpepper",
+            "iLevel": 1,
+            "iAvatar": -1,
+            "Weight": 120,
+            "MaxCount": 4,
+            "MaxWeightFactor": 0,
+            "MinCount": 1,
+            "MinWeightFactor": 2
+          },
+          {
+            "PlantType": "stickybombrice",
+            "iLevel": -1,
+            "iAvatar": -1,
+            "Weight": 60,
+            "MaxCount": 2,
+            "MaxWeightFactor": 0,
+            "MinCount": 0,
+            "MinWeightFactor": 1
+          },
+          {
+            "PlantType": "spikeweed",
+            "iLevel": -1,
+            "iAvatar": -1,
+            "Weight": 90,
+            "MaxCount": 5,
+            "MaxWeightFactor": 0,
+            "MinCount": 2,
+            "MinWeightFactor": 2
+          },
+          {
+            "PlantType": "saucer",
+            "iLevel": 1,
+            "iAvatar": -1,
+            "Weight": 35,
+            "MaxCount": 1,
+            "MaxWeightFactor": 0,
+            "MinCount": 0,
+            "MinWeightFactor": 1
+          }
+        ],
+        "DropDelayConditions": [
+          {
+            "MaxPackets": 0,
+            "Delay": 3.5
+          },
+          {
+            "MaxPackets": 3,
+            "Delay": 5
+          },
+          {
+            "MaxPackets": 6,
+            "Delay": 7
+          }
+        ],
+        "SpeedConditions": [
+          {
+            "MaxPackets": 0,
+            "Speed": 100
+          }
+        ]
+      },
+      "aliases": [
+        "ConveyorBelt"
+      ]
+    },
+    {
+      "objclass": "InitialPlantProperties",
+      "objdata": {
+        "InitialPlantPlacements": [
+          {
+            "TypeName": "stickybombrice",
+            "GridX": 1,
+            "GridY": 2,
+            "Level": 1
+          },
+          {
+            "TypeName": "spikeweed",
+            "GridX": 5,
+            "GridY": 2,
+            "Level": 1
+          }
+        ]
+      },
+      "aliases": [
+        "InitialPlants"
+      ]
+    },
+    {
+      "objclass": "LevelMutatorStartingPlantfoodProps",
+      "objdata": {
+        "StartingPlantfoodOverride": 0
+      },
+      "aliases": [
+        "StartingFood"
+      ]
+    },
+    {
+      "objclass": "ModifyConveyorWaveActionProps",
+      "objdata": {
+        "Add": [
+          {
+            "Type": "RTID(gloombara@PlantTypes)",
+            "iLevel": 1,
+            "iAvatar": -1,
+            "Weight": 75,
+            "MaxCount": 1,
+            "MaxWeightFactor": 0,
+            "MinCount": 1,
+            "MinWeightFactor": 2
+          }
+        ]
+      },
+      "aliases": [
+        "AddGloombara"
+      ]
+    },
+    {
+      "objclass": "SpawnZombiesFromGridItemSpawnerProps",
+      "objdata": {
+        "Zombies": [],
+        "GridTypes": [],
+        "SuppressActionIfNoGridItemsFound": false,
+        "ZombieSpawnWaitTime": 0,
+        "WaveStartMessage": "[S35_H14_GHOSTBELT_SPIRIT_HINT]",
+        "AdditionalPlantfood": 0
+      },
+      "aliases": [
+        "SpiritAdvice"
+      ]
+    },
+    {
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "WaveManagerProps": "RTID(Waves@CurrentLevel)",
+        "WaveManagerPropsVector": [
+          "RTID(Waves@CurrentLevel)",
+          "RTID(Waves@CurrentLevel)",
+          "RTID(Waves@CurrentLevel)",
+          "RTID(Waves@CurrentLevel)"
+        ],
+        "ManualStartup": false,
+        "DynamicZombies": []
+      },
+      "aliases": [
+        "WaveModule"
+      ]
+    },
+    {
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "WaveCount": 12,
+        "FlagWaveInterval": 6,
+        "SuppressFlagZombie": false,
+        "SuppressedDynamicZombieWaves": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "MinNextWaveHealthPercentage": 0.6,
+        "MaxNextWaveHealthPercentage": 0.6,
+        "ZombieCountdownFirstWaveSecs": 12,
+        "ZombieCountdownHugeWaveDelay": 2,
+        "DescriptionName": "[S35_H14_GHOSTBELT_MODE]",
+        "Description": "[S35_H14_GHOSTBELT_RULE]",
+        "Waves": [
+          [
+            "RTID(Wave01@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave02@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave03@CurrentLevel)",
+            "RTID(Wave03Barrels@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave04@CurrentLevel)"
+          ],
+          [
+            "RTID(AddGloombara@CurrentLevel)",
+            "RTID(Wave05@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave06@CurrentLevel)",
+            "RTID(Wave06Barrels@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave07@CurrentLevel)",
+            "RTID(SpiritAdvice@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave08@CurrentLevel)",
+            "RTID(Wave08Barrels@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave09@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)",
+            "RTID(Wave10Barrels@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)",
+            "RTID(Wave11Barrels@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave12@CurrentLevel)"
+          ]
+        ]
+      },
+      "aliases": [
+        "Waves"
+      ]
+    },
+    {
+      "objclass": "ZombieJitterOffsets",
+      "objdata": {
+        "ZombieSpawningOffsetIncrement": 43,
+        "ZombieSpawningRandomJitter": 61
+      },
+      "aliases": [
+        "Wave01Jitter"
+      ]
+    },
+    {
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(halloween@ZombieTypes)",
+            "Row": "3",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(halloween@ZombieTypes)",
+            "Row": "3",
+            "Level": 1
+          }
+        ],
+        "AdditionalPlantfood": 0,
+        "JitterOffsets": "RTID(Wave01Jitter@CurrentLevel)"
+      },
+      "aliases": [
+        "Wave01"
+      ]
+    },
+    {
+      "objclass": "ZombieJitterOffsets",
+      "objdata": {
+        "ZombieSpawningOffsetIncrement": 51,
+        "ZombieSpawningRandomJitter": 73
+      },
+      "aliases": [
+        "Wave02Jitter"
+      ]
+    },
+    {
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(halloween@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(halloween@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(halloween_armor1@ZombieTypes)",
+            "Row": "4",
+            "Level": 1
+          }
+        ],
+        "AdditionalPlantfood": 0,
+        "JitterOffsets": "RTID(Wave02Jitter@CurrentLevel)"
+      },
+      "aliases": [
+        "Wave02"
+      ]
+    },
+    {
+      "objclass": "ZombieJitterOffsets",
+      "objdata": {
+        "ZombieSpawningOffsetIncrement": 37,
+        "ZombieSpawningRandomJitter": 89
+      },
+      "aliases": [
+        "Wave03Jitter"
+      ]
+    },
+    {
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(halloween@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(halloween@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(halloween@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(halloween@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(halloween_armor1@ZombieTypes)",
+            "Row": "3",
+            "Level": 1
+          }
+        ],
+        "AdditionalPlantfood": 0,
+        "JitterOffsets": "RTID(Wave03Jitter@CurrentLevel)"
+      },
+      "aliases": [
+        "Wave03"
+      ]
+    },
+    {
+      "objclass": "BarrelWaveActionProps",
+      "objdata": {
+        "Interval": 1.2,
+        "Barrels": [
+          {
+            "Row": 3,
+            "Type": "barrelempty",
+            "Params": {
+              "BarrelHitPoints": 3000,
+              "BarrelSpeed": 0.45
+            }
+          }
+        ]
+      },
+      "aliases": [
+        "Wave03Barrels"
+      ]
+    },
+    {
+      "objclass": "ZombieJitterOffsets",
+      "objdata": {
+        "ZombieSpawningOffsetIncrement": 46,
+        "ZombieSpawningRandomJitter": 67
+      },
+      "aliases": [
+        "Wave04Jitter"
+      ]
+    },
+    {
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(halloween@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(halloween@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(halloween_armor1@ZombieTypes)",
+            "Row": "4",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(halloween_armor2@ZombieTypes)",
+            "Row": "3",
+            "Level": 1
+          }
+        ],
+        "AdditionalPlantfood": 0,
+        "JitterOffsets": "RTID(Wave04Jitter@CurrentLevel)"
+      },
+      "aliases": [
+        "Wave04"
+      ]
+    },
+    {
+      "objclass": "ZombieJitterOffsets",
+      "objdata": {
+        "ZombieSpawningOffsetIncrement": 54,
+        "ZombieSpawningRandomJitter": 63
+      },
+      "aliases": [
+        "Wave05Jitter"
+      ]
+    },
+    {
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(halloween@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(halloween@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(halloween_armor1@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(zombie_werewolf@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          }
+        ],
+        "AdditionalPlantfood": 0,
+        "JitterOffsets": "RTID(Wave05Jitter@CurrentLevel)"
+      },
+      "aliases": [
+        "Wave05"
+      ]
+    },
+    {
+      "objclass": "ZombieJitterOffsets",
+      "objdata": {
+        "ZombieSpawningOffsetIncrement": 39,
+        "ZombieSpawningRandomJitter": 83
+      },
+      "aliases": [
+        "Wave06Jitter"
+      ]
+    },
+    {
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(halloween_armor1@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(halloween@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(halloween@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(halloween@ZombieTypes)",
+            "Row": "4",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(halloween@ZombieTypes)",
+            "Row": "4",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(halloween_armor1@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          }
+        ],
+        "AdditionalPlantfood": 0,
+        "JitterOffsets": "RTID(Wave06Jitter@CurrentLevel)"
+      },
+      "aliases": [
+        "Wave06"
+      ]
+    },
+    {
+      "objclass": "BarrelWaveActionProps",
+      "objdata": {
+        "Interval": 1.2,
+        "Barrels": [
+          {
+            "Row": 2,
+            "Type": "barrelempty",
+            "Params": {
+              "BarrelHitPoints": 3000,
+              "BarrelSpeed": 0.45
+            }
+          },
+          {
+            "Row": 4,
+            "Type": "barrelmoster",
+            "Params": {
+              "BarrelHitPoints": 4000,
+              "BarrelSpeed": 0.5,
+              "Zombies": [
+                {
+                  "TypeName": "iceage_imp",
+                  "Level": 1
+                },
+                {
+                  "TypeName": "iceage_imp",
+                  "Level": 1
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "aliases": [
+        "Wave06Barrels"
+      ]
+    },
+    {
+      "objclass": "ZombieJitterOffsets",
+      "objdata": {
+        "ZombieSpawningOffsetIncrement": 47,
+        "ZombieSpawningRandomJitter": 71
+      },
+      "aliases": [
+        "Wave07Jitter"
+      ]
+    },
+    {
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(mausoleum_basic_ghost@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(mausoleum_basic_ghost@ZombieTypes)",
+            "Row": "4",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(halloween_armor1@ZombieTypes)",
+            "Row": "3",
+            "Level": 1
+          }
+        ],
+        "AdditionalPlantfood": 0,
+        "JitterOffsets": "RTID(Wave07Jitter@CurrentLevel)"
+      },
+      "aliases": [
+        "Wave07"
+      ]
+    },
+    {
+      "objclass": "ZombieJitterOffsets",
+      "objdata": {
+        "ZombieSpawningOffsetIncrement": 41,
+        "ZombieSpawningRandomJitter": 79
+      },
+      "aliases": [
+        "Wave08Jitter"
+      ]
+    },
+    {
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(halloween_armor1@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(halloween_armor1@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(mausoleum_archer_ghost@ZombieTypes)",
+            "Row": "3",
+            "Level": 1
+          }
+        ],
+        "AdditionalPlantfood": 0,
+        "JitterOffsets": "RTID(Wave08Jitter@CurrentLevel)"
+      },
+      "aliases": [
+        "Wave08"
+      ]
+    },
+    {
+      "objclass": "BarrelWaveActionProps",
+      "objdata": {
+        "Interval": 1.2,
+        "Barrels": [
+          {
+            "Row": 1,
+            "Type": "barrelempty",
+            "Params": {
+              "BarrelHitPoints": 3000,
+              "BarrelSpeed": 0.45
+            }
+          },
+          {
+            "Row": 5,
+            "Type": "barrelempty",
+            "Params": {
+              "BarrelHitPoints": 3000,
+              "BarrelSpeed": 0.45
+            }
+          }
+        ]
+      },
+      "aliases": [
+        "Wave08Barrels"
+      ]
+    },
+    {
+      "objclass": "ZombieJitterOffsets",
+      "objdata": {
+        "ZombieSpawningOffsetIncrement": 52,
+        "ZombieSpawningRandomJitter": 69
+      },
+      "aliases": [
+        "Wave09Jitter"
+      ]
+    },
+    {
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(mausoleum_drunkard_ghost@ZombieTypes)",
+            "Row": "3",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(mausoleum_armor1_ghost@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(zombie_werewolf@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          }
+        ],
+        "AdditionalPlantfood": 0,
+        "JitterOffsets": "RTID(Wave09Jitter@CurrentLevel)"
+      },
+      "aliases": [
+        "Wave09"
+      ]
+    },
+    {
+      "objclass": "ZombieJitterOffsets",
+      "objdata": {
+        "ZombieSpawningOffsetIncrement": 36,
+        "ZombieSpawningRandomJitter": 87
+      },
+      "aliases": [
+        "Wave10Jitter"
+      ]
+    },
+    {
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(mausoleum_armor1_ghost@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(mausoleum_basic_ghost@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(halloween_armor2@ZombieTypes)",
+            "Row": "3",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(mausoleum_archer_ghost@ZombieTypes)",
+            "Row": "4",
+            "Level": 1
+          }
+        ],
+        "AdditionalPlantfood": 0,
+        "JitterOffsets": "RTID(Wave10Jitter@CurrentLevel)"
+      },
+      "aliases": [
+        "Wave10"
+      ]
+    },
+    {
+      "objclass": "BarrelWaveActionProps",
+      "objdata": {
+        "Interval": 1.2,
+        "Barrels": [
+          {
+            "Row": 3,
+            "Type": "barrelmoster",
+            "Params": {
+              "BarrelHitPoints": 4000,
+              "BarrelSpeed": 0.5,
+              "Zombies": [
+                {
+                  "TypeName": "iceage_imp",
+                  "Level": 1
+                },
+                {
+                  "TypeName": "iceage_imp",
+                  "Level": 1
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "aliases": [
+        "Wave10Barrels"
+      ]
+    },
+    {
+      "objclass": "ZombieJitterOffsets",
+      "objdata": {
+        "ZombieSpawningOffsetIncrement": 49,
+        "ZombieSpawningRandomJitter": 65
+      },
+      "aliases": [
+        "Wave11Jitter"
+      ]
+    },
+    {
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(halloween_armor1@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(halloween@ZombieTypes)",
+            "Row": "3",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(mausoleum_drunkard_ghost@ZombieTypes)",
+            "Row": "4",
+            "Level": 1
+          }
+        ],
+        "AdditionalPlantfood": 0,
+        "JitterOffsets": "RTID(Wave11Jitter@CurrentLevel)"
+      },
+      "aliases": [
+        "Wave11"
+      ]
+    },
+    {
+      "objclass": "BarrelWaveActionProps",
+      "objdata": {
+        "Interval": 1.2,
+        "Barrels": [
+          {
+            "Row": 2,
+            "Type": "barrelempty",
+            "Params": {
+              "BarrelHitPoints": 3000,
+              "BarrelSpeed": 0.45
+            }
+          },
+          {
+            "Row": 5,
+            "Type": "barrelpowder",
+            "Params": {
+              "BarrelHitPoints": 10000,
+              "BarrelSpeed": 0.4,
+              "BarrelBlowDamageAmount": 4000
+            }
+          }
+        ]
+      },
+      "aliases": [
+        "Wave11Barrels"
+      ]
+    },
+    {
+      "objclass": "ZombieJitterOffsets",
+      "objdata": {
+        "ZombieSpawningOffsetIncrement": 53,
+        "ZombieSpawningRandomJitter": 67
+      },
+      "aliases": [
+        "Wave12Jitter"
+      ]
+    },
+    {
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(halloween@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(mausoleum_armor1_ghost@ZombieTypes)",
+            "Row": "4",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(mausoleum_archer_ghost@ZombieTypes)",
+            "Row": "1",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(mausoleum_drunkard_ghost@ZombieTypes)",
+            "Row": "5",
+            "Level": 1
+          },
+          {
+            "Type": "RTID(zombie_werewolf@ZombieTypes)",
+            "Row": "2",
+            "Level": 1
+          }
+        ],
+        "AdditionalPlantfood": 0,
+        "JitterOffsets": "RTID(Wave12Jitter@CurrentLevel)"
+      },
+      "aliases": [
+        "Wave12"
+      ]
+    },
+    {
+      "aliases": [
+        "RiftThemeDemo"
+      ],
+      "objclass": "RiftThemeDemoModuleProperties",
+      "objdata": {
+        "DemoRiftThemeName": [
+          "plant_exploder"
+        ]
+      }
+    },
+    {
+      "objclass": "StageModuleProperties",
+      "aliases": [
+        "SnowNightHalloweenStage"
+      ],
+      "objdata": {
+        "ResourceGroupNames": [
+          "Egypt_Gravestone",
+          "Game_Tombstones_Dynamic",
+          "Tombstone_Dark_Effects",
+          "DelayLoad_Background_Snow_Night",
+          "AudioTutorial"
+        ],
+        "GroupsToUnloadForAds": [
+          "DelayLoad_Background_Snow_Night"
+        ],
+        "StagePrefix": "snow_night",
+        "BackgroundResourceGroup": "DelayLoad_Background_Snow_Night",
+        "BackgroundImagePrefix": "IMAGE_BACKGROUNDS_SNOW_NIGHT",
+        "LevelPowerupSet": "LevelPowerupsDefault",
+        "BasicZombieTypeName": "halloween",
+        "FlagZombieTypeName": "halloween_flag",
+        "Armor1ZombieTypeName": "halloween_armor1",
+        "Armor2ZombieTypeName": "halloween_armor2",
+        "MusicSuffix": "Modern",
+        "AmbientAudioSuffix": "Amb_Tutorial_Garden_BG_LP",
+        "RailcartDefaultTypeName": "railcart_tutotial",
+        "GravestoneDefaultTypeName": "gravestone_tutorial",
+        "DisabledStreetCells": [
+          {
+            "mX": 0,
+            "mY": 0
+          },
+          {
+            "mX": 0,
+            "mY": 1
+          },
+          {
+            "mX": 0,
+            "mY": 2
+          },
+          {
+            "mX": 0,
+            "mY": 3
+          },
+          {
+            "mX": 0,
+            "mY": 4
+          },
+          {
+            "mX": 0,
+            "mY": 5
+          },
+          {
+            "mX": 0,
+            "mY": 6
+          },
+          {
+            "mX": 0,
+            "mY": 7
+          },
+          {
+            "mX": 0,
+            "mY": 8
+          },
+          {
+            "mX": 0,
+            "mY": 9
+          },
+          {
+            "mX": 1,
+            "mY": 0
+          },
+          {
+            "mX": 1,
+            "mY": 1
+          },
+          {
+            "mX": 1,
+            "mY": 2
+          },
+          {
+            "mX": 1,
+            "mY": 3
+          },
+          {
+            "mX": 1,
+            "mY": 4
+          },
+          {
+            "mX": 1,
+            "mY": 5
+          },
+          {
+            "mX": 1,
+            "mY": 6
+          },
+          {
+            "mX": 1,
+            "mY": 7
+          },
+          {
+            "mX": 1,
+            "mY": 8
+          },
+          {
+            "mX": 1,
+            "mY": 9
+          },
+          {
+            "mX": 2,
+            "mY": 0
+          },
+          {
+            "mX": 2,
+            "mY": 1
+          },
+          {
+            "mX": 2,
+            "mY": 2
+          },
+          {
+            "mX": 2,
+            "mY": 3
+          },
+          {
+            "mX": 2,
+            "mY": 4
+          },
+          {
+            "mX": 2,
+            "mY": 5
+          },
+          {
+            "mX": 2,
+            "mY": 6
+          },
+          {
+            "mX": 2,
+            "mY": 7
+          },
+          {
+            "mX": 2,
+            "mY": 8
+          },
+          {
+            "mX": 2,
+            "mY": 9
+          },
+          {
+            "mX": 3,
+            "mY": 9
+          },
+          {
+            "mX": 5,
+            "mY": 9
+          },
+          {
+            "mX": 7,
+            "mY": 9
+          },
+          {
+            "mX": 7,
+            "mY": 8
+          },
+          {
+            "mX": 7,
+            "mY": 7
+          },
+          {
+            "mX": 8,
+            "mY": 9
+          },
+          {
+            "mX": 8,
+            "mY": 8
+          },
+          {
+            "mX": 8,
+            "mY": 7
+          }
+        ]
+      }
+    }
+  ]
+}

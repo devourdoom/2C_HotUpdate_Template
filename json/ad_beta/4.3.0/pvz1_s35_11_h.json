@@ -1,0 +1,680 @@
+{
+    "objects": [
+        {
+            "objclass": "LevelDefinition",
+            "objdata": {
+                "Description": "[S35_MEMORY_HARD_NAME_011]",
+                "LevelNumber": 1,
+                "Loot": "RTID(DefaultLoot@LevelModules)",
+                "Modules": [
+                    "RTID(StandardIntro@LevelModules)",
+                    "RTID(ZombiesDeadWinCon@LevelModules)",
+                    "RTID(ChallengeModule@CurrentLevel)",
+                    "RTID(SeedBank@CurrentLevel)",
+                    "RTID(NewWaves@CurrentLevel)",
+                    "RTID(RiftThemeDemo@CurrentLevel)",
+                    "RTID(DefaultZombieWinCondition@LevelModules)",
+                    "RTID(ZombiePotions@CurrentLevel)",
+                    "RTID(TimeEnergy@CurrentLevel)"
+                ],
+                "MusicType": "MiniGame_A",
+                "Name": "[S35_MEMORY_HARD_NAME_011]",
+                "DisablePeavine": true,
+                "StageModule": "RTID(SnowModernStage@LevelModules)",
+                "VictoryModule": "RTID(PVZ1ModeOutro@LevelModules)"
+            }
+        },
+        {
+            "aliases": [
+                "ZombiePotions"
+            ],
+            "objclass": "ZombiePotionModuleProperties",
+            "objdata": {
+                "InitialPotionCount": 10,
+                "MaxPotionCount": 60,
+                "PotionSpawnTimer": {
+                    "Max": 16,
+                    "Min": 12
+                },
+                "PotionTypes": [
+                    "zombiepotion_memo"
+                ]
+            }
+        },
+        {
+            "objclass": "ZombiePotionProps",
+            "aliases": [
+                "ZombiePotionSpeedDefaultMemo"
+            ],
+            "objdata": {
+                "PopAnim": "POPANIM_MINIGAME_POTION_SPEED",
+                "PopAnimEffect": "POPANIM_EFFECTS_SPEED_POTION_POOF_EFFECT",
+                "PopAnimDestroyed": "POPANIM_EFFECTS_SPEED_POTION_DESTROYED_EFFECT",
+                "HitRectOffsetX": 10,
+                "HitRectOffsetWidth": -30,
+                "Hitpoints": 50,
+                "PopAnimRenderOffset": {
+                    "x": 95,
+                    "y": 130
+                },
+                "Height": "low",
+                "EffectStacks": [
+                    "onfire"
+                ],
+                "EffectSound": "Play_Plant_EvilShroom_Speed",
+                "DestroyedSound": "Play_Plant_Potion_Crushed_Glass_Any",
+                "DestroyedSoundGargantuar": "Play_Plant_Potion_Crushed_Glass"
+            }
+        },
+        {
+            "aliases": [
+                "SeedBank"
+            ],
+            "objclass": "SeedBankProperties",
+            "objdata": {
+                "PresetPlantList": [
+                    "rapeflower",
+                    "dragonfruit",
+                    "olive"
+                ],
+                "PlantBlackList": [
+                    "snowpea",
+                    "wintermelon",
+                    "glaciershroom"
+                ],
+                "PlantWhiteList": [
+                    "snapdragon",
+                    "firegourd",
+                    "fireshroom",
+                    "pepperpult",
+                    "firepeashooter",
+                    "lavaguava",
+                    "grapeshot",
+                    "meteorflower",
+                    "hotdate",
+                    "wasabiwhip",
+                    "pyrevine",
+                    "jackolantern",
+                    "inferno",
+                    "dragonfruit",
+                    "flamelady",
+                    "matchflower",
+                    "rapeflower",
+                    "gluttonydragon",
+                    "chainsawburmannii",
+                    "jalapeno",
+                    "cherry_bomb",
+                    "torchwood"
+                ],
+                "SelectionMethod": "chooser",
+                "OverrideSeedSlotsCount": 8
+            }
+        },
+        {
+            "aliases": [
+                "RiftThemeDemo"
+            ],
+            "objclass": "RiftThemeDemoModuleProperties",
+            "objdata": {
+                "DemoRiftThemeName": []
+            }
+        },
+        {
+            "aliases": [
+                "ChallengeModule"
+            ],
+            "objclass": "StarChallengeModuleProperties",
+            "objdata": {
+                "Challenges": [
+                    [
+                        "RTID(PlantFoodNonuse@CurrentLevel)",
+                        "RTID(ApplyZombieConditionsChallenge@CurrentLevel)",
+                        "RTID(ZombieDistance@CurrentLevel)"
+                    ]
+                ],
+                "ChallengesAlwaysAvailable": true
+            }
+        },
+        {
+            "aliases": [
+                "PlantFoodNonuse"
+            ],
+            "objclass": "StarChallengePlantFoodNonuseProps",
+            "objdata": {}
+        },
+        {
+            "aliases": [
+                "ZombieDistance"
+            ],
+            "objclass": "StarChallengeZombieDistanceProps",
+            "objdata": {
+                "TargetDistance": 4.0
+            }
+        },
+        {
+            "aliases": [
+                "ApplyZombieConditionsChallenge"
+            ],
+            "objclass": "ApplyZombieConditionsChallengeProps",
+            "objdata": {
+                "ConditionToInflict": [],
+                "IncludeBurnedToAsh": true,
+                "NumZombieConditionsToApply": 25
+            }
+        },
+        {
+            "aliases": [
+                "NewWaves"
+            ],
+            "objclass": "WaveManagerModuleProperties",
+            "objdata": {
+                "DynamicZombies": [],
+                "WaveManagerPropsVector": [
+                    "RTID(WaveManagerPropsWeek1@CurrentLevel)",
+                    "RTID(WaveManagerPropsWeek1@CurrentLevel)",
+                    "RTID(WaveManagerPropsWeek1@CurrentLevel)",
+                    "RTID(WaveManagerPropsWeek1@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "WaveManagerPropsWeek1"
+            ],
+            "objclass": "WaveManagerProperties",
+            "objdata": {
+                "FlagWaveInterval": 4,
+                "WaveCount": 8,
+                "DescriptionName": "[S35_MEMORY_HARD_MODE_011]",
+                "Description": "[S35_MEMORY_HARD_MODE_DESC_011]",
+                "Waves": [
+                    [
+                        "RTID(Wave1@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave2@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave3@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave4@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave5@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave6@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave7@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave8@CurrentLevel)"
+                    ]
+                ],
+                "SuppressFlagZombie": false,
+                "MinNextWaveHealthPercentage": 0.6,
+                "MaxNextWaveHealthPercentage": 0.6,
+                "ZombieCountdownFirstWaveSecs": 8.0
+            }
+        },
+        {
+            "aliases": [
+                "TimeEnergy"
+            ],
+            "objclass": "TimeEnergyModuleProperties",
+            "objdata": {
+                "TimeEnergyValueMax": 400.0,
+                "TimeEnergyTriggers": []
+            }
+        },
+        {
+            "aliases": [
+                "Wave1"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Level": 2,
+                        "Type": "RTID(dark@ZombieTypes)",
+                        "Row": "2"
+                    },
+                    {
+                        "Level": 2,
+                        "Type": "RTID(dark@ZombieTypes)",
+                        "Row": "4"
+                    }
+                ],
+                "JitterOffsets": "RTID(TuningJitter1@CurrentLevel)",
+                "AdditionalPlantfood": 0
+            }
+        },
+        {
+            "aliases": [
+                "TuningJitter1"
+            ],
+            "objclass": "ZombieJitterOffsets",
+            "objdata": {
+                "ZombieSpawningOffsetIncrement": 31,
+                "ZombieSpawningRandomJitter": 103
+            }
+        },
+        {
+            "aliases": [
+                "Wave2"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Level": 2,
+                        "Type": "RTID(dark_armor1@ZombieTypes)",
+                        "Row": "3"
+                    },
+                    {
+                        "Level": 2,
+                        "Type": "RTID(dark_armor1@ZombieTypes)",
+                        "Row": "1"
+                    },
+                    {
+                        "Level": 2,
+                        "Type": "RTID(dark_juggler@ZombieTypes)",
+                        "Row": "5"
+                    }
+                ],
+                "JitterOffsets": "RTID(TuningJitter2@CurrentLevel)",
+                "AdditionalPlantfood": 0
+            }
+        },
+        {
+            "aliases": [
+                "TuningJitter2"
+            ],
+            "objclass": "ZombieJitterOffsets",
+            "objdata": {
+                "ZombieSpawningOffsetIncrement": 47,
+                "ZombieSpawningRandomJitter": 127
+            }
+        },
+        {
+            "aliases": [
+                "Wave3"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Level": 2,
+                        "Row": "5",
+                        "Type": "RTID(dark_armor4@ZombieTypes)"
+                    },
+                    {
+                        "Level": 2,
+                        "Row": "2",
+                        "Type": "RTID(dark_wizard@ZombieTypes)"
+                    },
+                    {
+                        "Level": 2,
+                        "Type": "RTID(dark_armor1@ZombieTypes)",
+                        "Row": "4"
+                    },
+                    {
+                        "Level": 2,
+                        "Type": "RTID(dark_armor1@ZombieTypes)",
+                        "Row": "1"
+                    },
+                    {
+                        "Level": 2,
+                        "Type": "RTID(dark@ZombieTypes)",
+                        "Row": "3"
+                    },
+                    {
+                        "Level": 2,
+                        "Type": "RTID(dark@ZombieTypes)",
+                        "Row": "5"
+                    }
+                ],
+                "JitterOffsets": "RTID(TuningJitter3@CurrentLevel)",
+                "AdditionalPlantfood": 0
+            }
+        },
+        {
+            "aliases": [
+                "TuningJitter3"
+            ],
+            "objclass": "ZombieJitterOffsets",
+            "objdata": {
+                "ZombieSpawningOffsetIncrement": 29,
+                "ZombieSpawningRandomJitter": 97
+            }
+        },
+        {
+            "aliases": [
+                "Wave4"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Level": 2,
+                        "Row": "3",
+                        "Type": "RTID(dark_gargantuar@ZombieTypes)"
+                    },
+                    {
+                        "Level": 2,
+                        "Row": "5",
+                        "Type": "RTID(dark_wizard@ZombieTypes)"
+                    },
+                    {
+                        "Level": 2,
+                        "Row": "1",
+                        "Type": "RTID(dark_wizard@ZombieTypes)"
+                    },
+                    {
+                        "Level": 2,
+                        "Type": "RTID(dark_armor2@ZombieTypes)",
+                        "Row": "4"
+                    },
+                    {
+                        "Level": 2,
+                        "Type": "RTID(dark_armor2@ZombieTypes)",
+                        "Row": "2"
+                    },
+                    {
+                        "Level": 2,
+                        "Type": "RTID(dark_king@ZombieTypes)",
+                        "Row": "3"
+                    },
+                    {
+                        "Level": 2,
+                        "Type": "RTID(dark_juggler@ZombieTypes)",
+                        "Row": "5"
+                    },
+                    {
+                        "Level": 2,
+                        "Type": "RTID(dark_juggler@ZombieTypes)",
+                        "Row": "1"
+                    }
+                ],
+                "JitterOffsets": "RTID(TuningJitter4@CurrentLevel)",
+                "AdditionalPlantfood": 0
+            }
+        },
+        {
+            "aliases": [
+                "TuningJitter4"
+            ],
+            "objclass": "ZombieJitterOffsets",
+            "objdata": {
+                "ZombieSpawningOffsetIncrement": 41,
+                "ZombieSpawningRandomJitter": 139
+            }
+        },
+        {
+            "aliases": [
+                "Wave5"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Level": 2,
+                        "Row": "1",
+                        "Type": "RTID(dark_armor4@ZombieTypes)"
+                    },
+                    {
+                        "Level": 2,
+                        "Row": "4",
+                        "Type": "RTID(dark_wizard@ZombieTypes)"
+                    },
+                    {
+                        "Level": 2,
+                        "Type": "RTID(dark_king@ZombieTypes)",
+                        "Row": "2"
+                    },
+                    {
+                        "Level": 2,
+                        "Type": "RTID(dark_armor2@ZombieTypes)",
+                        "Row": "5"
+                    },
+                    {
+                        "Level": 2,
+                        "Type": "RTID(dark_armor2@ZombieTypes)",
+                        "Row": "3"
+                    },
+                    {
+                        "Level": 2,
+                        "Type": "RTID(dark_armor1@ZombieTypes)",
+                        "Row": "1"
+                    },
+                    {
+                        "Level": 2,
+                        "Type": "RTID(dark_armor1@ZombieTypes)",
+                        "Row": "4"
+                    }
+                ],
+                "JitterOffsets": "RTID(TuningJitter5@CurrentLevel)",
+                "AdditionalPlantfood": 0
+            }
+        },
+        {
+            "aliases": [
+                "TuningJitter5"
+            ],
+            "objclass": "ZombieJitterOffsets",
+            "objdata": {
+                "ZombieSpawningOffsetIncrement": 37,
+                "ZombieSpawningRandomJitter": 113
+            }
+        },
+        {
+            "aliases": [
+                "Wave6"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Level": 2,
+                        "Row": "4",
+                        "Type": "RTID(dark@ZombieTypes)"
+                    },
+                    {
+                        "Level": 2,
+                        "Row": "2",
+                        "Type": "RTID(dark_wizard@ZombieTypes)"
+                    },
+                    {
+                        "Level": 2,
+                        "Row": "5",
+                        "Type": "RTID(dark_wizard@ZombieTypes)"
+                    },
+                    {
+                        "Level": 2,
+                        "Type": "RTID(dark_armor1@ZombieTypes)",
+                        "Row": "3"
+                    },
+                    {
+                        "Level": 2,
+                        "Type": "RTID(dark_armor1@ZombieTypes)",
+                        "Row": "1"
+                    },
+                    {
+                        "Level": 2,
+                        "Type": "RTID(dark_king@ZombieTypes)",
+                        "Row": "4"
+                    }
+                ],
+                "JitterOffsets": "RTID(TuningJitter6@CurrentLevel)",
+                "AdditionalPlantfood": 0
+            }
+        },
+        {
+            "aliases": [
+                "TuningJitter6"
+            ],
+            "objclass": "ZombieJitterOffsets",
+            "objdata": {
+                "ZombieSpawningOffsetIncrement": 43,
+                "ZombieSpawningRandomJitter": 131
+            }
+        },
+        {
+            "aliases": [
+                "Wave7"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Level": 2,
+                        "Row": "2",
+                        "Type": "RTID(dark_armor4@ZombieTypes)"
+                    },
+                    {
+                        "Level": 2,
+                        "Row": "5",
+                        "Type": "RTID(dark_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Level": 2,
+                        "Row": "3",
+                        "Type": "RTID(dark@ZombieTypes)"
+                    },
+                    {
+                        "Level": 2,
+                        "Row": "1",
+                        "Type": "RTID(dark_wizard@ZombieTypes)"
+                    },
+                    {
+                        "Level": 2,
+                        "Row": "4",
+                        "Type": "RTID(dark_wizard@ZombieTypes)"
+                    },
+                    {
+                        "Level": 2,
+                        "Type": "RTID(dark_armor2@ZombieTypes)",
+                        "Row": "2"
+                    },
+                    {
+                        "Level": 2,
+                        "Type": "RTID(dark_armor2@ZombieTypes)",
+                        "Row": "5"
+                    },
+                    {
+                        "Level": 2,
+                        "Type": "RTID(dark_armor1@ZombieTypes)",
+                        "Row": "3"
+                    },
+                    {
+                        "Level": 2,
+                        "Type": "RTID(dark_armor1@ZombieTypes)",
+                        "Row": "1"
+                    },
+                    {
+                        "Level": 2,
+                        "Type": "RTID(dark_armor1@ZombieTypes)",
+                        "Row": "4"
+                    },
+                    {
+                        "Level": 2,
+                        "Type": "RTID(dark_king@ZombieTypes)",
+                        "Row": "2"
+                    },
+                    {
+                        "Level": 2,
+                        "Type": "RTID(dark@ZombieTypes)",
+                        "Row": "5"
+                    }
+                ],
+                "JitterOffsets": "RTID(TuningJitter7@CurrentLevel)",
+                "AdditionalPlantfood": 0
+            }
+        },
+        {
+            "aliases": [
+                "TuningJitter7"
+            ],
+            "objclass": "ZombieJitterOffsets",
+            "objdata": {
+                "ZombieSpawningOffsetIncrement": 33,
+                "ZombieSpawningRandomJitter": 109
+            }
+        },
+        {
+            "aliases": [
+                "Wave8"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Level": 2,
+                        "Row": "5",
+                        "Type": "RTID(dark_gargantuar@ZombieTypes)"
+                    },
+                    {
+                        "Level": 2,
+                        "Row": "3",
+                        "Type": "RTID(dark_wizard@ZombieTypes)"
+                    },
+                    {
+                        "Level": 2,
+                        "Row": "1",
+                        "Type": "RTID(dark_armor4@ZombieTypes)"
+                    },
+                    {
+                        "Level": 2,
+                        "Row": "4",
+                        "Type": "RTID(dark_wizard@ZombieTypes)"
+                    },
+                    {
+                        "Level": 2,
+                        "Row": "2",
+                        "Type": "RTID(dark@ZombieTypes)"
+                    },
+                    {
+                        "Level": 2,
+                        "Row": "5",
+                        "Type": "RTID(dark@ZombieTypes)"
+                    },
+                    {
+                        "Level": 2,
+                        "Row": "3",
+                        "Type": "RTID(dark_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Level": 2,
+                        "Row": "1",
+                        "Type": "RTID(dark@ZombieTypes)"
+                    },
+                    {
+                        "Level": 2,
+                        "Row": "4",
+                        "Type": "RTID(dark@ZombieTypes)"
+                    },
+                    {
+                        "Level": 2,
+                        "Row": "2",
+                        "Type": "RTID(dark@ZombieTypes)"
+                    }
+                ],
+                "JitterOffsets": "RTID(TuningJitter8@CurrentLevel)",
+                "AdditionalPlantfood": 0
+            }
+        },
+        {
+            "aliases": [
+                "TuningJitter8"
+            ],
+            "objclass": "ZombieJitterOffsets",
+            "objdata": {
+                "ZombieSpawningOffsetIncrement": 39,
+                "ZombieSpawningRandomJitter": 149
+            }
+        }
+    ],
+    "version": 1
+}

@@ -1,0 +1,801 @@
+{
+  "version": 1,
+  "#comment": "PVZ1 S35 Week 1 - Lost City airship",
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "[S35_W01_BOSS_DESC]",
+        "LevelNumber": 9,
+        "IsArtifactDisabled": false,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(LostCityMowers@LevelModules)",
+          "RTID(Traps@CurrentLevel)",
+          "RTID(StartingPlants@CurrentLevel)",
+          "RTID(ZombossRobotIntro@CurrentLevel)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(ConveyorBelt@CurrentLevel)",
+          "RTID(ZombossBattle@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)"
+        ],
+        "Name": "[S35_W01_BOSS_NAME]",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "VictoryModule": "RTID(PVZ1ModeOutro@LevelModules)",
+        "StageModule": "RTID(SnowModernStage@LevelModules)",
+        "ShowZombies": [
+          "zombossmech_lostcity_memo",
+          "lostcity_excavator",
+          "lostcity_jane",
+          "lostcity_lostpilot",
+          "lostcity_relichunter"
+        ],
+        "IsBossFight": true,
+        "ZombieMaxLevel": 1
+      }
+    },
+    {
+      "aliases": [
+        "Traps"
+      ],
+      "objclass": "InitialGridItemProperties",
+      "objdata": {
+        "InitialGridItemPlacements": [
+          {
+            "GridX": 8,
+            "GridY": 0,
+            "TypeName": "flame_spreader_trap"
+          },
+          {
+            "GridX": 8,
+            "GridY": 4,
+            "TypeName": "flame_spreader_trap"
+          },
+          {
+            "GridX": 1,
+            "GridY": 2,
+            "TypeName": "zomboss_boulder_trap_falling_forward"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "StartingPlants"
+      ],
+      "objclass": "InitialPlantEntryProperties",
+      "objdata": {
+        "Plants": [
+          {
+            "GridX": 1,
+            "GridY": 1,
+            "PlantTypes": [
+              "repeater"
+            ],
+            "Level": 1,
+            "Avatar": false
+          },
+          {
+            "GridX": 1,
+            "GridY": 3,
+            "PlantTypes": [
+              "repeater"
+            ],
+            "Level": 1,
+            "Avatar": false
+          }
+        ]
+      }
+    },
+    {
+      "objclass": "ZombossBattleIntroProperties",
+      "aliases": [
+        "ZombossRobotIntro"
+      ],
+      "objdata": {
+        "ResourceGroupNames": [],
+        "PanStartOffset": 78,
+        "PanEndOffset": 468,
+        "PanRightDuration": 1.5,
+        "PanLeftDuration": 1.5,
+        "ZombossPhaseCount": 3,
+        "SkipShowingStreetBossBattle": false
+      }
+    },
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(SaveMowers@CurrentLevel)",
+            "RTID(PlantsSurvive@CurrentLevel)",
+            "RTID(KillZombies@CurrentLevel)"
+          ]
+        ],
+        "ChallengesAlwaysAvailable": true
+      }
+    },
+    {
+      "aliases": [
+        "SaveMowers"
+      ],
+      "objclass": "StarChallengeSaveMowersProps",
+      "objdata": {}
+    },
+    {
+      "aliases": [
+        "PlantsSurvive"
+      ],
+      "objclass": "StarChallengePlantsSurviveProps",
+      "objdata": {
+        "Count": 8
+      }
+    },
+    {
+      "aliases": [
+        "KillZombies"
+      ],
+      "objclass": "StarChallengeKillZombiesInTimeProps",
+      "objdata": {
+        "ZombiesToKill": 4,
+        "Time": 12
+      }
+    },
+    {
+      "aliases": [
+        "ZombossBattle"
+      ],
+      "objclass": "ZombossBattleModuleProperties",
+      "objdata": {
+        "ReservedColumnCount": 2,
+        "ZombossMechType": "zombossmech_lostcity_memo",
+        "ZombossDeathRow": 2,
+        "ZombossDeathColumn": 6,
+        "ZombossStageCount": 3,
+        "ZombossSpawnGridPosition": {
+          "mX": 6,
+          "mY": 2
+        }
+      }
+    },
+    {
+      "aliases": [
+        "ConveyorBelt"
+      ],
+      "objclass": "ConveyorSeedBankProperties",
+      "objdata": {
+        "DropDelayConditions": [
+          {
+            "Delay": 3,
+            "MaxPackets": 0
+          },
+          {
+            "Delay": 3,
+            "MaxPackets": 3
+          },
+          {
+            "Delay": 4,
+            "MaxPackets": 6
+          },
+          {
+            "Delay": 6,
+            "MaxPackets": 9
+          }
+        ],
+        "InitialPlantList": [
+          {
+            "PlantType": "repeater",
+            "iLevel": 1,
+            "iAvatar": -1,
+            "Weight": 38,
+            "MaxCount": 10,
+            "MaxWeightFactor": 0
+          },
+          {
+            "PlantType": "twinshoneysuckle",
+            "iLevel": 1,
+            "iAvatar": -1,
+            "Weight": 22,
+            "MaxCount": 2,
+            "MaxWeightFactor": 0
+          },
+          {
+            "PlantType": "rhubarbarian",
+            "iLevel": 1,
+            "iAvatar": -1,
+            "Weight": 26,
+            "MaxCount": 3,
+            "MaxWeightFactor": 0
+          },
+          {
+            "PlantType": "endurian",
+            "iLevel": 1,
+            "iAvatar": -1,
+            "Weight": 16,
+            "MaxCount": 4,
+            "MaxWeightFactor": 0
+          },
+          {
+            "PlantType": "grapeshot",
+            "iLevel": 1,
+            "iAvatar": -1,
+            "Weight": 8,
+            "MaxCount": 1,
+            "MaxWeightFactor": 0
+          }
+        ],
+        "SpeedConditions": [
+          {
+            "MaxPackets": 0,
+            "Speed": 100
+          },
+          {
+            "MaxPackets": 2,
+            "Speed": 70
+          },
+          {
+            "MaxPackets": 5,
+            "Speed": 50
+          }
+        ]
+      }
+    },
+    {
+      "objclass": "ZombossJumpActionDefinition",
+      "aliases": [
+        "ZombossSpawnJump"
+      ],
+      "objdata": {
+        "JumpHeight": 150,
+        "JumpHangTime": 1.2,
+        "JumpAnimRateModifier": 1
+      }
+    },
+    {
+      "objclass": "ZombieZombossMechLostCityProps",
+      "aliases": [
+        "ZombieZombossMechLostCityMemo"
+      ],
+      "objdata": {
+        "Speed": 0.1,
+        "CanSpawnPlantFood": false,
+        "EnableAutoTest": false,
+        "SizeType": "big",
+        "HeadDropFraction": -1,
+        "ArmDropFraction": -1,
+        "HitRect": {
+          "mX": 0,
+          "mY": -50,
+          "mWidth": 192,
+          "mHeight": 120
+        },
+        "AttackRect": {
+          "mX": 15,
+          "mY": 0,
+          "mWidth": 20,
+          "mHeight": 195
+        },
+        "ArtCenter": {
+          "x": 114,
+          "y": 250
+        },
+        "AlmanacOffset": {
+          "x": 50,
+          "y": 150
+        },
+        "AlmanacScale": 0.65,
+        "ShadowOffset": {
+          "x": 0,
+          "y": -10,
+          "z": 0.8
+        },
+        "ShadowScaling": {
+          "x": 4.5,
+          "y": 4
+        },
+        "GroundTrackName": "ground_swatch",
+        "ZombieStats": [
+          {
+            "Type": "toughness",
+            "Value": "toughness8"
+          },
+          {
+            "Type": "speed",
+            "Value": "speed3"
+          }
+        ],
+        "GridExtents": {
+          "mX": 3,
+          "mY": 2
+        },
+        "CanTriggerZombieWin": false,
+        "IsValidPinchTarget": false,
+        "CanBeFlicked": false,
+        "CanBeFlickedOff": false,
+        "CanBeLaunchedByPlants": false,
+        "CanBeKnockedBack": false,
+        "# Zomboss properties": 0,
+        "SquashZombies": true,
+        "SquashGridItems": false,
+        "MinColumn": 1,
+        "MaxColumn": 7,
+        "HideDuringIntro": true,
+        "PowerUpDamageModifier": 0.25,
+        "ZombieLevelStats": [
+          {
+            "AttackLevel": 1,
+            "HitPointsLevel": 1
+          },
+          {
+            "AttackLevel": 2,
+            "HitPointsLevel": 1
+          },
+          {
+            "AttackLevel": 3,
+            "HitPointsLevel": 1
+          },
+          {
+            "AttackLevel": 4.5,
+            "HitPointsLevel": 1
+          },
+          {
+            "AttackLevel": 5,
+            "HitPointsLevel": 1
+          }
+        ],
+        "Stages": [
+          {
+            "Actions": [
+              "RTID(ZombossLostCityDropZombiesTier1@CurrentLevel)",
+              "RTID(ZombossLostCityDropZombiesTier1_alt@CurrentLevel)",
+              "RTID(ZombossLostCityTriggerTrapTier1@ZombieActions)",
+              "RTID(ZombossParachuteSpawnTier1@CurrentLevel)"
+            ],
+            "HitPoints": 6000,
+            "DamageIndexFull": 0,
+            "DamageIndexHalf": 2,
+            "AnimRateModifier": 1,
+            "IdleTime": {
+              "Min": 3,
+              "Max": 4
+            },
+            "RetreatAction": "RTID(ZombossLostCityRetreatJump@ZombieActions)",
+            "ChilledDurationFromFrozen": 10,
+            "StunTime": 2.5,
+            "StunDamageScale": 1.5,
+            "StunStaggerBackMovement": 80,
+            "StunStaggerBackTime": 0.4
+          },
+          {
+            "Actions": [
+              "RTID(ZombossLostCityDropZombiesTier2@CurrentLevel)",
+              "RTID(ZombossLostCityDropZombiesTier2_alt@CurrentLevel)",
+              "RTID(ZombossLostCityTriggerTrapTier2@ZombieActions)",
+              "RTID(ZombossParachuteSpawnTier2@CurrentLevel)",
+              "RTID(ZombossRelichunterSpawnTier2@CurrentLevel)"
+            ],
+            "HitPoints": 9000,
+            "DamageIndexFull": 3,
+            "DamageIndexHalf": 4,
+            "AnimRateModifier": 1.1,
+            "IdleTime": {
+              "Min": 2,
+              "Max": 3
+            },
+            "RetreatAction": "RTID(ZombossLostCityRetreatJump@ZombieActions)",
+            "ChilledDurationFromFrozen": 10,
+            "StunTime": 3,
+            "StunDamageScale": 1.5,
+            "StunStaggerBackMovement": 80,
+            "StunStaggerBackTime": 0.4
+          },
+          {
+            "Actions": [
+              "RTID(ZombossLostCityDropZombiesTier3@CurrentLevel)",
+              "RTID(ZombossLostCityDropZombiesTier3_alt@CurrentLevel)",
+              "RTID(ZombossLostCityTriggerTrapTier3@ZombieActions)",
+              "RTID(ZombossParachuteSpawnTier3@CurrentLevel)",
+              "RTID(ZombossRelichunterSpawnTier3@CurrentLevel)",
+              "RTID(ZombossLostCityTriggerTrapTier3_stone@CurrentLevel)"
+            ],
+            "HitPoints": 12000,
+            "DamageIndexFull": 5,
+            "DamageIndexHalf": 6,
+            "AnimRateModifier": 1.25,
+            "IdleTime": {
+              "Min": 1.5,
+              "Max": 2.5
+            },
+            "RetreatAction": "RTID(ZombossLostCityRetreatJump@ZombieActions)",
+            "ChilledDurationFromFrozen": 10,
+            "StunTime": 1.5,
+            "StunDamageScale": 1.5,
+            "StunStaggerBackMovement": 80,
+            "StunStaggerBackTime": 0.4
+          }
+        ]
+      }
+    },
+    {
+      "objclass": "ZombossDropZombieActionDefinition",
+      "aliases": [
+        "ZombossLostCityDropZombiesTier1"
+      ],
+      "objdata": {
+        "Weight": 10,
+        "RepeatMin": 0,
+        "RepeatMax": 0,
+        "SpawnJumpAction": "RTID(ZombossSpawnJump@CurrentLevel)",
+        "SpawnZombieWavePointRange": {
+          "Min": 300,
+          "Max": 500
+        },
+        "SpawnZombieTypes": [
+          "lostcity",
+          "lostcity_armor1"
+        ],
+        "SpawnCooldownTime": 0.5,
+        "SpawnWavesBetweenPlantFood": {
+          "Min": 2,
+          "Max": 2
+        },
+        "ZombieDropSpeed": 150,
+        "NumberOfRowsToSpawnDown": 3,
+        "MovementCurveType": "ease_in_out",
+        "MovementSpeed": 120,
+        "ValidSpawningRegion": {
+          "mX": 7,
+          "mY": 0,
+          "mWidth": 1,
+          "mHeight": 4
+        }
+      }
+    },
+    {
+      "objclass": "ZombossDropZombieActionDefinition",
+      "aliases": [
+        "ZombossLostCityDropZombiesTier1_alt"
+      ],
+      "objdata": {
+        "Weight": 10,
+        "RepeatMin": 0,
+        "RepeatMax": 0,
+        "SpawnJumpAction": "RTID(ZombossSpawnJump@CurrentLevel)",
+        "SpawnZombieWavePointRange": {
+          "Min": 300,
+          "Max": 450
+        },
+        "SpawnZombieTypes": [
+          "lostcity",
+          "lostcity_excavator"
+        ],
+        "SpawnCooldownTime": 0.5,
+        "SpawnWavesBetweenPlantFood": {
+          "Min": 2,
+          "Max": 2
+        },
+        "ZombieDropSpeed": 150,
+        "NumberOfRowsToSpawnDown": 3,
+        "MovementCurveType": "ease_in_out",
+        "MovementSpeed": 120,
+        "ValidSpawningRegion": {
+          "mX": 7,
+          "mY": 0,
+          "mWidth": 1,
+          "mHeight": 4
+        }
+      }
+    },
+    {
+      "objclass": "ZombieDropZombiesOnBoardActionDefinition",
+      "aliases": [
+        "ZombossParachuteSpawnTier1"
+      ],
+      "objdata": {
+        "Weight": 6,
+        "RepeatMin": 0,
+        "RepeatMax": 0,
+        "ColumnEnd": "6",
+        "ColumnStart": "5",
+        "MinSpawn": "1",
+        "MaxSpawn": "1",
+        "ZombieNames": [
+          "lostcity_lostpilot"
+        ],
+        "ZombieWeights": [
+          12
+        ],
+        "TimeBeforeSpawn": 1.5,
+        "ZombieFallTime": 1,
+        "RampUpAnimation": "",
+        "LoopingAnimation": "air_strike",
+        "RampDownAnimation": "air_strike_end",
+        "EffectTypeToShow": "effectobject_planeshadow"
+      }
+    },
+    {
+      "objclass": "ZombossDropZombieActionDefinition",
+      "aliases": [
+        "ZombossLostCityDropZombiesTier2"
+      ],
+      "objdata": {
+        "Weight": 12,
+        "RepeatMin": 0,
+        "RepeatMax": 0,
+        "SpawnJumpAction": "RTID(ZombossSpawnJump@CurrentLevel)",
+        "SpawnZombieWavePointRange": {
+          "Min": 500,
+          "Max": 800
+        },
+        "SpawnZombieTypes": [
+          "lostcity_armor1",
+          "lostcity_jane"
+        ],
+        "SpawnCooldownTime": 0.5,
+        "SpawnWavesBetweenPlantFood": {
+          "Min": 2,
+          "Max": 2
+        },
+        "ZombieDropSpeed": 150,
+        "NumberOfRowsToSpawnDown": 3,
+        "MovementCurveType": "ease_in_out",
+        "MovementSpeed": 120,
+        "ValidSpawningRegion": {
+          "mX": 7,
+          "mY": 0,
+          "mWidth": 1,
+          "mHeight": 4
+        }
+      }
+    },
+    {
+      "objclass": "ZombossDropZombieActionDefinition",
+      "aliases": [
+        "ZombossLostCityDropZombiesTier2_alt"
+      ],
+      "objdata": {
+        "Weight": 10,
+        "RepeatMin": 0,
+        "RepeatMax": 0,
+        "SpawnJumpAction": "RTID(ZombossSpawnJump@CurrentLevel)",
+        "SpawnZombieWavePointRange": {
+          "Min": 500,
+          "Max": 800
+        },
+        "SpawnZombieTypes": [
+          "lostcity_armor1",
+          "lostcity_excavator"
+        ],
+        "SpawnCooldownTime": 0.5,
+        "SpawnWavesBetweenPlantFood": {
+          "Min": 2,
+          "Max": 2
+        },
+        "ZombieDropSpeed": 150,
+        "NumberOfRowsToSpawnDown": 3,
+        "MovementCurveType": "ease_in_out",
+        "MovementSpeed": 120,
+        "ValidSpawningRegion": {
+          "mX": 7,
+          "mY": 0,
+          "mWidth": 1,
+          "mHeight": 4
+        }
+      }
+    },
+    {
+      "objclass": "ZombieDropZombiesOnBoardActionDefinition",
+      "aliases": [
+        "ZombossParachuteSpawnTier2"
+      ],
+      "objdata": {
+        "Weight": 8,
+        "RepeatMin": 0,
+        "RepeatMax": 0,
+        "ColumnEnd": "5",
+        "ColumnStart": "4",
+        "MinSpawn": "1",
+        "MaxSpawn": "3",
+        "ZombieNames": [
+          "lostcity_lostpilot"
+        ],
+        "ZombieWeights": [
+          12
+        ],
+        "TimeBeforeSpawn": 1.5,
+        "ZombieFallTime": 1,
+        "RampUpAnimation": "",
+        "LoopingAnimation": "air_strike",
+        "RampDownAnimation": "air_strike_end",
+        "EffectTypeToShow": "effectobject_planeshadow"
+      }
+    },
+    {
+      "objclass": "ZombieDropZombiesOnBoardActionDefinition",
+      "aliases": [
+        "ZombossRelichunterSpawnTier2"
+      ],
+      "objdata": {
+        "Weight": 7,
+        "RepeatMin": 0,
+        "RepeatMax": 0,
+        "ColumnEnd": "5",
+        "ColumnStart": "4",
+        "MinSpawn": "1",
+        "MaxSpawn": "1",
+        "ZombieNames": [
+          "lostcity_relichunter"
+        ],
+        "ZombieWeights": [
+          12
+        ],
+        "TimeBeforeSpawn": 1.5,
+        "ZombieFallTime": 1.5,
+        "RampUpAnimation": "",
+        "LoopingAnimation": "air_strike",
+        "RampDownAnimation": "air_strike_end",
+        "EffectTypeToShow": ""
+      }
+    },
+    {
+      "objclass": "ZombossDropZombieActionDefinition",
+      "aliases": [
+        "ZombossLostCityDropZombiesTier3"
+      ],
+      "objdata": {
+        "Weight": 12,
+        "RepeatMin": 0,
+        "RepeatMax": 0,
+        "SpawnJumpAction": "RTID(ZombossSpawnJump@CurrentLevel)",
+        "SpawnZombieWavePointRange": {
+          "Min": 850,
+          "Max": 1200
+        },
+        "SpawnZombieTypes": [
+          "lostcity_armor2",
+          "lostcity_jane",
+          "lostcity_excavator"
+        ],
+        "SpawnCooldownTime": 0.5,
+        "SpawnWavesBetweenPlantFood": {
+          "Min": 1,
+          "Max": 2
+        },
+        "ZombieDropSpeed": 150,
+        "NumberOfRowsToSpawnDown": 3,
+        "MovementCurveType": "ease_in_out",
+        "MovementSpeed": 120,
+        "ValidSpawningRegion": {
+          "mX": 7,
+          "mY": 0,
+          "mWidth": 1,
+          "mHeight": 4
+        }
+      }
+    },
+    {
+      "objclass": "ZombossDropZombieActionDefinition",
+      "aliases": [
+        "ZombossLostCityDropZombiesTier3_alt"
+      ],
+      "objdata": {
+        "Weight": 12,
+        "RepeatMin": 0,
+        "RepeatMax": 0,
+        "SpawnJumpAction": "RTID(ZombossSpawnJump@CurrentLevel)",
+        "SpawnZombieWavePointRange": {
+          "Min": 900,
+          "Max": 1300
+        },
+        "SpawnZombieTypes": [
+          "lostcity_bug",
+          "lostcity_jane",
+          "lostcity_excavator"
+        ],
+        "SpawnCooldownTime": 0.5,
+        "SpawnWavesBetweenPlantFood": {
+          "Min": 2,
+          "Max": 2
+        },
+        "ZombieDropSpeed": 150,
+        "NumberOfRowsToSpawnDown": 3,
+        "MovementCurveType": "ease_in_out",
+        "MovementSpeed": 120,
+        "ValidSpawningRegion": {
+          "mX": 7,
+          "mY": 0,
+          "mWidth": 1,
+          "mHeight": 4
+        }
+      }
+    },
+    {
+      "objclass": "ZombieDropZombiesOnBoardActionDefinition",
+      "aliases": [
+        "ZombossParachuteSpawnTier3"
+      ],
+      "objdata": {
+        "Weight": 10,
+        "RepeatMin": 0,
+        "RepeatMax": 0,
+        "ColumnEnd": "5",
+        "ColumnStart": "3",
+        "MinSpawn": "2",
+        "MaxSpawn": "4",
+        "ZombieNames": [
+          "lostcity_lostpilot"
+        ],
+        "ZombieWeights": [
+          12
+        ],
+        "TimeBeforeSpawn": 1.5,
+        "ZombieFallTime": 1,
+        "RampUpAnimation": "",
+        "LoopingAnimation": "air_strike",
+        "RampDownAnimation": "air_strike_end",
+        "EffectTypeToShow": "effectobject_planeshadow"
+      }
+    },
+    {
+      "objclass": "ZombieDropZombiesOnBoardActionDefinition",
+      "aliases": [
+        "ZombossRelichunterSpawnTier3"
+      ],
+      "objdata": {
+        "Weight": 8,
+        "RepeatMin": 0,
+        "RepeatMax": 0,
+        "ColumnEnd": "4",
+        "ColumnStart": "3",
+        "MinSpawn": "2",
+        "MaxSpawn": "2",
+        "ZombieNames": [
+          "lostcity_relichunter"
+        ],
+        "ZombieWeights": [
+          12
+        ],
+        "TimeBeforeSpawn": 1.5,
+        "ZombieFallTime": 1.5,
+        "RampUpAnimation": "",
+        "LoopingAnimation": "air_strike",
+        "RampDownAnimation": "air_strike_end",
+        "EffectTypeToShow": ""
+      }
+    },
+    {
+      "objclass": "ZombossDropSandbagActionDefinition",
+      "aliases": [
+        "ZombossLostCityTriggerTrapTier3_stone"
+      ],
+      "objdata": {
+        "Weight": 7,
+        "RepeatMin": 0,
+        "RepeatMax": 0,
+        "ProjectileTypeToSpawn": "RTID(LostCitySandbagProjectile@ProjectileTypes)",
+        "ProjectileOffset": {
+          "x": 20,
+          "y": 0,
+          "z": 100
+        },
+        "MovementCurveType": "ease_in_out",
+        "MovementSpeed": 120,
+        "ValidDroppingRegion": {
+          "mX": 1,
+          "mY": 2,
+          "mWidth": 1,
+          "mHeight": 1
+        },
+        "DroppingOffset": {
+          "x": -20,
+          "y": 0,
+          "z": 0
+        }
+      }
+    }
+  ]
+}

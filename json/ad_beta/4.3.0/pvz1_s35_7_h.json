@@ -1,0 +1,763 @@
+{
+  "version": 1,
+  "#comment": "S35 hard 7 / mirror relay budget Last Stand / v0.3",
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Name": "[S35_MEMORY_H007_MIRROR_NAME]",
+        "Description": "[S35_MEMORY_H007_MIRROR_DESC]",
+        "LevelNumber": 7,
+        "StartingSun": 5000,
+        "ZombieMaxLevel": 1,
+        "IsArtifactDisabled": false,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "VictoryModule": "RTID(PVZ1ModeOutro@LevelModules)",
+        "StageModule": "RTID(SnowModernStage@LevelModules)",
+        "Modules": [
+          "RTID(RiftThemeDemo@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(Challenges@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(LastStand@CurrentLevel)",
+          "RTID(MirrorReservations@CurrentLevel)",
+          "RTID(WaveModule@CurrentLevel)"
+        ],
+        "ShowZombies": [
+          "tutorial_armor1",
+          "tutorial",
+          "tutorial_imp",
+          "tutorial_armor2",
+          "modern_newspaper",
+          "ScreenDoor",
+          "lostcity_excavator",
+          "lostcity_jane",
+          "pharaoh",
+          "explorer",
+          "iceage_hunter",
+          "football_mech",
+          "kongfu_monk_drink",
+          "gladiator_zombie",
+          "modern_balloon",
+          "dark_juggler",
+          "fairy_tale_gargantuar"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "SelectionMethod": "chooser",
+        "OverrideSeedSlotsCount": 8,
+        "GlobalLevel": 1,
+        "PresetPlantList": [],
+        "PlantBlackList": []
+      }
+    },
+    {
+      "aliases": [
+        "LastStand"
+      ],
+      "objclass": "LastStandMinigameProperties",
+      "objdata": {
+        "StartingSun": 5000,
+        "StartingPlantfood": 0
+      }
+    },
+    {
+      "aliases": [
+        "Goal1"
+      ],
+      "objclass": "StarChallengeDisablePlantProps",
+      "objdata": {
+        "Profession": "warrior"
+      }
+    },
+    {
+      "aliases": [
+        "Goal2"
+      ],
+      "objclass": "StarChallengePlantFoodNonuseProps",
+      "objdata": {}
+    },
+    {
+      "aliases": [
+        "Goal3"
+      ],
+      "objclass": "StarChallengeBufferTileZombieKillProps",
+      "objdata": {
+        "Count": 10
+      }
+    },
+    {
+      "aliases": [
+        "Challenges"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(Goal1@CurrentLevel)",
+            "RTID(Goal2@CurrentLevel)",
+            "RTID(Goal3@CurrentLevel)"
+          ]
+        ],
+        "ChallengesAlwaysAvailable": true
+      }
+    },
+    {
+      "aliases": [
+        "Offsets"
+      ],
+      "objclass": "ZombieJitterOffsets",
+      "objdata": {
+        "ZombieSpawningOffsetIncrement": 20,
+        "ZombieSpawningRandomJitter": 10
+      }
+    },
+    {
+      "aliases": [
+        "MirrorRelay"
+      ],
+      "objclass": "WaveActionMagicMirrorTeleportationArrayProps",
+      "objdata": {
+        "MagicMirrorTeleportationArrays": [
+          {
+            "Mirror1GridX": 0,
+            "Mirror1GridY": 0,
+            "Mirror2GridX": 8,
+            "Mirror2GridY": 1,
+            "MirrorExistDuration": 86400.0
+          },
+          {
+            "Mirror1GridX": 0,
+            "Mirror1GridY": 1,
+            "Mirror2GridX": 8,
+            "Mirror2GridY": 2,
+            "MirrorExistDuration": 86400.0
+          },
+          {
+            "Mirror1GridX": 0,
+            "Mirror1GridY": 2,
+            "Mirror2GridX": 8,
+            "Mirror2GridY": 3,
+            "MirrorExistDuration": 86400.0
+          },
+          {
+            "Mirror1GridX": 0,
+            "Mirror1GridY": 3,
+            "Mirror2GridX": 8,
+            "Mirror2GridY": 4,
+            "MirrorExistDuration": 86400.0
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "MirrorReservations"
+      ],
+      "objclass": "InitialGridItemProperties",
+      "objdata": {
+        "InitialGridItemPlacements": [
+          {
+            "TypeName": "fake_mold",
+            "GridX": 0,
+            "GridY": 0
+          },
+          {
+            "TypeName": "fake_mold",
+            "GridX": 0,
+            "GridY": 1
+          },
+          {
+            "TypeName": "fake_mold",
+            "GridX": 0,
+            "GridY": 2
+          },
+          {
+            "TypeName": "fake_mold",
+            "GridX": 0,
+            "GridY": 3
+          },
+          {
+            "TypeName": "fake_mold",
+            "GridX": 8,
+            "GridY": 1
+          },
+          {
+            "TypeName": "fake_mold",
+            "GridX": 8,
+            "GridY": 2
+          },
+          {
+            "TypeName": "fake_mold",
+            "GridX": 8,
+            "GridY": 3
+          },
+          {
+            "TypeName": "fake_mold",
+            "GridX": 8,
+            "GridY": 4
+          },
+          {
+            "TypeName": "bufftile_speed",
+            "GridX": 7,
+            "GridY": 1
+          },
+          {
+            "TypeName": "bufftile_speed",
+            "GridX": 7,
+            "GridY": 2
+          },
+          {
+            "TypeName": "bufftile_speed",
+            "GridX": 7,
+            "GridY": 3
+          },
+          {
+            "TypeName": "bufftile_speed",
+            "GridX": 7,
+            "GridY": 4
+          },
+          {
+            "TypeName": "bufftile_shield",
+            "GridX": 7,
+            "GridY": 0
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(tutorial_imp@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(tutorial_imp@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(tutorial_imp@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(tutorial_imp@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(tutorial_imp@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(tutorial_imp@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          }
+        ],
+        "JitterOffsets": "RTID(Offsets@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_armor2@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(tutorial_armor2@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(modern_newspaper@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(modern_newspaper@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(modern_newspaper@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          }
+        ],
+        "JitterOffsets": "RTID(Offsets@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(football_mech@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(gladiator_zombie@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(ScreenDoor@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(ScreenDoor@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(lostcity_excavator@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(lostcity_excavator@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          }
+        ],
+        "JitterOffsets": "RTID(Offsets@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_flag@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(gladiator_zombie@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(gladiator_zombie@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(dark_juggler@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(lostcity_jane@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(lostcity_jane@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(modern_newspaper@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(dark_juggler@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          }
+        ],
+        "JitterOffsets": "RTID(Offsets@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(gladiator_zombie@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(gladiator_zombie@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(dark_juggler@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(explorer@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(dark_juggler@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          }
+        ],
+        "JitterOffsets": "RTID(Offsets@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(football_mech@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(kongfu_monk_drink@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(iceage_hunter@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(iceage_hunter@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(iceage_hunter@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(gladiator_zombie@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          }
+        ],
+        "JitterOffsets": "RTID(Offsets@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(football_mech@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(football_mech@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(football_mech@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(football_mech@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(kongfu_monk_drink@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          }
+        ],
+        "JitterOffsets": "RTID(Offsets@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_flag@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(fairy_tale_gargantuar@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(kongfu_monk_drink@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(kongfu_monk_drink@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(iceage_hunter@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(iceage_hunter@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(lostcity_excavator@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(lostcity_excavator@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(modern_newspaper@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(modern_newspaper@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(modern_newspaper@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(modern_newspaper@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(tutorial_imp@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(tutorial_imp@ZombieTypes)",
+            "Level": 1,
+            "Row": "1"
+          }
+        ],
+        "JitterOffsets": "RTID(Offsets@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "Waves"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "WaveCount": 8,
+        "FlagWaveInterval": 4,
+        "SuppressFlagZombie": true,
+        "SuppressedDynamicZombieWaves": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "Waves": [
+          [
+            "RTID(MirrorRelay@CurrentLevel)",
+            "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+          ]
+        ],
+        "MinNextWaveHealthPercentage": 0.6,
+        "MaxNextWaveHealthPercentage": 0.6,
+        "ZombieCountdownFirstWaveSecs": 2,
+        "ZombieCountdownHugeWaveDelay": 3,
+        "DescriptionName": "[S35_MEMORY_H007_MIRROR_MODE]",
+        "Description": "[S35_MEMORY_H007_MIRROR_MODE_DESC]"
+      }
+    },
+    {
+      "aliases": [
+        "WaveModule"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "ManualStartup": true,
+        "WaveManagerPropsVector": [
+          "RTID(Waves@CurrentLevel)",
+          "RTID(Waves@CurrentLevel)",
+          "RTID(Waves@CurrentLevel)",
+          "RTID(Waves@CurrentLevel)"
+        ],
+        "DynamicZombies": []
+      }
+    },
+    {
+      "aliases": [
+        "RiftThemeDemo"
+      ],
+      "objclass": "RiftThemeDemoModuleProperties",
+      "objdata": {
+        "DemoRiftThemeName": [
+          "rusher"
+        ]
+      }
+    }
+  ]
+}
